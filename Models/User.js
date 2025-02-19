@@ -23,6 +23,7 @@ const userDetails = new Schema({
   image: {
     type: String,
     unique: false,
+    required: false
   },
   role: {
     type: String,
