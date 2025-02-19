@@ -7,7 +7,8 @@ const VerifyToken = require('../Controller/VerifyToken');
 
 const router = express.Router();
 
-router.post("/login", upload.single("profilePic"), signUp);
+router.post("/signup", upload.single("profilePic"), signUp);
+// router.post("/signup", upload.single("profilePic"), signUp);
 router.get("/token-verify",verifyToken, VerifyToken);
 
 module.exports = { router };
