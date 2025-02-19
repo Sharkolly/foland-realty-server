@@ -12,25 +12,31 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.MONGODBURL;
 
-app.use(cors({
-  origin: ['http://localhost:5173']
-}));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://foland-realty.vercel.app/"],
+  })
+);
 app.use(bodyParser());
 app.use(cookieParser());
 
-app.use('/', router)
-router
+app.use("/", router);
+router;
 app.get("/", (req, res) => {
   res.json({ message: "Worked" });
 });
+app.get("/app", (req, res) => {
+  res.json({ message: "App worked" });
+});
 
-mongoose.connect(mongoDBURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => {
-  app.listen(PORT, () => {
-    console.log("Server Started !!", PORT);
-  });
-
-}).catch(err => console.log(err.message));
-
+mongoose
+  .connect(mongoDBURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log("Server Started !!", PORT);
+    });
+  })
+  .catch((err) => console.log(err.message));
