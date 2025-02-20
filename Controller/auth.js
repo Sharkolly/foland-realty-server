@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const signUp = async (req, res) => {
   const { email, password, firstName, lastName, role } = req.body;
-  const profilePic = req.file ? req.file.path : "";
+  // const profilePic = req.file ? req.file.path : "";
 
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = {
@@ -13,7 +13,7 @@ const signUp = async (req, res) => {
     role,
     firstName,
     lastName,
-    profilePic,
+    // profilePic,
   };
 
   try {
@@ -23,7 +23,7 @@ const signUp = async (req, res) => {
       role,
       firstName,
       lastName,
-      profilePic,
+      // profilePic,
     });
     const user = await saveToDatabase.save();
     const userIdToString = await user._id.toString();
