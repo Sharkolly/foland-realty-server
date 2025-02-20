@@ -12,14 +12,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.MONGODBURL;
 
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://foland-realty.vercel.app/"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
-
+// app.use(
+//   cors({
+//     origin: ["http://localhost:5173", "https://foland-realty.vercel.app/"],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
+app.use(cors());
 app.options("*", cors());
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://foland-realty.vercel.app");
