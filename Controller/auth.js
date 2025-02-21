@@ -5,6 +5,28 @@ const jwt = require("jsonwebtoken");
 const signUp = async (req, res) => {
   const { email, password, firstName, lastName, role } = req.body;
   // const profilePic = req.file ? req.file.path : "";
+  const regexForValidEmail = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+  const regexForValidPassword =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+  if (!firstName || !lastName || !password || !email || !role) {
+    return res.status(403).json({ message: "Complete the form" });
+  }
+
+  if (!regexForValidEmail.test(email)) {
+    return res
+      .status(403)
+      .json({ emailValidationError: "Email is not a valid email" });
+  }
+  if (!regexForValidPassword.test(password)) {
+    return res
+      .status(403)
+      .json({
+        passwordValidationError:
+          "Password must have minimum of 8 characters, 1 Uppercase Letter, 1 Lowercase Letter, 1 Number , 1 Special Character",
+      });
+  }
 
   const hashedPassword = await bcrypt.hash(password, 10);
   const user = {
@@ -17,6 +39,11 @@ const signUp = async (req, res) => {
   };
 
   try {
+    const checkIfUserExist = await User.findOne({ email });
+
+    if(checkIfUserExist){
+      return res.status(403).json({message: 'Email already Exist'});
+    };
     const saveToDatabase = await new User({
       email,
       password: hashedPassword,
@@ -31,11 +58,46 @@ const signUp = async (req, res) => {
       { _id: userIdToString },
       process.env.JWT_SECRET_KEY,
       { expiresIn: "7h" }
-    );    
-    res.json({ token });
+    );
+    return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {
     console.log(err.message);
+    return res.status(500).json({ message: "Server error" });
   }
 };
 
-module.exports= { signUp };
+const login = async (req, res) => {
+  const { email, password } = req.body;
+  if (!password || !email) {
+    return res.status(403).json({ message: "Complete the form" });
+  }
+  try {
+    const checkIfUserExist = await User.findOne({ email });
+    if (!checkIfUserExist) {
+      return res
+        .status(403)
+        .json({ message: "Email is not registered. Please Sign Up." });
+    }
+    const comparePassword = await bcrypt.compare(
+      password,
+      checkIfUserExist.password
+    );
+
+    console.log(comparePassword);
+    if (!comparePassword) {
+      return res.status(401).json({ message: "Invalid Email or Password" });
+    }
+    const token = jwt.sign(
+      { _id: checkIfUserExist._id },
+      process.env.JWT_SECRET_KEY,
+      {
+        expiresIn: "7h",
+      }
+    );
+    return res.status(201).json({ message: "Login Successful", token });
+  } catch (err) {
+    console.log(err.message);
+    return res.status(500).json({ message: "Server error" });
+  }
+};
+module.exports = { signUp, login };
