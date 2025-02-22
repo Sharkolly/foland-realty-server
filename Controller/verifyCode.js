@@ -1,4 +1,5 @@
 const User = require("../Models/User");
+const bcrypt = require("bcryptjs");
 
 const verify_code = async (req, res) => {
   const { email, code } = req.body;
@@ -13,7 +14,8 @@ const verify_code = async (req, res) => {
       return res.status(403).json({ message: ' "Email does not exist" ' });
     }
 
-    if (user.resetCode !== code || Date.now() > user.resetCodeExpiration) {
+    const compareCode = await bcrypt.compare(code, user.resetCode);
+    if (!compareCode || Date.now() > user.resetCodeExpiration) {
       return res.status(403).json({ message: "Invalid or expired code" });
     }
     return res.status(201).json({ message: "Code Verified" });

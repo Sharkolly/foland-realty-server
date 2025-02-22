@@ -28,9 +28,9 @@ const reset_password = async (req, res) => {
     user.resetCodeExpiration = null;
     await user.save();
 
-    return res.status.json({ message: "Password Reset" });
+    return res.status(201).json({ message: "Password Reset" });
   } catch (error) {
-    return res.status(403).json({ message: "Server error" });
+    return res.status(500).json({ message: "Server error" });
   }
 };
 
