@@ -4,8 +4,10 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
 const bcrypt = require("bcryptjs");
+const upload = require('./middleware/fileUpload');
+const fs = require("fs");
+
 const { router } = require("./Routes/index");
 const errorHandler = require("./middleware/errorHandler");
 

@@ -33,7 +33,7 @@ const userDetails = new Schema({
     type: String,
   },
   resetCodeExpiration: { type: Date },
-});
+}, {timestamps: true});
 
 const User = model("User", userDetails);
 

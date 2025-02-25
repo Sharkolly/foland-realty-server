@@ -40,7 +40,7 @@ const signUp = async (req, res) => {
       const checkIfUserExist = await User.findOne({ email });
   
       if (checkIfUserExist) {
-        return res.status(403).json({ message: "Email already Exist" });
+        return res.status(403).json({ emailValidationError: "Email already Exist" });
       };
       const saveToDatabase = await new User({
         email,
