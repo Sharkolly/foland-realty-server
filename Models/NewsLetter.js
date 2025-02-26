@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const newsLetterSchema = new Schema({
   email: {
-    type: string,
+    type: String,
     unique: [true, "Email has been subscribed already"],
   },
 }, {timestamps: true});
