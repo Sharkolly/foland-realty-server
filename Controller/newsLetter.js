@@ -2,8 +2,15 @@ const NewsLetter = require("../Models/NewsLetter");
 
 const newsLetter = async (req, res) => {
   const { email } = req.body;
+  const regexForValidEmail = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
   if (!email) {
     return res.status(403).json({ message: "Enter email address!" });
+  }
+
+  if (!regexForValidEmail.test(email)) {
+    return res
+      .status(403)
+      .json({ emailValidationError: "Email is not a valid email" });
   }
   try {
     const checkIfEmailExist = await NewsLetter.findOne({ email });
