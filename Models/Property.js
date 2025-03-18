@@ -45,13 +45,40 @@ const propertySchema = new Schema(
       },
     },
     price: {
-      type: Number,
+      type: String,
       required: [true, "Please provide a price"],
     },
     location: {
       type: String,
       required: [true, "Please provide the location"],
     },
+    bedroom: {
+      type: Number,
+    },
+    bathroom: {
+      type: Number,
+    },
+    landSize: {
+      type: String
+    },
+    ownershipDetails: [
+      {
+        titleDocument: {
+          type: String,
+          required: true
+        },
+        ownershipType: {
+          type: String,
+          enum: ["Leasehold", "Freehold"],
+          default: "Freehold",
+          required: true
+        },
+        propertyID: {
+          type: Number,
+          required: true
+        },
+      },
+    ],
     owner: { type: Schema.Types.ObjectId, ref: "User" },
     createdAt: { type: Date, default: Date.now },
   },

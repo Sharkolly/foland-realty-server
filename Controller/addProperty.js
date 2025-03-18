@@ -3,8 +3,25 @@ const Property = require("../Models/Property");
 const { v4: uuidv4 } = require("uuid");
 
 const addProperty = async (req, res) => {
-  const { title, description, price, type, location,property, state, lga } = req.body;
-  console.log(property);
+
+await new Promise((res) => setTimeout(res, 3000));
+
+  const {
+    title,
+    description,
+    price,
+    type,
+    location,
+    property,
+    state,
+    lga,
+    bathroom,
+    bedroom,
+    landSize,
+    titleDocument,
+    ownershipType,
+    propertyID,
+  } = req.body;
   if (
     !title ||
     !description ||
@@ -12,8 +29,12 @@ const addProperty = async (req, res) => {
     !type ||
     !location ||
     !state ||
-    !lga || 
-    !property
+    !lga ||
+    !property ||
+    !landSize ||
+    !titleDocument ||
+    !ownershipType ||
+    !propertyID
   ) {
     return res.status(400).json({ message: "Please fill all fields" });
   }
@@ -25,22 +46,26 @@ const addProperty = async (req, res) => {
       }))
     : null;
 
-  if (images === null) {
-    return res.status(400).json({ message: "Please add the images" });
-  }
+  const ownershipDetails = [{ titleDocument, ownershipType, propertyID }];
 
   try {
     const propertyDetails = {
       uuid: uuidv4(),
       title,
       description,
-      price: parseInt(price),
+      price: `#${parseInt(price).toLocaleString()}`,
       type,
       location,
       state,
       lga,
       images,
-      property
+      property,
+      landSize: `${landSize}sqm`,
+      titleDocument,
+      ownershipDetails,
+      propertyID,
+      bathroom,
+      bedroom,
     };
 
     const saveProperty = await new Property(propertyDetails);
@@ -49,7 +74,7 @@ const addProperty = async (req, res) => {
 
     res.json({ message: "Property Saved" });
   } catch (error) {
-    console.log(error.message);
+    return res.status(500).json({ message: "Server error" });
   }
 };
 
