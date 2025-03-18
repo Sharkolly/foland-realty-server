@@ -23,7 +23,7 @@ const forgot_password = async (req, res) => {
   }
 
   try {
-    const checkForEmail = await User.findOne({ email });
+    const checkForEmail = await User.findOne({ email: email.toLowerCase() });
 
     if (!checkForEmail) {
       return res.status(403).json({ message: "Email does not exist" });

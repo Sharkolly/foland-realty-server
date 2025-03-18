@@ -8,7 +8,7 @@ const login = async (req, res) => {
     return res.status(403).json({ message: "Complete the form" });
   }
   try {
-    const checkIfUserExist = await User.findOne({ email });
+    const checkIfUserExist = await User.findOne({ email:  email.toLowerCase() });
     if (!checkIfUserExist) {
       return res
         .status(403)
