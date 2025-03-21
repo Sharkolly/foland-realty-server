@@ -28,14 +28,6 @@ export const signUp = async (req, res) => {
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  const user = {
-    email: email.toLowerCase(),
-    password: hashedPassword,
-    role,
-    firstName,
-    lastName,
-    // profilePic,
-  };
 
   try {
     const checkIfUserExist = await User.findOne({ email });
@@ -46,7 +38,7 @@ export const signUp = async (req, res) => {
         .json({ emailValidationError: "Email already Exist" });
     }
     const saveToDatabase = await new User({
-      email,
+      email: email.toLowerCase(),
       password: hashedPassword,
       role,
       firstName,
@@ -55,9 +47,12 @@ export const signUp = async (req, res) => {
     });
     const user = await saveToDatabase.save();
     const userIdToString = await user._id.toString();
-    console.log(userIdToString);
     const mySqlSave = await createUser(email, userIdToString);
-    console.log(mySqlSave);
+
+    if (!mySqlSave || !user) {
+      const deleteUser = await User.findOneAndDelete({ email });
+      return res.status(409).json({ message: "An Error Occurred" });
+    }
     const token = jwt.sign(
       { _id: userIdToString },
       process.env.JWT_SECRET_KEY,
