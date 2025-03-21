@@ -11,6 +11,11 @@ import { v4 } from "uuid";
 import { router } from "./Routes/index.js";
 // import errorHandler from "./middleware/errorHandler.js";
 
+const password = process.env.AIVEN_SERVICE_PASSWORD;
+const databaseUrl = `mysql://avnadmin:${password}@foland-realty-2025-foland-realty-2025.j.aivencloud.com:24163/defaultdb`;
+
+process.env.DATABASE_URL = databaseUrl;
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.MONGODBURL;
@@ -52,6 +57,7 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => {
+      console.log(process.env.DATABASE_URL);
       console.log("Server Started !!", PORT);
     });
   })
