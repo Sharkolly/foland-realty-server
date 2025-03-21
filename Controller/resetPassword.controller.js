@@ -1,7 +1,7 @@
-const bcrypt = require("bcryptjs");
-const User = require("../Models/User");
+import User from "../Models/User.js";
+import nodemailer from "nodemailer";
 
-const reset_password = async (req, res) => {
+export const reset_password = async (req, res) => {
   const { email, newPassword } = req.body;
   const regexForValidPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
@@ -33,5 +33,3 @@ const reset_password = async (req, res) => {
     return res.status(500).json({ message: "Server error" });
   }
 };
-
-module.exports = { reset_password };

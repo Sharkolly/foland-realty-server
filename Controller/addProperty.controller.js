@@ -1,6 +1,6 @@
-const crypto = require("crypto");
-const Property = require("../Models/Property");
-const { v4: uuidv4 } = require("uuid");
+import crypto from 'crypto';
+import Property from "../Models/Property.js";
+import { v4 } from "uuid";
 
 const addProperty = async (req, res) => {
 
@@ -48,9 +48,10 @@ await new Promise((res) => setTimeout(res, 3000));
 
   const ownershipDetails = [{ titleDocument, ownershipType, propertyID }];
 
+  const uuid = v4();
   try {
     const propertyDetails = {
-      uuid: uuidv4(),
+      uuid: uuid,
       title,
       description,
       price: `#${parseInt(price).toLocaleString()}`,
@@ -78,4 +79,5 @@ await new Promise((res) => setTimeout(res, 3000));
   }
 };
 
-module.exports = addProperty;
+
+export default addProperty

@@ -1,6 +1,6 @@
-const User = require("../Models/User");
-const nodemailer = require("nodemailer");
-const bcrypt = require("bcryptjs");
+import User from "../Models/User.js";
+import nodemailer from "nodemailer";
+import bcrypt from "bcryptjs";
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const forgot_password = async (req, res) => {
+export const forgot_password = async (req, res) => {
   const { email } = req.body;
   const regexForValidEmail = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
@@ -50,4 +50,3 @@ const forgot_password = async (req, res) => {
   }
 };
 
-module.exports = { forgot_password };

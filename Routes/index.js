@@ -1,17 +1,17 @@
-const express = require("express");
-const upload = require("../middleware/fileUpload");
-const { login } = require("../Controller/login");
-const { forgot_password } = require("../Controller/forgotPassword");
-const { verify_code } = require("../Controller/verifyCode");
-const { signUp } = require("../Controller/signup");
-const { reset_password } = require("../Controller/resetPassword");
-const { newsLetter } = require("../Controller/newsLetter");
-const verifyToken = require("../middleware/tokenVerification");
-const VerifyToken = require("../Controller/VerifyToken");
-const addProperty = require("../Controller/addProperty");
-const multer = require('multer');
+import express from "express";
+import upload from "../middleware/fileUpload.js";
+import { login } from "../Controller/login.controller.js";
+import { forgot_password } from "../Controller/forgotPassword.controller.js";
+import { verify_code } from "../Controller/verifyCode.controller.js";
+import { signUp } from "../Controller/signup.controller.js";
+import { reset_password } from "../Controller/resetPassword.controller.js";
+import { newsLetter } from "../Controller/newsLetter.controller.js";
+import verifyToken from "../middleware/tokenVerification.js";
+import VerifyToken from "../Controller/VerifyToken.controller.js";
+import addProperty from "../Controller/addProperty.controller.js";
+import multer from 'multer';
 
-const router = express.Router();
+export const router = express.Router();
 
 // router.post("/signup", upload.single("profilePic"), signUp);
 
@@ -57,4 +57,3 @@ router.post(
 
 router.get("/token-verify", verifyToken, VerifyToken);
 
-module.exports = { router };

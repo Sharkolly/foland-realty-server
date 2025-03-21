@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+import { Schema, model } from "mongoose";
 
 const newsLetterSchema = new Schema({
   email: {
@@ -9,4 +9,4 @@ const newsLetterSchema = new Schema({
 
 const NewsLetter = model("NewsLetter", newsLetterSchema);
 
-module.exports = NewsLetter;
+export default NewsLetter;

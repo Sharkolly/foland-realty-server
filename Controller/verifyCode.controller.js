@@ -1,7 +1,7 @@
-const User = require("../Models/User");
-const bcrypt = require("bcryptjs");
+import User from "../Models/User.js";
+import bcrypt from "bcryptjs";
 
-const verify_code = async (req, res) => {
+export const verify_code = async (req, res) => {
   const { email, code } = req.body;
 
   if (!email || !code) {
@@ -29,5 +29,3 @@ const verify_code = async (req, res) => {
     return res.status(500).json({ message: "Server error" });
   }
 };
-
-module.exports = { verify_code };

@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+import { Schema, model } from "mongoose";
 
 const imageSchema = new Schema(
   {
@@ -86,4 +86,4 @@ const propertySchema = new Schema(
 );
 const Property = model("Property", propertySchema);
 
-module.exports = Property;
+export default Property;

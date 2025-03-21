@@ -1,6 +1,6 @@
-const NewsLetter = require("../Models/NewsLetter");
+import NewsLetter from "../Models/NewsLetter.js";
 
-const newsLetter = async (req, res) => {
+export const newsLetter = async (req, res) => {
   const { email } = req.body;
   const regexForValidEmail = /^(?!.*\.\.)[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
@@ -26,5 +26,3 @@ const newsLetter = async (req, res) => {
     return res.status(501).json({ message: "Something went wrong" });
   }
 };
-
-module.exports = { newsLetter };

@@ -2,6 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon mongoDB",
@@ -12,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^6.5.0",
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
@@ -32,5 +34,8 @@
     "pdfkit": "^0.16.0",
     "ssim.js": "^3.5.0",
     "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.5.0"
   }
 }

@@ -1,15 +1,15 @@
-require("dotenv").config();
-const express = require("express");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const bcrypt = require("bcryptjs");
-const upload = require('./middleware/fileUpload');
-const fs = require("fs");
+import dotenv from "dotenv";
+dotenv.config();
+import express from "express";
+import db from "./helpers/db.js";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import { v4 } from "uuid";
 
-const { router } = require("./Routes/index");
-const errorHandler = require("./middleware/errorHandler");
+import { router } from "./Routes/index.js";
+// import errorHandler from "./middleware/errorHandler.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;

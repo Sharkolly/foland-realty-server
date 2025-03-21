@@ -1,8 +1,8 @@
-const bcrypt = require("bcryptjs");
-const User = require("../Models/User");
-const jwt = require("jsonwebtoken");
+import User from "../Models/User.js";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
-const login = async (req, res) => {
+export const login = async (req, res) => {
   const { email, password } = req.body;
   if (!password || !email) {
     return res.status(403).json({ message: "Complete the form" });
@@ -34,5 +34,3 @@ const login = async (req, res) => {
     return res.status(500).json({ message: "Server error" });
   }
 };
-
-module.exports = { login };
