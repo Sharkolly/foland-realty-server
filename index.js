@@ -8,6 +8,8 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import { v4 } from "uuid";
 
+
+
 import { router } from "./Routes/index.js";
 // import errorHandler from "./middleware/errorHandler.js";
 
@@ -57,7 +59,6 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => {
-      console.log(process.env.DATABASE_URL);
       console.log("Server Started !!", PORT);
     });
   })
