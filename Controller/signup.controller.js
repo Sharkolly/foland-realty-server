@@ -1,7 +1,7 @@
 import User from "../Models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { createUser } from "../mysql/controllers/user.model.js";
+import { createUser, checkUser } from "../mysql/controllers/user.model.js";
 
 export const signUp = async (req, res) => {
   const { email, password, firstName, lastName, role } = req.body;
@@ -31,8 +31,9 @@ export const signUp = async (req, res) => {
 
   try {
     const checkIfUserExist = await User.findOne({ email });
+    const checkUserMysql = await checkUser(email);
 
-    if (checkIfUserExist) {
+    if (checkIfUserExist || checkUserMysql) {
       return res
         .status(403)
         .json({ emailValidationError: "Email already Exist" });
@@ -50,7 +51,7 @@ export const signUp = async (req, res) => {
     const mySqlSave = await createUser(email, userIdToString);
 
     if (!mySqlSave || !user) {
-      const deleteUser = await User.findOneAndDelete({ email });
+      await User.findOneAndDelete({ email });
       return res.status(409).json({ message: "An Error Occurred" });
     }
     const token = jwt.sign(
