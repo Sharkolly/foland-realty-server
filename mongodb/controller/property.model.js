@@ -1,6 +1,5 @@
 import Property from "../../Models/Property.js";
 
-
 export const getUserTotalProperty = async (user) => {
   const userTotalProperty = await Property.countDocuments({ owner: user._id });
   const userTotalPropertes = await Property.find({ owner: user._id });
@@ -8,7 +7,7 @@ export const getUserTotalProperty = async (user) => {
   return userTotalProperty;
 };
 
-export const addPropertiesToMongoDb= async (
+export const addPropertiesToMongoDb = async (
   uuid,
   title,
   description,
