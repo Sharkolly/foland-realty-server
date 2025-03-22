@@ -1,11 +1,12 @@
-import crypto from 'crypto';
-import Property from "../Models/Property.js";
+import crypto from "crypto";
 import { v4 } from "uuid";
+import { addPropertiesToMongoDb } from "../mongodb/controller/property.model.js";
 
 const addProperty = async (req, res) => {
+  await new Promise((res) => setTimeout(res, 3000));
 
-await new Promise((res) => setTimeout(res, 3000));
-
+  const { user } = req;
+  const owner = user._id;
   const {
     title,
     description,
@@ -22,6 +23,8 @@ await new Promise((res) => setTimeout(res, 3000));
     ownershipType,
     propertyID,
   } = req.body;
+  console.log(req.body);
+  console.log(title, description, price, type, location + "Hello");
   if (
     !title ||
     !description ||
@@ -49,35 +52,34 @@ await new Promise((res) => setTimeout(res, 3000));
   const ownershipDetails = [{ titleDocument, ownershipType, propertyID }];
 
   const uuid = v4();
+
   try {
-    const propertyDetails = {
+    const landsize = `${landSize}sqm`;
+    const priceOfProperty = `#${parseInt(price).toLocaleString()}`;
+    const newProperty = await addPropertiesToMongoDb(
       uuid,
       title,
       description,
-      price: `#${parseInt(price).toLocaleString()}`,
+      priceOfProperty,
       type,
       location,
       state,
       lga,
       images,
       property,
-      landSize: `${landSize}sqm`,
+      landsize,
       titleDocument,
       ownershipDetails,
       propertyID,
       bathroom,
       bedroom,
-    };
-
-    const saveProperty = await new Property(propertyDetails);
-    const newProperty = await saveProperty.save();
+      owner
+    );
     console.log(newProperty);
-
     res.json({ message: "Property Saved" });
   } catch (error) {
     return res.status(500).json({ message: "Server error" });
   }
 };
 
-
-export default addProperty
+export default addProperty;

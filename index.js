@@ -1,16 +1,17 @@
+"use strict";
+
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
-import db from "./helpers/db.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
-import { v4 } from "uuid";
 
-
-
-import { router } from "./Routes/index.js";
+import authRoute from "./Routes/authRoute.js";
+import user from "./Routes/user.js";
+import propertyRoute from "./Routes/propertyRoute.js";
+import tokenVerification from "./middleware/tokenVerification.js";
 // import errorHandler from "./middleware/errorHandler.js";
 
 const password = process.env.AIVEN_SERVICE_PASSWORD;
@@ -43,14 +44,9 @@ app.options("*", cors());
 app.use(bodyParser());
 app.use(cookieParser());
 
-app.use("/", router);
-
-app.get("/", (req, res) => {
-  res.json({ message: "Worked" });
-});
-app.get("/app", (req, res) => {
-  res.json({ message: "App worked" });
-});
+app.use("/api/auth", authRoute);
+app.use("/api/foland-realty", tokenVerification, user);
+app.use("/api/foland-realty/property", tokenVerification, propertyRoute);
 
 mongoose
   .connect(mongoDBURL, {

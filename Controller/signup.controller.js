@@ -1,9 +1,11 @@
-import User from "../Models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { createUser, checkUser } from "../mysql/controllers/user.model.js";
-import db from "../helpers/db.js";
 import { v4 } from "uuid";
+import {
+  userSignUpMongoDB,
+  checkUserExists,
+} from "../mongodb/controller/auth.model.js";
 
 export const signUp = async (req, res) => {
   const { email, password, firstName, lastName, role } = req.body;
@@ -31,7 +33,9 @@ export const signUp = async (req, res) => {
 
   const hashedPassword = await bcrypt.hash(password, 10);
   try {
-    const checkIfUserExist = await User.findOne({ email });
+    //mongoDb
+    const checkIfUserExist = await checkUserExists(email);
+    //mySql
     const checkUserMysql = await checkUser(email);
 
     if (checkIfUserExist || checkUserMysql) {
@@ -42,22 +46,19 @@ export const signUp = async (req, res) => {
     const uuid = v4();
 
     const mySqlSave = await createUser(email, uuid, role);
-    const saveToDatabase = await new User({
-      email: email.toLowerCase(),
-      password: hashedPassword,
+    const userIdToString = await userSignUpMongoDB(
+      email,
+      password,
       role,
       firstName,
       lastName,
       uuid,
-      // profilePic,
-    });
-
-    const user = await saveToDatabase.save();
-    const userIdToString = await user._id.toString();
+      hashedPassword
+    );
     const token = jwt.sign(
       { _id: userIdToString },
       process.env.JWT_SECRET_KEY,
-      { expiresIn: "7h" }
+      { expiresIn: "3d" }
     );
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {

@@ -1,6 +1,8 @@
-import User from "../Models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import {
+  checkUserExists,
+} from "../mongodb/controller/auth.model.js";
 
 export const login = async (req, res) => {
   const { email, password } = req.body;
@@ -8,7 +10,7 @@ export const login = async (req, res) => {
     return res.status(403).json({ message: "Complete the form" });
   }
   try {
-    const checkIfUserExist = await User.findOne({ email:  email.toLowerCase() });
+    const checkIfUserExist = await checkUserExists(email);
     if (!checkIfUserExist) {
       return res
         .status(403)
@@ -26,11 +28,11 @@ export const login = async (req, res) => {
       { _id: checkIfUserExist._id },
       process.env.JWT_SECRET_KEY,
       {
-        expiresIn: "7h",
+        expiresIn: "3d",
       }
     );
     return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
     return res.status(500).json({ message: "Server error" });
   }
-};
+}; 

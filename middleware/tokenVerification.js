@@ -7,11 +7,11 @@ const verifyToken = async (req, res, next) => {
   }
   jwt.verify(getToken, process.env.JWT_SECRET_KEY, (err, user) => {
     if (err) {
-      return res.status(201).json({ message: err.message }).status(403);
+      return res.status(403).json({ message: err.message });
     }
     req.user = user;
+    next();
   });
-  next();
 };
 
 export default verifyToken;
