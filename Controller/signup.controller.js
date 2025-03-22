@@ -2,6 +2,8 @@ import User from "../Models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { createUser, checkUser } from "../mysql/controllers/user.model.js";
+import db from "../helpers/db.js";
+import { v4 } from "uuid";
 
 export const signUp = async (req, res) => {
   const { email, password, firstName, lastName, role } = req.body;
@@ -28,7 +30,6 @@ export const signUp = async (req, res) => {
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-
   try {
     const checkIfUserExist = await User.findOne({ email });
     const checkUserMysql = await checkUser(email);
@@ -38,22 +39,21 @@ export const signUp = async (req, res) => {
         .status(403)
         .json({ emailValidationError: "Email already Exist" });
     }
+    const uuid = v4();
+
+    const mySqlSave = await createUser(email, uuid, role);
     const saveToDatabase = await new User({
       email: email.toLowerCase(),
       password: hashedPassword,
       role,
       firstName,
       lastName,
+      uuid,
       // profilePic,
     });
+
     const user = await saveToDatabase.save();
     const userIdToString = await user._id.toString();
-    const mySqlSave = await createUser(email, userIdToString);
-
-    if (!mySqlSave || !user) {
-      await User.findOneAndDelete({ email });
-      return res.status(409).json({ message: "An Error Occurred" });
-    }
     const token = jwt.sign(
       { _id: userIdToString },
       process.env.JWT_SECRET_KEY,
@@ -61,7 +61,6 @@ export const signUp = async (req, res) => {
     );
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {
-    console.log(err.message);
     return res.status(500).json({ message: "Server error" });
   }
 };

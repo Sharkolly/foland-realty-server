@@ -51,7 +51,7 @@ await new Promise((res) => setTimeout(res, 3000));
   const uuid = v4();
   try {
     const propertyDetails = {
-      uuid: uuid,
+      uuid,
       title,
       description,
       price: `#${parseInt(price).toLocaleString()}`,

@@ -9,7 +9,7 @@ datasource db {
 
 model User {
   id          String   @id @unique @default(uuid())
-  mongoDbID   String   @unique
+  uuid        String   @unique
   email       String   @unique
   role        Role     @default(Tenant)
   phoneNumber String?

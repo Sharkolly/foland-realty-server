@@ -1,19 +1,20 @@
 import db from "../../helpers/db.js";
 
-export const createUser = async (email, mongoDbID) => {
+export const createUser = async (email, uuid, role) => {
   const user = await db.user.create({
     data: {
-      email,
-      mongoDbID,
+      email: email.toLowerCase(),
+      uuid,
+      role,
     },
   });
 
   return user;
 };
-export const checkUser = async (email, mongoDbID) => {
+export const checkUser = async (email) => {
   const user = await db.user.findUnique({
     where: {
-      email,
+      email: email.toLowerCase(),
     },
   });
 
