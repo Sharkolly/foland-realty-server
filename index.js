@@ -48,6 +48,8 @@ app.use("/api/auth", authRoute);
 app.use("/api/foland-realty", tokenVerification, user);
 app.use("/api/foland-realty/property", tokenVerification, propertyRoute);
 
+app.use("/uploads", express.static("uploads"));
+
 mongoose
   .connect(mongoDBURL, {
     useNewUrlParser: true,

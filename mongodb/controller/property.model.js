@@ -6,6 +6,10 @@ export const getUserTotalProperty = async (user) => {
   console.log(userTotalPropertes);
   return userTotalProperty;
 };
+export const getProperties = async () => {
+  const properties = await Property.find();
+  return properties;
+};
 
 export const addPropertiesToMongoDb = async (
   uuid,
@@ -45,7 +49,7 @@ export const addPropertiesToMongoDb = async (
     bathroom,
     bedroom,
     owner,
-    isLandlordLivingWithTenant
+    isLandlordLivingWithTenant,
   };
 
   const saveProperty = await new Property(propertyDetails);
