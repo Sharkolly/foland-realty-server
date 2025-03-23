@@ -32,7 +32,7 @@ const userDetails = new Schema(
     role: {
       type: String,
       enum: ["Tenant", "Landlord", "Agent"],
-      default: "tenant",
+      default: "Tenant",
     },
     resetCode: {
       type: String,

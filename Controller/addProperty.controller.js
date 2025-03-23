@@ -22,9 +22,9 @@ const addProperty = async (req, res) => {
     titleDocument,
     ownershipType,
     propertyID,
+    isLandlordLivingWithTenant
   } = req.body;
-  console.log(req.body);
-  console.log(title, description, price, type, location + "Hello");
+
   if (
     !title ||
     !description ||
@@ -37,7 +37,8 @@ const addProperty = async (req, res) => {
     !landSize ||
     !titleDocument ||
     !ownershipType ||
-    !propertyID
+    !propertyID || 
+    !isLandlordLivingWithTenant
   ) {
     return res.status(400).json({ message: "Please fill all fields" });
   }
@@ -73,9 +74,9 @@ const addProperty = async (req, res) => {
       propertyID,
       bathroom,
       bedroom,
-      owner
+      owner,
+      isLandlordLivingWithTenant
     );
-    console.log(newProperty);
     res.json({ message: "Property Saved" });
   } catch (error) {
     return res.status(500).json({ message: "Server error" });

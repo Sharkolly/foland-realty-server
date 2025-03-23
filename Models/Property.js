@@ -57,29 +57,35 @@ const propertySchema = new Schema(
     },
     bathroom: {
       type: Number,
+      required: true,
     },
     landSize: {
-      type: String
+      type: String,
+      required: true,
+    },
+    isLandlordLivingWithTenant: {
+      type: String,
+      required: true,
     },
     ownershipDetails: [
       {
         titleDocument: {
           type: String,
-          required: true
+          required: true,
         },
         ownershipType: {
           type: String,
           enum: ["Leasehold", "Freehold"],
           default: "Freehold",
-          required: true
+          required: true,
         },
         propertyID: {
           type: Number,
-          required: true
+          required: true,
         },
       },
     ],
-    owner: { type: Schema.Types.ObjectId, ref: "User",required: true, },
+    owner: { type: Schema.Types.ObjectId, ref: "User", required: true },
     createdAt: { type: Date, default: Date.now },
   },
   { timestamps: true }

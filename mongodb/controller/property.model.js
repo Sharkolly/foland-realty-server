@@ -24,7 +24,8 @@ export const addPropertiesToMongoDb = async (
   propertyID,
   bathroom,
   bedroom,
-  owner
+  owner,
+  isLandlordLivingWithTenant
 ) => {
   const propertyDetails = {
     uuid,
@@ -44,6 +45,7 @@ export const addPropertiesToMongoDb = async (
     bathroom,
     bedroom,
     owner,
+    isLandlordLivingWithTenant
   };
 
   const saveProperty = await new Property(propertyDetails);
