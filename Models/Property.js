@@ -65,7 +65,6 @@ const propertySchema = new Schema(
     },
     isLandlordLivingWithTenant: {
       type: String,
-      required: true,
     },
     ownershipDetails: [
       {

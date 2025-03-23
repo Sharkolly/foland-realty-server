@@ -22,7 +22,7 @@ const addProperty = async (req, res) => {
     titleDocument,
     ownershipType,
     propertyID,
-    isLandlordLivingWithTenant
+    isLandlordLivingWithTenant,
   } = req.body;
 
   if (
@@ -37,8 +37,7 @@ const addProperty = async (req, res) => {
     !landSize ||
     !titleDocument ||
     !ownershipType ||
-    !propertyID || 
-    !isLandlordLivingWithTenant
+    !propertyID 
   ) {
     return res.status(400).json({ message: "Please fill all fields" });
   }
@@ -82,5 +81,5 @@ const addProperty = async (req, res) => {
     return res.status(500).json({ message: "Server error" });
   }
 };
-3
+3;
 export default addProperty;
