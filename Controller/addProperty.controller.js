@@ -1,4 +1,3 @@
-import crypto from "crypto";
 import { v4 } from "uuid";
 import { addPropertiesToMongoDb } from "../mongodb/controller/property.model.js";
 
@@ -25,6 +24,8 @@ const addProperty = async (req, res) => {
     isLandlordLivingWithTenant,
   } = req.body;
 
+  console.log(title);
+
   if (
     !title ||
     !description ||
@@ -37,18 +38,17 @@ const addProperty = async (req, res) => {
     !landSize ||
     !titleDocument ||
     !ownershipType ||
-    !propertyID 
+    !propertyID
   ) {
     return res.status(400).json({ message: "Please fill all fields" });
   }
 
   const images = req.files
     ? req.files.map((file) => ({
-        path: `/uploads/${file.filename}`,
-        hash: crypto.createHash("sha256").update(file.filename).digest("hex"),
+        path: file.path,
+        hash: file.filename,
       }))
-    : null;
-
+    : [];
   const ownershipDetails = [{ titleDocument, ownershipType, propertyID }];
 
   const uuid = v4();
@@ -76,10 +76,10 @@ const addProperty = async (req, res) => {
       owner,
       isLandlordLivingWithTenant
     );
+    console.log(newProperty);
     res.json({ message: "Property Saved" });
   } catch (error) {
     return res.status(500).json({ message: "Server error" });
   }
 };
-3;
 export default addProperty;
