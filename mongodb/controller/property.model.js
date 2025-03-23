@@ -36,7 +36,7 @@ export const addPropertiesToMongoDb = async (
     title,
     description,
     price: priceOfProperty,
-    type,
+    propertyType: type,
     location,
     state,
     lga,
