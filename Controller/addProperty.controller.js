@@ -81,5 +81,5 @@ const addProperty = async (req, res) => {
     return res.status(500).json({ message: "Server error" });
   }
 };
-
+3
 export default addProperty;

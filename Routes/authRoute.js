@@ -8,8 +8,6 @@ import { reset_password } from "../Controller/resetPassword.controller.js";
 import { newsLetter } from "../Controller/newsLetter.controller.js";
 import verifyToken from "../middleware/tokenVerification.js";
 import VerifyToken from "../Controller/VerifyToken.controller.js";
-import addProperty from "../Controller/addProperty.controller.js";
-import multer from "multer";
 
  const router = express.Router();
 
