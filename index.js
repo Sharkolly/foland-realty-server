@@ -50,6 +50,10 @@ app.use("/api/foland-realty/property", tokenVerification, propertyRoute);
 
 app.use("/uploads", express.static("uploads"));
 
+app.get("/", () => {
+  res.json({ success: true });
+});
+
 mongoose
   .connect(mongoDBURL, {
     useNewUrlParser: true,
