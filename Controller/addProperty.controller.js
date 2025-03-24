@@ -22,22 +22,9 @@ const addProperty = async (req, res) => {
     ownershipType,
     propertyID,
     isLandlordLivingWithTenant,
-    purpose
+    purpose,
   } = req.body;
-  console.log(
-    title,
-    description,
-    price,
-    type,
-    location,
-    state,
-    lga,
-    property,
-    landSize,
-    titleDocument,
-    ownershipType,
-    propertyID
-  );
+
   if (
     !title ||
     !description ||

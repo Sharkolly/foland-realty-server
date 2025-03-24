@@ -3,6 +3,7 @@ import upload from "../middleware/fileUpload.js";
 import multer from "multer";
 import addProperty from "../Controller/addProperty.controller.js";
 import getProperties from "../Controller/getProperties.controller.js";
+import saveProperty from "../Controller/saveProperty.controller.js";
 
 const router = express.Router();
 
@@ -35,5 +36,6 @@ router.post(
 );
 
 router.get("/all-properties", getProperties);
+router.post("/save-property", saveProperty);
 
 export default router;

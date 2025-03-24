@@ -71,6 +71,11 @@ const propertySchema = new Schema(
     isLandlordLivingWithTenant: {
       type: String,
     },
+    saved: {
+      type: Boolean,
+      enum: [true, false],
+      default: false
+    },
     ownershipDetails: [
       {
         titleDocument: {
