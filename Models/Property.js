@@ -29,6 +29,8 @@ const propertySchema = new Schema(
     },
     property: {
       type: String,
+      enum: ["Land", "House"],
+      default: "House",
       required: true,
     },
     state: {
@@ -48,6 +50,11 @@ const propertySchema = new Schema(
       type: String,
       required: [true, "Please provide a price"],
     },
+    purpose: {
+      type: String,
+      required: false,
+      enum: ["Commercial", "Residential", "Agricultural", "Mixed Use"],
+    },
     location: {
       type: String,
       required: [true, "Please provide the location"],
@@ -57,7 +64,6 @@ const propertySchema = new Schema(
     },
     bathroom: {
       type: Number,
-      required: true,
     },
     landSize: {
       type: String,

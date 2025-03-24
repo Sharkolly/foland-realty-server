@@ -5,7 +5,7 @@ const getPropertiesController = async (req, res) => {
     const property = await getProperties();
     res.status(200).json({ property });
   } catch (err) {
-    console.log(err.message);
+    res.status(500).json({ message: "Internal server error" });
   }
 };
 export default getPropertiesController;
