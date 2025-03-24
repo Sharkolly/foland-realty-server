@@ -50,7 +50,7 @@ app.use("/api/foland-realty/property", tokenVerification, propertyRoute);
 
 app.use("/uploads", express.static("uploads"));
 
-app.get("/", () => {
+app.get("/", (req,res) => {
   res.json({ success: true });
 });
 
