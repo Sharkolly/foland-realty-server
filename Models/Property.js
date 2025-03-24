@@ -26,6 +26,7 @@ const propertySchema = new Schema(
       type: String,
       enum: ["For Sale", "For Rent"],
       default: "For Rent",
+      required: true
     },
     property: {
       type: String,
@@ -52,8 +53,6 @@ const propertySchema = new Schema(
     },
     purpose: {
       type: String,
-      required: false,
-      enum: ["Commercial", "Residential", "Agricultural", "Mixed Use"],
     },
     location: {
       type: String,
