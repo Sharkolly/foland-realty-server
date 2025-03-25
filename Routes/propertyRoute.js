@@ -6,6 +6,7 @@ import getProperties from "../Controller/getProperties.controller.js";
 import saveProperty from "../Controller/saveProperty.controller.js";
 import getSavedProperties from "../Controller/getSavedProperty.controller.js";
 import getAllSavedProperties from "../Controller/getUserSavedProperties.controller.js";
+import getSingleProperty from "../Controller/getSingleProperty.controller.js";
 
 const router = express.Router();
 
@@ -47,7 +48,11 @@ router.get("/saved-property", getSavedProperties);
 //get user saved properties
 router.get("/user-saved-property", getAllSavedProperties);
 
+//get single property
+router.get("/:id", getSingleProperty);
+
 //post save property
 router.post("/save-property", saveProperty);
+
 
 export default router;

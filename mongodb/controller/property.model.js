@@ -51,10 +51,15 @@ export const addPropertiesToMongoDb = async (
     bedroom,
     owner,
     isLandlordLivingWithTenant,
-    purpose
+    purpose,
   };
 
   const saveProperty = await new Property(propertyDetails);
   const newProperty = await saveProperty.save();
   return newProperty;
+};
+
+export const getSingleProperty = async (propertyId) => {
+  const getProperty = await Property.findOne({ _id: propertyId });
+  return getProperty;
 };
