@@ -5,10 +5,11 @@ export const getUserTotalSavedProperty = async (user) => {
     owner: user._id,
   });
   const userTotalPropertes = await SavedProperty.find({ owner: user._id });
+
   return userTotalProperty;
 };
 export const getSavedProperties = async () => {
-  const savedProperties = await SavedProperty.find();
+  const savedProperties = await SavedProperty.find().sort({ createdAt: -1 });
   // .sort({ createdAt: -1 })
   // .limit(6);
   return savedProperties;
@@ -16,7 +17,9 @@ export const getSavedProperties = async () => {
 export const getUserSavedProperties = async (user) => {
   const userSavedProperties = await SavedProperty.find({
     owner: user._id,
-  }).populate("property");
+  })
+    .populate("property")
+    .sort({ createdAt: -1 });
   // .sort({ createdAt: -1 })
   // .limit(6);
   return userSavedProperties;

@@ -1,14 +1,17 @@
 import { Schema, model } from "mongoose";
 
-const SavedPropertySchema = new Schema({
-  owner: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  property: {
-    type: Schema.Types.ObjectId,
-    ref: "Property",
-    required: true,
+const SavedPropertySchema = new Schema(
+  {
+    owner: { type: Schema.Types.ObjectId, ref: "User", required: true },
+    property: {
+      type: Schema.Types.ObjectId,
+      ref: "Property",
+      required: true,
+    },
+    savedAt: { type: Date, default: Date.now },
   },
-  savedAt: { type: Date, default: Date.now },
-});
+  { timestamps: true }
+);
 
 const SavedProperty = model("SavedProperty", SavedPropertySchema);
 

@@ -1,3 +1,4 @@
+import { getUserTotalSavedProperty } from "../mongodb/controller/saveProperty.model.js";
 import {
   getUserMongoDb,
   getUserTotalProperty,
@@ -11,7 +12,8 @@ export const getUser = async (req, res) => {
       res.status(403).json({ message: "User not found" });
     }
     const userTotalProperty = await getUserTotalProperty(user);
-    res.status(200).json({ userProfile, userTotalProperty });
+    const userSavedTotalProperty = await getUserTotalSavedProperty(user);
+    res.status(200).json({ userProfile, userTotalProperty, userSavedTotalProperty });
   } catch (err) {
     console.log(err.message);
   }
