@@ -4,9 +4,12 @@ import multer from "multer";
 import addProperty from "../Controller/addProperty.controller.js";
 import getProperties from "../Controller/getProperties.controller.js";
 import saveProperty from "../Controller/saveProperty.controller.js";
+import getSavedProperties from "../Controller/getSavedProperty.controller.js";
+import getAllSavedProperties from "../Controller/getUserSavedProperties.controller.js";
 
 const router = express.Router();
 
+//post property
 router.post(
   "/add-property",
   (req, res, next) => {
@@ -35,7 +38,16 @@ router.post(
   addProperty
 );
 
+//get all properties
 router.get("/all-properties", getProperties);
+
+//get saved property
+router.get("/saved-property", getSavedProperties);
+
+//get user saved properties
+router.get("/user-saved-property", getAllSavedProperties);
+
+//post save property
 router.post("/save-property", saveProperty);
 
 export default router;
