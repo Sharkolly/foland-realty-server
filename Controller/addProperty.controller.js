@@ -24,7 +24,7 @@ const addProperty = async (req, res) => {
     isLandlordLivingWithTenant,
     purpose,
   } = req.body;
-
+  console.log(purpose);
   if (
     !title ||
     !description ||

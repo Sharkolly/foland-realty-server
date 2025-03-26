@@ -24,6 +24,16 @@ export const getUserSavedProperties = async (user) => {
   // .limit(6);
   return userSavedProperties;
 };
+export const getUserSavedPropertiesWithFewDetails = async (user) => {
+  const userSavedProperties = await SavedProperty.find({
+    owner: user._id,
+  })
+    .populate("property")
+    .sort({ createdAt: -1 }).exec();
+  // .sort({ createdAt: -1 })
+  // .limit(6);
+  return userSavedProperties;
+};
 
 export const addSavedPropertiesToMongoDb = async (user, propertyId) => {
   const propertyDetails = {

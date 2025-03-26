@@ -5,6 +5,7 @@ export const getUserMongoDb = async (user) => {
   const userProfile = await User.findById({ _id: user._id }).select(
     "-password"
   );
+
   return userProfile;
 };
 export const getUserTotalProperty = async (user) => {
