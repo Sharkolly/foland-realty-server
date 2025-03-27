@@ -9,7 +9,8 @@ export const getUserTotalSavedProperty = async (user) => {
   return userTotalProperty;
 };
 export const getSavedProperties = async () => {
-  const savedProperties = await SavedProperty.find().sort({ createdAt: -1 });
+  const savedProperties = await SavedProperty.find()
+  // .sort({ createdAt: -1 });
   // .sort({ createdAt: -1 })
   // .limit(6);
   return savedProperties;

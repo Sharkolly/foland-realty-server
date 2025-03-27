@@ -4,6 +4,7 @@ import { addSavedPropertiesToMongoDb } from "../mongodb/controller/saveProperty.
 const saveProperty = async (req, res) => {
   const { user } = req;
   const { propertyId } = req.body;
+  // await new Promise((res,rej) => setTimeout(() => {res()}, 3000))
   //   await Property.deleteMany();
   try {
     const checkIfPropertyIsSaved = await SavedProperty.findOne({
@@ -11,16 +12,19 @@ const saveProperty = async (req, res) => {
       property: propertyId,
     });
     if (checkIfPropertyIsSaved) {
-      await SavedProperty.deleteOne({ owner: checkIfPropertyIsSaved.owner });
+      console.log(checkIfPropertyIsSaved);
+      await SavedProperty.deleteOne({ owner: checkIfPropertyIsSaved.owner, property: checkIfPropertyIsSaved.property });
       return res
         .status(200)
         .json({ message: "Property unsaved", saved: false });
     } else {
       const addToDB = await addSavedPropertiesToMongoDb(user, propertyId);
+      // console.log(addToDB);
       return res.status(201).json({ message: "Property Saved", saved: true });
     }
   } catch (err) {
-    res.status(500).json({ message: "Server Error" });
+    console.log(err);
+    res.status(500).json({ message: err.message, err });
   }
 };
 
