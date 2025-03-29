@@ -12,6 +12,7 @@ import authRoute from "./Routes/authRoute.js";
 import user from "./Routes/user.js";
 import propertyRoute from "./Routes/propertyRoute.js";
 import tokenVerification from "./middleware/tokenVerification.js";
+import { newsLetter } from "./Controller/newsLetter.controller.js";
 // import errorHandler from "./middleware/errorHandler.js";
 
 const password = process.env.AIVEN_SERVICE_PASSWORD;
@@ -47,6 +48,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoute);
 app.use("/api/foland-realty", tokenVerification, user);
 app.use("/api/foland-realty/property", tokenVerification, propertyRoute);
+app.use("/api/foland-realty", newsLetter);
 
 app.use("/uploads", express.static("uploads"));
 
