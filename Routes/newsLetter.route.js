@@ -3,6 +3,6 @@ import { newsLetter } from "../Controller/newsLetter.controller.js";
 
 const router = express.Router();
 
-router.post("/subscribe", newsLetter);
+router.post("/", newsLetter);
 
 export default router;

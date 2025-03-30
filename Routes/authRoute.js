@@ -23,8 +23,6 @@ router.post("/verify-code", verify_code);
 
 router.post("/reset-password", reset_password);
 
-router.post("/subscribe", newsLetter);
-
 router.get("/token-verify", verifyToken, VerifyToken);
 
 

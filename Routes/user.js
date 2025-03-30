@@ -4,7 +4,7 @@ import { getUserDetailsController } from "../Controller/getUserDetails.controlle
 
 const router = express.Router();
 
-router.get("/user", getUser);
+router.get("/", getUser);
 
 router.get('/user-details', getUserDetailsController)
 

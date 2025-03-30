@@ -1,5 +1,4 @@
 "use strict";
-
 import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
@@ -7,12 +6,14 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
+import twilio from 'twilio';
 
 import authRoute from "./Routes/authRoute.js";
 import user from "./Routes/user.js";
 import propertyRoute from "./Routes/propertyRoute.js";
+import adminRoute from "./Routes/admin.routes.js";
+import newsLetter from "./Routes/newsLetter.route.js";
 import tokenVerification from "./middleware/tokenVerification.js";
-import { newsLetter } from "./Controller/newsLetter.controller.js";
 // import errorHandler from "./middleware/errorHandler.js";
 
 const password = process.env.AIVEN_SERVICE_PASSWORD;
@@ -45,10 +46,11 @@ app.options("*", cors());
 app.use(bodyParser());
 app.use(cookieParser());
 
-app.use("/api/auth", authRoute);
-app.use("/api/foland-realty", tokenVerification, user);
+app.use("/api/foland-realty/auth", authRoute);
+app.use("/api/foland-realty/user", tokenVerification, user);
 app.use("/api/foland-realty/property", tokenVerification, propertyRoute);
-app.use("/api/foland-realty", newsLetter);
+app.use("/api/foland-realty/subscribe", newsLetter);
+app.use("/api/foland-realty/admin", adminRoute);
 
 app.use("/uploads", express.static("uploads"));
 
