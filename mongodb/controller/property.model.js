@@ -9,7 +9,7 @@ export const getUserPropertiesAdded = async (user) => {
   return userTotalPropertes;
 };
 export const getProperties = async () => {
-  const properties = await Property.find().sort({ createdAt: -1 }).limit(6);
+  const properties = await Property.find().sort({ createdAt: -1 }).limit(10);
   return properties;
 };
 
