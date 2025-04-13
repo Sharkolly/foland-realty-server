@@ -46,7 +46,7 @@ export const signUp = async (req, res) => {
     const uuid = v4();
 
     const mySqlSave = await createUser(email, uuid, role);
-    const userIdToString = await userSignUpMongoDB(
+    const {userIdToString, role} = await userSignUpMongoDB(
       email,
       password,
       role,
@@ -56,7 +56,7 @@ export const signUp = async (req, res) => {
       hashedPassword
     );
     const token = jwt.sign(
-      { _id: userIdToString },
+      { _id: userIdToString,  role  },
       process.env.JWT_SECRET_KEY,
       { expiresIn: "3d" }
     );

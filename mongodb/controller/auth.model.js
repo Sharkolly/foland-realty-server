@@ -20,7 +20,7 @@ export const userSignUpMongoDB = async (
   });
   const user = await saveToDatabase.save();
   const userIdToString = await user._id.toString();
-  return userIdToString;
+  return {userIdToString, role: user.role};
 };
 
 

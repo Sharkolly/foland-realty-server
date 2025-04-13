@@ -15,8 +15,7 @@ const chatRoomSchema = new Schema(
     roomId: { type: String, unique: true, required: true },
     propertyId: String,
     sender: { type: Schema.Types.ObjectId, ref: "User" }, // tenants
-    receiver: String, // landlord || agent,
-    receiverName: String,
+    receiver: { type: Schema.Types.ObjectId, ref: "User" }, // landlord || agent,
     messages: [messageSchema],
   },
   { timestamps: true }
