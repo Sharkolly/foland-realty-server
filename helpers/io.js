@@ -58,7 +58,7 @@ export const initSocket = (server) => {
 
         const getAllMsg = await Chat.findOne({ roomId: room });
 
-        io.to(room).emit("get-all-message", getAllMsg);
+        io.to(room).emit("get-all-message", getAllMsg, {id: socket.id } );
 
         io.to(room).emit("notification", socket.id);
 
@@ -98,7 +98,7 @@ export const initSocket = (server) => {
         );
 
         const getAllMessage = await Chat.findOne({ roomId: room });
-        io.to(room).emit("get-all-message", getAllMessage);
+        io.to(room).emit("get-all-message", getAllMessage, {id: socket.id, message });
       } else {
         // io.emit("sent-message",  upDate);
         io.emit("sent-message", { message: data, id: socket.id });
