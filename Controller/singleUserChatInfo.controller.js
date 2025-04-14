@@ -1,0 +1,20 @@
+import { getUserInChat } from "../mongodb/controller/singleUserChatInfo.model.js";
+
+const getChatUser = async (req, res) => {
+  const { user } = req;
+  const {owner, tenant} = req.params;
+  const room = `${owner}/${tenant}`
+  console.log(user);
+
+  try {
+    const userInfo = await getUserInChat(user._id, user.role, room, owner);
+    if (!userInfo) {
+      return res.status(404).json({ message: "No chat found" });
+    }
+    res.status(201).json(userInfo);
+  } catch (error) {
+    res.status(502).json({ message: error.message });
+  }
+};
+
+export default getChatUser;

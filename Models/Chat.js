@@ -13,7 +13,7 @@ const messageSchema = new Schema({
 const chatRoomSchema = new Schema(
   {
     roomId: { type: String, unique: true, required: true },
-    propertyId: String,
+    propertyId: { type: Schema.Types.ObjectId, ref: "Property" }, // tenants
     sender: { type: Schema.Types.ObjectId, ref: "User" }, // tenants
     receiver: { type: Schema.Types.ObjectId, ref: "User" }, // landlord || agent,
     messages: [messageSchema],
