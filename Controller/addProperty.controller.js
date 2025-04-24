@@ -2,8 +2,7 @@ import { v4 } from "uuid";
 import { addPropertiesToMongoDb } from "../mongodb/controller/property.model.js";
 
 const addProperty = async (req, res) => {
-  await new Promise((res) => setTimeout(res, 3000));
-
+// get user details from middleware
   const { user } = req;
   const owner = user._id;
   const {
@@ -40,10 +39,9 @@ const addProperty = async (req, res) => {
     !propertyID
   ) {
     return res.status(400).json({ message: "Please fill all fields" });
-  }
+  };
 
-  console.log(property);
-
+  // push the images to one array then adding the path and hashname
   const images = req.files
     ? req.files.map((file) => ({
         path: file.path,
@@ -52,6 +50,7 @@ const addProperty = async (req, res) => {
     : [];
   const ownershipDetails = [{ titleDocument, ownershipType, propertyID }];
 
+  // give each property UUID
   const uuid = v4();
 
   try {
@@ -67,7 +66,7 @@ const addProperty = async (req, res) => {
       state,
       lga,
       images,
-      property,
+      property, 
       landsize,
       titleDocument,
       ownershipDetails,

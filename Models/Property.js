@@ -13,6 +13,7 @@ const propertySchema = new Schema(
   {
     uuid: {
       type: String,
+      required: true
     },
     title: {
       type: String,
@@ -24,13 +25,13 @@ const propertySchema = new Schema(
     },
     propertyType: {
       type: String,
-      enum: ["For Sale", "For Rent"],
+      enum: ["For Sale", "For Rent", "Shortlet"],
       default: "For Rent",
       required: true
     },
     property: {
       type: String,
-      enum: ["Land", "House"],
+      enum: ["Land", "House", "Shop"],
       default: "House",
       required: true,
     },
@@ -89,6 +90,10 @@ const propertySchema = new Schema(
         },
       },
     ],
+    edited: {
+      type: Boolean,
+      default: false,
+    },
     owner: { type: Schema.Types.ObjectId, ref: "User", required: true },
     createdAt: { type: Date, default: Date.now },
   },

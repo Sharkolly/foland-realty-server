@@ -5,9 +5,10 @@ export const getUserInChat = async (senderId, role, roomId, owner) => {
   let user;
   let firstTime;
   const checkIfRoomExist = await Chat.findOne({ roomId });
-  if (checkIfRoomExist) {
+  if (checkIfRoomExist) { 
+    // if room exist then send the existing chat else thats the first time send the owner of the property back
     if (role == "Landlord" || role == "Agent") {
-      // console.log(senderId);
+      //if landlord or agent check the chat receiver else check sender
       user = await Chat.findOne({ receiver: senderId, roomId })
         .populate("sender", "firstName lastName role image")
         .sort({ updatedAt: -1 });

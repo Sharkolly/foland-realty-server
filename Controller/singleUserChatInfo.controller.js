@@ -4,9 +4,9 @@ const getChatUser = async (req, res) => {
   const { user } = req;
   const {owner, tenant} = req.params;
   const room = `${owner}/${tenant}`
-  console.log(user);
 
   try {
+    // get a single chat of person
     const userInfo = await getUserInChat(user._id, user.role, room, owner);
     if (!userInfo) {
       return res.status(404).json({ message: "No chat found" });

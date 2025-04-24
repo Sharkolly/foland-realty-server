@@ -1,13 +1,13 @@
 import { getUsersInChat } from "../mongodb/controller/getChatUsers.model.js";
 
 const getChatUsers = async (req, res) => {
-  const { user } = req;
-  console.log(user);
+  const { user } = req;  
 
   try {
+    //get all the users in the user has chatted with
     const users = await getUsersInChat(user._id, user.role);
     if (!users) {
-      return res.status(404).json({ message: "No chat found" });
+      return res.status(201).json({ message: "No chat found" });
     }
     // console.log(users);
     res.status(201).json(users);

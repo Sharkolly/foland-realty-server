@@ -15,15 +15,17 @@ export const signUp = async (req, res) => {
   const regexForValidPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 
+    // check for user credentials
   if (!firstName || !lastName || !password || !email || !role) {
     return res.status(403).json({ message: "Complete the form" });
   }
-
+// validate email
   if (!regexForValidEmail.test(email)) {
     return res
       .status(403)
       .json({ emailValidationError: "Email is not a valid email" });
   }
+  // validate password
   if (!regexForValidPassword.test(password)) {
     return res.status(403).json({
       passwordValidationError:
@@ -31,11 +33,13 @@ export const signUp = async (req, res) => {
     });
   }
 
+
+  // hash password
   const hashedPassword = await bcrypt.hash(password, 10);
   try {
-    //mongoDb
+    //check user in mongoDb
     const checkIfUserExist = await checkUserExists(email);
-    //mySql
+    //check user in MySql
     const checkUserMysql = await checkUser(email);
 
     if (checkIfUserExist || checkUserMysql) {
@@ -43,9 +47,13 @@ export const signUp = async (req, res) => {
         .status(403)
         .json({ emailValidationError: "Email already Exist" });
     }
+    // generate a uuid
     const uuid = v4();
 
+
+    // save to mySQL
     const mySqlSave = await createUser(email, uuid, role);
+    // save to MongoDB
     const {userIdToString, role} = await userSignUpMongoDB(
       email,
       password,
@@ -55,6 +63,8 @@ export const signUp = async (req, res) => {
       uuid,
       hashedPassword
     );
+
+    // sign a token and send to browser
     const token = jwt.sign(
       { _id: userIdToString,  role  },
       process.env.JWT_SECRET_KEY,

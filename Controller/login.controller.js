@@ -6,16 +6,21 @@ import {
 
 export const login = async (req, res) => {
   const { email, password } = req.body;
+
+  //check for email and password
   if (!password || !email) {
     return res.status(403).json({ message: "Complete the form" });
   }
   try {
+    // check if user exist
     const checkIfUserExist = await checkUserExists(email);
     if (!checkIfUserExist) {
       return res
         .status(403)
         .json({ message: "Email is not registered. Please Sign Up." });
     }
+
+    // compare the password
     const comparePassword = await bcrypt.compare(
       password,
       checkIfUserExist.password
@@ -24,6 +29,8 @@ export const login = async (req, res) => {
     if (!comparePassword) {
       return res.status(401).json({ message: "Invalid Email or Password" });
     }
+
+    // sign a jwt token then send to the browser
     const token = jwt.sign(
       { _id: checkIfUserExist._id, role: checkIfUserExist.role  },
       process.env.JWT_SECRET_KEY,

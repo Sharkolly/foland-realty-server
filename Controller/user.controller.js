@@ -10,6 +10,8 @@ import {
 export const getUser = async (req, res) => {
   const { user } = req;
   try {
+
+    // get the user profile, i used the for the context api
     const userProfile = await getUserMongoDb(user);
 
     if (!userProfile) {

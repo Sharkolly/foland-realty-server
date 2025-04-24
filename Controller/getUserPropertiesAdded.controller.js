@@ -3,6 +3,7 @@ import { getUserPropertiesAdded } from "../mongodb/controller/property.model.js"
 const getUserPropertiesAddedController = async (req, res) => {
   const { user } = req;
   try {
+    //get all the properties the user has added
     const getUserAddedProperties = await getUserPropertiesAdded(user);
     res.status(201).json({ properties: getUserAddedProperties });
   } catch (error) {

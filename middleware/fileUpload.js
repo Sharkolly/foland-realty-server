@@ -4,7 +4,8 @@ import storage from "../config/cloudinaryStorage.config.js";
 
 // File Filter (Optional)
 const fileFilter = (req, file, cb) => {
-  const allowedTypes = /jpeg|jpg|png|gif|avi|mov/;
+  const allowedTypes = /jpeg|jpg|mp4|wem|png|avi|mov/;
+  // get extension name from path
   const ext = path.extname(file.originalname).toLowerCase();
   const mime = file.mimetype;
 

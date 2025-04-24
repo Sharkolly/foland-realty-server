@@ -4,8 +4,10 @@ import { getUserDetailsController } from "../Controller/getUserDetails.controlle
 
 const router = express.Router();
 
+// get user
 router.get("/", getUser);
 
+// get user details 
 router.get('/user-details', getUserDetailsController)
 
 export default router;
