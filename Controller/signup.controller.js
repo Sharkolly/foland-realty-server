@@ -53,12 +53,8 @@ export const signUp = async (req, res) => {
 
     // save to mySQL
     const mySqlSave = await createUser(email, uuid, role);
-<<<<<<< HEAD
-    // save to MongoDB
-    const {userIdToString, role} = await userSignUpMongoDB(
-=======
+
     const {userIdToString} = await userSignUpMongoDB(
->>>>>>> 9bb75fceb89953bde568f9a1c3b98d60a7477b7e
       email,
       password,
       role,
