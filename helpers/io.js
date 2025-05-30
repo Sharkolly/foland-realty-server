@@ -23,7 +23,7 @@ export const initSocket = (server) => {
 
     if (!token) {
       console.log("No token provided, disconnecting socket");
-      return socket.disconnect(true); // Force disconnect
+      return socket.disconnect(true);
     }
     try {
       // verify token

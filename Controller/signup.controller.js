@@ -70,6 +70,14 @@ export const signUp = async (req, res) => {
       process.env.JWT_SECRET_KEY,
       { expiresIn: "3d" }
     );
+
+    res.cookie("token", token, {
+      httpOnly: false,
+      // secure: process.env.NODE_ENV === "production",
+      secure: false,
+      // sameSite: 'lax', 
+      maxAge: 86400 * 1000, // 1 day in milliseconds
+    });
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {
     return res.status(500).json({ message: "Server error" });

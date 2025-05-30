@@ -33,7 +33,7 @@ export const getTotalSavedProperty = async () => {
 
 // get all users and details
 export const getAllUsers = async () => {
-  const allUsers = await User.find().select("-password");
+  const allUsers = await User.find().select("-password").sort({createdAt: -1});
   return allUsers;
 };
 

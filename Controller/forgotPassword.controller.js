@@ -1,15 +1,7 @@
 import User from "../Models/User.js";
-import nodemailer from "nodemailer";
-import bcrypt from "bcryptjs";
 
-//configure nodemailer
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
+import bcrypt from "bcryptjs";
+import transporter from "../config/nodemailer.config.js";
 
 export const forgot_password = async (req, res) => {
   //get email

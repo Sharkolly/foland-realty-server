@@ -22,9 +22,10 @@ import adminRoute from "./Routes/admin.routes.js";
 import AdminRoute from "./Routes/Admin/admin.route.js";
 import newsLetter from "./Routes/newsLetter.route.js";
 import chat from "./Routes/chat.route.js";
+import contact from "./Routes/contact.route.js";
 import tokenVerification from "./middleware/tokenVerification.js";
 import db from "./helpers/db.js";
-// import errorHandler from "./middleware/errorHandler.js";
+import errorHandler from "./middleware/errorHandler.js";
 
 const password = process.env.AIVEN_SERVICE_PASSWORD;
 const databaseUrl = `mysql://avnadmin:${password}@foland-realty-2025-foland-realty-2025.j.aivencloud.com:24163/defaultdb`;
@@ -36,15 +37,6 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.MONGODBURL;
 
-// app.use(
-//   cors({
-//     origin: ["http://localhost:5173", "https://foland-realty.vercel.app/"],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   })
-// );
-
-
 // app.use(errorHandler);
 // app.use(cors());
 // app.options("*", cors());
@@ -53,6 +45,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "http://localhost:3000",
+      "http://foland-realty-nextjs.vercel.app",
       "http://localhost:5174",
       // "https://practice-socketio.vercel.app",
       "https://foland-realty.vercel.app",
@@ -60,16 +54,6 @@ app.use(
     credentials: true,
   })
 );
-
-
-
-
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "https://foland-realty.vercel.app");
-//   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-//   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-//   next();
-// });
 
 app.use(bodyParser());
 app.use(cookieParser());
@@ -79,6 +63,7 @@ app.use("/api/foland-realty/user", tokenVerification, user);
 app.use("/api/foland-realty/property", tokenVerification, propertyRoute);
 app.use("/api/foland-realty/chat", tokenVerification, chat);
 app.use("/api/foland-realty/subscribe", newsLetter);
+app.use("/api/foland-realty/contact", contact);
 app.use("/api/foland-realty/admin", adminRoute);
 app.use("/api/foland-realty/auth/admin", AdminRoute);
 
@@ -119,12 +104,10 @@ mongoose
     });
   })
   .catch((err) => console.log(err.message));
+  // server.listen(PORT, () => {
+  //   // addUser();
 
-  // io.on("connection", (socket) => {
-  //   console.log(socket.id);
 
-    
-  // socket.on("disconnect", () => {
-  //   console.log("Socket disconnected:", socket.id);
-  // });
+  //   initSocket(server);
+  //   console.log("Server Started !!", PORT);
   // });
