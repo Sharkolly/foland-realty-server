@@ -46,7 +46,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:3000",
-      "http://foland-realty-nextjs.vercel.app",
+      "https://foland-realty-nextjs.vercel.app",
       "http://localhost:5174",
       // "https://practice-socketio.vercel.app",
       "https://foland-realty.vercel.app",
