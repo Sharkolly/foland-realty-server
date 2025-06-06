@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon mongoDB",
-    "dev": "nodemon index"
+    "start": "NODE_ENV=development  nodemon index",
+    "dev": "NODE_ENV=production nodemon index"
   },
   "keywords": [],
   "author": "",
