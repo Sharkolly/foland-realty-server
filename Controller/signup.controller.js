@@ -9,6 +9,7 @@ import {
 
 export const signUp = async (req, res) => {
   const { email, password, firstName, lastName, role } = req.body;
+  console.log(email, password, firstName, lastName, role);
   // const profilePic = req.file ? req.file.path : "";
   const regexForValidEmail = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
@@ -40,9 +41,10 @@ export const signUp = async (req, res) => {
     //check user in mongoDb
     const checkIfUserExist = await checkUserExists(email);
     //check user in MySql
-    const checkUserMysql = await checkUser(email);
+    // const checkUserMysql = await checkUser(email);
 
-    if (checkIfUserExist || checkUserMysql) {
+    // if (checkIfUserExist || checkUserMysql) {
+    if (checkIfUserExist) {
       return res
         .status(403)
         .json({ emailValidationError: "Email already Exist" });
@@ -52,7 +54,7 @@ export const signUp = async (req, res) => {
 
 
     // save to mySQL
-    const mySqlSave = await createUser(email, uuid, role);
+    // const mySqlSave = await createUser(email, uuid, role);
 
     const {userIdToString} = await userSignUpMongoDB(
       email,
@@ -72,14 +74,15 @@ export const signUp = async (req, res) => {
     );
 
     res.cookie("token", token, {
-      httpOnly: false,
+      httpOnly: true,
       // secure: process.env.NODE_ENV === "production",
-      secure: false,
-      // sameSite: 'lax', 
+      secure: true,
+      sameSite: 'none', 
       maxAge: 86400 * 1000, // 1 day in milliseconds
     });
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {
+    console.log(err.message);
     return res.status(500).json({ message: "Server error" });
   }
 };

@@ -8,6 +8,7 @@ import { reset_password } from "../Controller/resetPassword.controller.js";
 import { newsLetter } from "../Controller/newsLetter.controller.js";
 import verifyToken from "../middleware/tokenVerification.js";
 import VerifyToken from "../Controller/VerifyToken.controller.js";
+import { logOut } from "../Controller/logOut.controller.js";
 
  const router = express.Router();
 
@@ -24,6 +25,8 @@ router.post("/verify-code", verify_code);
 router.post("/reset-password", reset_password);
 
 router.get("/token-verify", verifyToken, VerifyToken);
+
+router.get("/logout", logOut);
 
 
 export default router;
