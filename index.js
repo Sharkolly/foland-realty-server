@@ -60,7 +60,17 @@ const mongoDBURL = process.env.MONGODBURL;
 //   }
 
   // app.use(cors(corsOptions));
-  app.use(cors());
+  app.use(
+    cors({
+      origin: [
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://foland-realty-nextjs.vercel.app",
+        "https://foland-realty.vercel.app",
+      ],
+      credentials: true,
+    })
+  );
 
 // Special handling for preflight requests
 // app.options('*', cors(corsOptions));
