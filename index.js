@@ -41,7 +41,7 @@ const mongoDBURL = process.env.MONGODBURL;
 // app.use(cors());
 // app.options("*", cors());
 
-app.options('*',
+app.use(
   cors({
     origin: [
       "http://localhost:5173",
