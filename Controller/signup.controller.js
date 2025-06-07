@@ -52,7 +52,6 @@ export const signUp = async (req, res) => {
     // generate a uuid
     const uuid = v4();
 
-
     // save to mySQL
     // const mySqlSave = await createUser(email, uuid, role);
 

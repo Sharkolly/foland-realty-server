@@ -52,6 +52,12 @@ app.use(
       "https://foland-realty.vercel.app",
     ],
     credentials: true,
+    allowedHeaders: [
+      'Content-Type', 
+      'Authorization', 
+      'X-Requested-With'
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
   })
 );
 
