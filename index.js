@@ -41,28 +41,29 @@ const mongoDBURL = process.env.MONGODBURL;
 // app.use(cors());
 // app.options("*", cors());
 
-const corsOptions = {
-    origin: [
-      "http://localhost:5173",
-      "http://localhost:3000",
-      "https://foland-realty-nextjs.vercel.app",
-      "http://localhost:5174",
-      // "https://practice-socketio.vercel.app",
-      "https://foland-realty.vercel.app",
-    ],
-    credentials: true,
-    allowedHeaders: [
-      'Content-Type', 
-      'Authorization', 
-      'X-Requested-With'
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-  }
+// const corsOptions = {
+//     origin: [
+//       "http://localhost:5173",
+//       "http://localhost:3000",
+//       "https://foland-realty-nextjs.vercel.app",
+//       "http://localhost:5174",
+//       // "https://practice-socketio.vercel.app",
+//       "https://foland-realty.vercel.app",
+//     ],
+//     credentials: true,
+//     allowedHeaders: [
+//       'Content-Type', 
+//       'Authorization', 
+//       'X-Requested-With'
+//     ],
+//     methods: ['GET', 'POST', 'PUT', 'DELETE']
+//   }
 
-  app.use(cors(corsOptions));
+  // app.use(cors(corsOptions));
+  app.use(cors());
 
 // Special handling for preflight requests
-app.options('*', cors(corsOptions));
+// app.options('*', cors(corsOptions));
 
 app.use(bodyParser());
 app.use(cookieParser());
