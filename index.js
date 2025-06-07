@@ -41,8 +41,7 @@ const mongoDBURL = process.env.MONGODBURL;
 // app.use(cors());
 // app.options("*", cors());
 
-app.use(
-  cors({
+const corsOptions = {
     origin: [
       "http://localhost:5173",
       "http://localhost:3000",
@@ -58,8 +57,12 @@ app.use(
       'X-Requested-With'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE']
-  })
-);
+  }
+
+  app.use(cors(corsOptions));
+
+// Special handling for preflight requests
+app.options('*', cors(corsOptions));
 
 app.use(bodyParser());
 app.use(cookieParser());

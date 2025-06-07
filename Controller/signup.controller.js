@@ -16,11 +16,11 @@ export const signUp = async (req, res) => {
   const regexForValidPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 
-    // check for user credentials
+  // check for user credentials
   if (!firstName || !lastName || !password || !email || !role) {
     return res.status(403).json({ message: "Complete the form" });
   }
-// validate email
+  // validate email
   if (!regexForValidEmail.test(email)) {
     return res
       .status(403)
@@ -33,7 +33,6 @@ export const signUp = async (req, res) => {
         "Password must have minimum of 8 characters, 1 Uppercase Letter, 1 Lowercase Letter, 1 Number and 1 Special Character",
     });
   }
-
 
   // hash password
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -55,7 +54,7 @@ export const signUp = async (req, res) => {
     // save to mySQL
     // const mySqlSave = await createUser(email, uuid, role);
 
-    const {userIdToString} = await userSignUpMongoDB(
+    const { userIdToString } = await userSignUpMongoDB(
       email,
       password,
       role,
@@ -67,18 +66,38 @@ export const signUp = async (req, res) => {
 
     // sign a token and send to browser
     const token = jwt.sign(
-      { _id: userIdToString,  role  },
+      { _id: userIdToString, role },
       process.env.JWT_SECRET_KEY,
       { expiresIn: "3d" }
     );
 
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   // secure: process.env.NODE_ENV === "production",
+    //   secure: true,
+    //   sameSite: 'none',
+    //   maxAge: 86400 * 1000, // 1 day in milliseconds
+    // });
+
     res.cookie("token", token, {
       httpOnly: true,
-      // secure: process.env.NODE_ENV === "production",
-      secure: true,
-      sameSite: 'none', 
-      maxAge: 86400 * 1000, // 1 day in milliseconds
+      secure: true, 
+      sameSite: "none",
+      path: "/", 
+      domain:
+        process.env.NODE_ENV === "production"
+          ? ".vercel.app/" 
+          : undefined, 
+      maxAge: 86400 * 1000,
+     
+      partitioned: process.env.NODE_ENV === "production",
     });
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://foland-realty-nextjs.vercel.app"
+    );
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Vary", "Origin"); // Important for credentialed requests
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {
     console.log(err.message);
