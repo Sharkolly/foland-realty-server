@@ -63,7 +63,7 @@ export const login = async (req, res) => {
     // );
     // res.setHeader("Access-Control-Allow-Credentials", "true");
     // res.setHeader("Vary", "Origin"); // Important for credentialed requests
-    return res.status(201).json({ message: "Login Successful" });
+    return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
     return res.status(500).json({ message: "Server error" });
   }
