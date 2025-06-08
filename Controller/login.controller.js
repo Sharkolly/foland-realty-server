@@ -37,32 +37,32 @@ export const login = async (req, res) => {
       }
     );
 
-    res.cookie("token", token, {
-      httpOnly: true,
-      // secure: process.env.NODE_ENV === "production",
-      secure: true,
-      sameSite: 'none',
-      maxAge: 86400 * 1000, // 1 day in milliseconds
-    });
     // res.cookie("token", token, {
     //   httpOnly: true,
-    //   secure: true, // Must be true for sameSite: 'none'
-    //   sameSite: "none", // Required for cross-origin
-    //   path: "/", // Important for all routes
-    //   domain:
-    //     process.env.NODE_ENV === "production"
-    //       ? ".vercel.app" // Note the leading dot for subdomains
-    //       : undefined, // Omit for localhost
-    //   maxAge: 86400 * 1000,
-    //   // Add this for older browser compatibility
-    //   partitioned: process.env.NODE_ENV === "production", // Chrome 109+ for third-party cookies
+    //   // secure: process.env.NODE_ENV === "production",
+    //   secure: true,
+    //   sameSite: 'none',
+    //   maxAge: 86400 * 1000, // 1 day in milliseconds
     // });
-    // res.setHeader(
-    //   "Access-Control-Allow-Origin",
-    //   "https://foland-realty-nextjs.vercel.app"
-    // );
-    // res.setHeader("Access-Control-Allow-Credentials", "true");
-    // res.setHeader("Vary", "Origin"); // Important for credentialed requests
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true, // Must be true for sameSite: 'none'
+      sameSite: "none", // Required for cross-origin
+      path: "/", // Important for all routes
+      domain:
+        process.env.NODE_ENV === "production"
+          ? ".vercel.app" // Note the leading dot for subdomains
+          : undefined, // Omit for localhost
+      maxAge: 86400 * 1000,
+      // Add this for older browser compatibility
+      partitioned: process.env.NODE_ENV === "production", // Chrome 109+ for third-party cookies
+    });
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://foland-realty-nextjs.vercel.app"
+    );
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Vary", "Origin"); // Important for credentialed requests
     return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
     return res.status(500).json({ message: "Server error" });
