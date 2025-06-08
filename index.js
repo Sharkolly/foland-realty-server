@@ -38,42 +38,43 @@ const PORT = process.env.PORT || 5000;
 const mongoDBURL = process.env.MONGODBURL;
 
 // app.use(errorHandler);
-// app.use(cors());
-// app.options("*", cors());
+  // app.use(
+  //   cors({
+  //     origin: [
+  //       "http://localhost:5173",
+  //       "http://localhost:3000",
+  //       "https://foland-realty-nextjs.vercel.app",
+  //       "https://foland-realty.vercel.app",
+  //     ],
+  //     credentials: true,
+  //   })
+  // );
 
-// const corsOptions = {
-//     origin: [
-//       "http://localhost:5173",
-//       "http://localhost:3000",
-//       "https://foland-realty-nextjs.vercel.app",
-//       "http://localhost:5174",
-//       // "https://practice-socketio.vercel.app",
-//       "https://foland-realty.vercel.app",
-//     ],
-//     credentials: true,
-//     allowedHeaders: [
-//       'Content-Type', 
-//       'Authorization', 
-//       'X-Requested-With'
-//     ],
-//     methods: ['GET', 'POST', 'PUT', 'DELETE']
-//   }
-
-  // app.use(cors(corsOptions));
-  app.use(
-    cors({
-      origin: [
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://foland-realty-nextjs.vercel.app",
-        "https://foland-realty.vercel.app",
-      ],
-      credentials: true,
-    })
-  );
-
-// Special handling for preflight requests
-// app.options('*', cors(corsOptions));
+  const allowedOrigins = [
+    "https://foland-realty-nextjs.vercel.app",
+    "https://foland-realty.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:5173",
+  ];
+  
+  const corsOptions = {
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin || allowedOrigins.includes(origin)) {
+        console.log(origin);
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // REQUIRED for cookies
+    exposedHeaders: ["set-cookie"], // Needed for Chrome
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+  };
+  
+  app.use(cors(corsOptions));
+  app.options("*", cors(corsOptions));
 
 app.use(bodyParser());
 app.use(cookieParser());

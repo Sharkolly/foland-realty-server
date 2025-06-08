@@ -78,26 +78,6 @@ export const signUp = async (req, res) => {
       sameSite: 'none',
       maxAge: 86400 * 1000, // 1 day in milliseconds
     });
-
-    // res.cookie("token", token, {
-    //   httpOnly: true,
-    //   secure: true, 
-    //   sameSite: "none",
-    //   path: "/", 
-    //   domain:
-    //     process.env.NODE_ENV === "production"
-    //       ? ".vercel.app/" 
-    //       : undefined, 
-    //   maxAge: 86400 * 1000,
-     
-    //   partitioned: process.env.NODE_ENV === "production",
-    // });
-    // res.setHeader(
-    //   "Access-Control-Allow-Origin",
-    //   "https://foland-realty-nextjs.vercel.app"
-    // );
-    // res.setHeader("Access-Control-Allow-Credentials", "true");
-    // res.setHeader("Vary", "Origin"); // Important for credentialed requests
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {
     console.log(err.message);
