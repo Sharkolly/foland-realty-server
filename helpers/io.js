@@ -1,4 +1,5 @@
 import { Server } from "socket.io";
+import cookie from "cookie";
 import jwt from "jsonwebtoken";
 import Chat from "../Models/Chat.js";
 import User from "../Models/User.js";
@@ -10,16 +11,24 @@ export const initSocket = (server) => {
     cors: {
       origin: [
         "http://localhost:5173",
-        "http://localhost:5174",
+        "http://localhost:3000",
         "https://foland-realty.vercel.app",
+        "https://foland-realty-nextjs.vercel.app",
       ],
-      // credentials: true,
+      credentials: true,
     },
   });
 
   io.use(async (socket, next) => {
     //get token
-    const token = socket.handshake.auth.token;
+    const rawCookie = socket.handshake.headers.cookie;
+
+    if (!rawCookie) {
+      return next(new Error("No cookie found"));
+    }
+
+    const parsed = cookie.parse(rawCookie);
+    const token = parsed.token;
 
     if (!token) {
       console.log("No token provided, disconnecting socket");
