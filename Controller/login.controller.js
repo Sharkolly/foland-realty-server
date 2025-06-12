@@ -36,13 +36,17 @@ export const login = async (req, res) => {
         expiresIn: "3d",
       }
     );
-
+    
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production" ? true : false, // Set secure to true in production
-      sameSite: process.env.NODE_ENV === "production" ? 'none' : 'lax', // Set sameSite to none in production
+      // secure: process.env.NODE_ENV === "production" ? true : false, // Set secure to true in production
+      // sameSite: process.env.NODE_ENV === "production" ? 'none' : 'lax', // Set sameSite to none in production
+
+      secure: true, // Set secure to true in production
+      sameSite: 'none', // Set sameSite to none in production
       maxAge: 86400 * 1000, // 1 day in milliseconds
     });
+
     return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
     return res.status(500).json({ message: "Server error" });
