@@ -73,9 +73,8 @@ export const signUp = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      // secure: process.env.NODE_ENV === "production",
-      secure: true,
-      sameSite: 'none',
+      secure: process.env.NODE_ENV === "production" ? true : false, // Set secure to true in production
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Set sameSite to none in production
       maxAge: 86400 * 1000, // 1 day in milliseconds
     });
     return res.status(201).json({ token, message: "Login Successful" });
