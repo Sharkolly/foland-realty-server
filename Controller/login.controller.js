@@ -41,10 +41,11 @@ export const login = async (req, res) => {
       httpOnly: true,
       // secure: process.env.NODE_ENV === "production", // HTTPS only in prod
       // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      domain: process.env.NODE_ENV === "production" ? ".vercel.app" : undefined,
       // domain: process.env.NODE_ENV === "production" ? ".vercel.app" : undefined,
 
       secure: true, // Set secure to true in production
-      sameSite: 'none', // Set sameSite to none in production
+      // sameSite: 'none', // Set sameSite to none in production
       maxAge: 86400 * 1000, // 1 day in milliseconds
     });
 
