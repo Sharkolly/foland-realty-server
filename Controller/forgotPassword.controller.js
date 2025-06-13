@@ -1,5 +1,4 @@
 import User from "../Models/User.js";
-
 import bcrypt from "bcryptjs";
 import transporter from "../config/nodemailer.config.js";
 
@@ -37,6 +36,7 @@ export const forgot_password = async (req, res) => {
     checkForEmail.resetCode = hashCode;
     checkForEmail.resetCodeExpiration = codeExpiration;
     await checkForEmail.save();
+    
 
     //send the message to the email
     await transporter.sendMail({
@@ -47,6 +47,7 @@ export const forgot_password = async (req, res) => {
     });
     return res.status(201).json({ message: "Reset code sent to email" });
   } catch (err) {
+    console.log(err);
     return res.status(500).json({ message: "Server error" });
   }
 };

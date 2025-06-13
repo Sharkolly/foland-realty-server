@@ -78,7 +78,7 @@ export const signUp = async (req, res) => {
 
        secure: true, // Set secure to true in production
       sameSite: 'none', // Set sameSite to none in production
-      maxAge: 86400 * 1000, // 1 day in milliseconds
+      maxAge: 86400 * 1000 * 3, // 1 day in milliseconds
     });
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {

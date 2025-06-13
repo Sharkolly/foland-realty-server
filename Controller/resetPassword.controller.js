@@ -1,5 +1,5 @@
 import User from "../Models/User.js";
-import nodemailer from "nodemailer";
+import bcrypt from "bcryptjs";
 
 export const reset_password = async (req, res) => {
   const { email, newPassword } = req.body;
@@ -39,6 +39,7 @@ export const reset_password = async (req, res) => {
 
     return res.status(201).json({ message: "Password Reset" });
   } catch (error) {
+    console.log(error.message);
     return res.status(500).json({ message: "Server error" });
   }
 };
