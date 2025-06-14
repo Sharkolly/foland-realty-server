@@ -47,6 +47,7 @@ const mongoDBURL = process.env.MONGODBURL;
         "https://foland-realty.vercel.app",
       ],
       credentials: true,
+      exposedHeaders: ['set-cookie']
     })
   );
 
