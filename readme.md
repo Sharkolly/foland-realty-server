@@ -1,0 +1,1 @@
+- For first time users run `npx prisma generate --schema=./prisma/schema.prisma   ` intialize the the prisma on your local machine
