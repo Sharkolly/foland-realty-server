@@ -1,7 +1,7 @@
 import SavedProperty from "../Models/SavedProperty.js";
 import { addSavedPropertiesToMongoDb } from "../mongodb/controller/saveProperty.model.js";
 
-const saveProperty = async (req, res) => {
+const saveProperty = async (req, res, next) => {
   const { user } = req;
   const { propertyId } = req.body;
   try {
@@ -25,7 +25,8 @@ const saveProperty = async (req, res) => {
       return res.status(201).json({ message: "Property Saved", saved: true });
     }
   } catch (err) {
-    res.status(500).json({ message: "Server error" });
+    // res.status(500).json({ message: "Server error" });
+    next(err);  
   }
 };
 

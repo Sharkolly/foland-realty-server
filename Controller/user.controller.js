@@ -7,7 +7,7 @@ import {
   getUserTotalProperty,
 } from "../mongodb/controller/user.model.js";
 
-export const getUser = async (req, res) => {
+export const getUser = async (req, res, next) => {
   const { user } = req;
   try {
 
@@ -26,5 +26,6 @@ export const getUser = async (req, res) => {
     });
   } catch (err) {
     console.log(err.message);
+    next(err);
   }
 };

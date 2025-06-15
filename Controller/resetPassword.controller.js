@@ -1,7 +1,7 @@
 import User from "../Models/User.js";
 import bcrypt from "bcryptjs";
 
-export const reset_password = async (req, res) => {
+export const reset_password = async (req, res, next) => {
   const { email, newPassword } = req.body;
   const regexForValidPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
@@ -40,6 +40,7 @@ export const reset_password = async (req, res) => {
     return res.status(201).json({ message: "Password Reset" });
   } catch (error) {
     console.log(error.message);
-    return res.status(500).json({ message: "Server error" });
+    // return res.status(500).json({ message: "Server error" });
+    next(error);
   }
 };

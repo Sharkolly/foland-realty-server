@@ -1,6 +1,6 @@
 import { getUsersInChat } from "../mongodb/controller/getChatUsers.model.js";
 
-const getChatUsers = async (req, res) => {
+const getChatUsers = async (req, res, next) => {
   const { user } = req;  
 
   try {
@@ -13,6 +13,7 @@ const getChatUsers = async (req, res) => {
     res.status(201).json(users);
   } catch (error) {
     console.log(error);
+    next(error);
   }
 };
 

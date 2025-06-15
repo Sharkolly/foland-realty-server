@@ -1,17 +1,16 @@
 "use strict";
 import dotenv from "dotenv";
 dotenv.config();
+import morgan from 'morgan'
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import mongoose from "mongoose";
 import bodyParser from "body-parser";
-import { Server } from "socket.io";
 import http from "http";
-import { v4 } from "uuid";
-import bcrypt from "bcryptjs";
-import path from 'path';
-import fs from 'fs'
+// import { v4 } from "uuid";
+// import bcrypt from "bcryptjs";
+// import path from "path";
+// import fs from "fs";
 
 import { initSocket } from "./helpers/io.js";
 import authRoute from "./Routes/authRoute.js";
@@ -25,6 +24,8 @@ import contact from "./Routes/contact.route.js";
 import tokenVerification from "./middleware/tokenVerification.js";
 import db from "./helpers/db.js";
 import errorHandler from "./middleware/errorHandler.js";
+import connectToMongoDB from "./config/mongodb.config.js";
+import limiter from "./config/rate_limit.config.js";
 
 const password = process.env.AIVEN_SERVICE_PASSWORD;
 const databaseUrl = `mysql://avnadmin:${password}@foland-realty-2025-foland-realty-2025.j.aivencloud.com:24163/defaultdb`;
@@ -34,21 +35,17 @@ process.env.DATABASE_URL = databaseUrl;
 const app = express();
 const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
-const mongoDBURL = process.env.MONGODBURL;
+app.use(morgan("dev"));
 
-
-// app.use(errorHandler);
-  app.use(
-    cors({
-      origin: [
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://foland-realty-nextjs.vercel.app",
-        "https://foland-realty.vercel.app",
-      ],
-      credentials: true,
-    })
-  );
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://foland-realty.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 
 app.use(bodyParser());
 app.use(cookieParser());
@@ -63,6 +60,8 @@ app.use("/api/foland-realty/admin", adminRoute);
 app.use("/api/foland-realty/auth/admin", AdminRoute);
 
 app.use("/uploads", express.static("uploads"));
+app.use(errorHandler);
+app.use(limiter);
 
 // const addUser = async () => {
 //   const uuid = v4();
@@ -80,29 +79,20 @@ app.use("/uploads", express.static("uploads"));
 // };
 
 app.get("/", (req, res) => {
-  res.json({ success: true });
+  return res.status(201).json({ success: true });
 });
 
-
-mongoose
-  .connect(mongoDBURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
+const startServer = async () => {
+  try {
+    await connectToMongoDB();
     server.listen(PORT, () => {
-      // addUser();
-
-
       initSocket(server);
       console.log("Server Started !!", PORT);
     });
-  })
-  .catch((err) => console.log(err.message));
-  // server.listen(PORT, () => {
-  //   // addUser();
+  } catch (err) {
+    console.error("Error starting server:", err);
+    process.exit(1); // Exit the process with a failure code
+  }
+};
 
-
-  //   initSocket(server);
-  //   console.log("Server Started !!", PORT);
-  // });
+startServer();

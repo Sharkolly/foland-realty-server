@@ -1,5 +1,5 @@
 const errorHandler = (err, req, res, next) => {
-  console.error("🔥 Error:", err.message);
+  console.log("🔥 Error:", err.message);
 
   if (!res.headersSent) {
     res.status(err.statusCode || 500).json({

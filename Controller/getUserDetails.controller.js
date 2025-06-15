@@ -7,7 +7,7 @@ import {
   getUserTotalProperty,
 } from "../mongodb/controller/user.model.js";
 
-export const getUserDetailsController = async (req, res) => {
+export const getUserDetailsController = async (req, res, next) => {
   const { user } = req;
   try {
 // check for user profile
@@ -20,7 +20,7 @@ export const getUserDetailsController = async (req, res) => {
     const userSavedProperty = await getUserSavedProperties(user);
     //get total amount of saved property of user
     const userSavedTotalProperty = await getUserTotalSavedProperty(user);
-    res.status(200).json({
+    return res.status(200).json({
       userProfile,
       userTotalProperty,
       userSavedTotalProperty,
@@ -28,5 +28,6 @@ export const getUserDetailsController = async (req, res) => {
     });
   } catch (err) {
     console.log(err.message);
+    next(err)
   }
 };

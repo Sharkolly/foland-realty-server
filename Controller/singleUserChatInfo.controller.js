@@ -1,6 +1,6 @@
 import { getUserInChat } from "../mongodb/controller/singleUserChatInfo.model.js";
 
-const getChatUser = async (req, res) => {
+const getChatUser = async (req, res, next) => {
   const { user } = req;
   const {owner, tenant} = req.params;
   const room = `${owner}/${tenant}`
@@ -13,7 +13,8 @@ const getChatUser = async (req, res) => {
     }
     res.status(201).json(userInfo);
   } catch (error) {
-    res.status(502).json({ message: error.message });
+    // res.status(502).json({ message: error.message });
+    next(error);
   }
 };
 

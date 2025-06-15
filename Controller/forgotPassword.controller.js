@@ -2,7 +2,7 @@ import User from "../Models/User.js";
 import bcrypt from "bcryptjs";
 import transporter from "../config/nodemailer.config.js";
 
-export const forgot_password = async (req, res) => {
+export const forgot_password = async (req, res, next) => {
   //get email
   const { email } = req.body;
   const regexForValidEmail = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
@@ -47,7 +47,7 @@ export const forgot_password = async (req, res) => {
     });
     return res.status(201).json({ message: "Reset code sent to email" });
   } catch (err) {
-    console.log(err);
-    return res.status(500).json({ message: "Server error" });
+    next(err)
+    // return res.status(500).json({ message: "Server error" });
   }
 };

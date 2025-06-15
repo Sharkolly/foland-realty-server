@@ -1,7 +1,7 @@
 import User from "../Models/User.js";
 import bcrypt from "bcryptjs";
 
-export const verify_code = async (req, res) => {
+export const verify_code = async (req, res, next) => {
   const { email, code } = req.body;
   if (!email || !code) {
     return res.status(403).json({ message: "Enter the verification code." });
@@ -28,6 +28,7 @@ export const verify_code = async (req, res) => {
     }
     return res.status(201).json({ message: "Code Verified" });
   } catch (err) {
-    return res.status(500).json({ message: "Server error" });
+    // return res.status(500).json({ message: "Server error" });
+    next(err);
   }
 };

@@ -8,7 +8,7 @@ import {
   getAllProperties
 } from "../mongodb/controller/admin.model.js";
 
-const adminController = async (req, res) => {
+const adminController = async (req, res, next) => {
   try {
     const getAllUSers = await getTotalUsers();
     const getAllProperty = await getTotalProperty();
@@ -28,7 +28,8 @@ const adminController = async (req, res) => {
       allProperties
     });
   } catch (error) {
-    res.status(403).json({ message: "Server Error" });
+    // res.status(403).json({ message: "Server Error" });
+    next(error);
   }
 };
 

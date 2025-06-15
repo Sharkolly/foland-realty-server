@@ -1,6 +1,6 @@
 import NewsLetter from "../Models/NewsLetter.js";
 
-export const newsLetter = async (req, res) => {
+export const newsLetter = async (req, res, next) => {
   const { email } = req.body;
   const regexForValidEmail =
     /^(?!.*\.\.)[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
@@ -24,6 +24,7 @@ export const newsLetter = async (req, res) => {
     await newEmail.save();
     return res.status(201).json({ message: "Subscribed successfully!" });
   } catch (err) {
-    return res.status(501).json({ message: "Something went wrong" });
+    // return res.status(501).json({ message: "Something went wrong" });
+    next(err);
   }
 };

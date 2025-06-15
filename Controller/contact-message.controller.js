@@ -1,6 +1,6 @@
 import transporter from "../config/nodemailer.config.js";
 
-const contactMessage = async (req, res) => {
+const contactMessage = async (req, res, next) => {
   const { contactMessage, contactPhoneNumber, contactFullName, contactEmail } =
     req.body;
   const regexForValidEmail = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
@@ -32,7 +32,8 @@ const contactMessage = async (req, res) => {
       .status(201)
       .json({ success: true, message: "Message Sent Successfully" });
   } catch (err) {
-    res.status(501).json({ message: err.message, success: false });
+    // res.status(501).json({ message: err.message, success: false });
+    next(err)
   }
 };
 

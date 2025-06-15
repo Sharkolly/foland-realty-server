@@ -1,12 +1,13 @@
 import { getSavedProperties } from "../mongodb/controller/saveProperty.model.js";
 
-const getSavedPropertiesController = async (req, res) => {
+const getSavedPropertiesController = async (req, res, next) => {
   try {
     //get all saved properties
     const savedProperties = await getSavedProperties();
-    res.status(200).json({ savedProperties });
+    return res.status(200).json({ savedProperties });
   } catch (err) {
-    res.status(500).json({ message: "Internal server error" });
+  //  return res.status(500).json({ message: "Internal server error" });
+    next(err);
   }
 };
 export default getSavedPropertiesController;

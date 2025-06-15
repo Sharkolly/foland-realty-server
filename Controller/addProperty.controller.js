@@ -1,7 +1,7 @@
 import { v4 } from "uuid";
 import { addPropertiesToMongoDb } from "../mongodb/controller/property.model.js";
 
-const addProperty = async (req, res) => {
+const addProperty = async (req, res, next) => {
 // get user details from middleware
   const { user } = req;
   const owner = user._id;
@@ -23,7 +23,6 @@ const addProperty = async (req, res) => {
     isLandlordLivingWithTenant,
     purpose,
   } = req.body;
-  console.log(purpose);
   if (
     !title ||
     !description ||
@@ -77,9 +76,9 @@ const addProperty = async (req, res) => {
       isLandlordLivingWithTenant,
       purpose
     );
-    res.json({ message: "Property Saved" });
+    return res.status(201).json({ message: "Property Saved" });
   } catch (error) {
-    return res.status(500).json({ message: "Server error" });
+    next(error)
   }
 };
 export default addProperty;

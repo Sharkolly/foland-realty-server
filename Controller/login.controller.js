@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { checkUserExists } from "../mongodb/controller/auth.model.js";
 
-export const login = async (req, res) => {
+export const login = async (req, res, next) => {
   const { email, password } = req.body;
 
   //check for email and password
@@ -11,26 +11,23 @@ export const login = async (req, res) => {
   }
   try {
     // check if user exist
-    const checkIfUserExist = await checkUserExists(email);
-    if (!checkIfUserExist) {
+    const user = await checkUserExists(email);
+    if (!user) {
       return res
         .status(403)
         .json({ message: "Email is not registered. Please Sign Up." });
     }
 
     // compare the password
-    const comparePassword = await bcrypt.compare(
-      password,
-      checkIfUserExist.password
-    );
+    const isPasswordValid = await bcrypt.compare(password, user.password);
 
-    if (!comparePassword) {
+    if (!isPasswordValid) {
       return res.status(401).json({ message: "Invalid Email or Password" });
     }
 
     // sign a jwt token then send to the browser
     const token = jwt.sign(
-      { _id: checkIfUserExist._id, role: checkIfUserExist.role },
+      { _id: user._id, role: user.role },
       process.env.JWT_SECRET_KEY,
       {
         expiresIn: "3d",
@@ -39,18 +36,14 @@ export const login = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      // secure: process.env.NODE_ENV === "production", // HTTPS only in prod
-      // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-      // domain: process.env.NODE_ENV === "production" ? ".vercel.app" : undefined,
-      // domain: process.env.NODE_ENV === "production" ? ".vercel.app" : undefined,
-
-      secure: true, // Set secure to true in production
-      sameSite: 'none', // Set sameSite to none in production
-      maxAge: 86400 * 1000, // 1 day in milliseconds
+      secure: true,
+      sameSite: "none",
+      maxAge: 86400 * 3000, // 1 day in milliseconds
     });
 
     return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
-    return res.status(500).json({ message: "Server error" });
+    // return res.status(500).json({ message: "Server error" });
+    next(err);
   }
 };
