@@ -37,15 +37,15 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
 app.use(morgan("dev"));
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://foland-realty.vercel.app",
-    ],
-    credentials: true,
-  })
-);
+  app.use(
+    cors({
+      origin: [
+        "http://localhost:3000",
+        "https://foland-realty.vercel.app",
+      ],
+      credentials: true,
+    })
+  );
 
 app.use(bodyParser());
 app.use(cookieParser());

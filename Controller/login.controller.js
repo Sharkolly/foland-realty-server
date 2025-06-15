@@ -5,10 +5,10 @@ import { checkUserExists } from "../mongodb/controller/auth.model.js";
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
 
-  //check for email and password
   if (!password || !email) {
-    return res.status(403).json({ message: "Complete the form" });
+    return res.status(400).json({ message: "Email and password are required" });
   }
+
   try {
     // check if user exist
     const user = await checkUserExists(email);
@@ -19,26 +19,29 @@ export const login = async (req, res, next) => {
     }
 
     // compare the password
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    const isValidPassword = await bcrypt.compare(
+      password,
+      user.password
+    );
 
-    if (!isPasswordValid) {
+    if (!isValidPassword) {
       return res.status(401).json({ message: "Invalid Email or Password" });
     }
 
-    // sign a jwt token then send to the browser
     const token = jwt.sign(
       { _id: user._id, role: user.role },
       process.env.JWT_SECRET_KEY,
-      {
-        expiresIn: "3d",
-      }
+      { expiresIn: "3d" }
     );
+
+    const isProduction = process.env.NODE_ENV === "production";
+    const isLocalhostAccess = req.get("origin")?.includes("localhost");
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      maxAge: 86400 * 3000, // 1 day in milliseconds
+      secure: true, // Set secure to true in production
+      sameSite: 'none', // Set sameSite to none in production
+      maxAge: 86400 * 1000, // 1 day in milliseconds
     });
 
     return res.status(201).json({ message: "Login Successful", token });
