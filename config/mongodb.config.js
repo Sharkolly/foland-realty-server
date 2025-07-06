@@ -1,37 +1,34 @@
+import dotenv from "dotenv";
+dotenv.config(); // Doit être tout en haut
+
 import mongoose from "mongoose";
 
 const mongoDBURL = process.env.MONGODBURL;
-const mongoDBOptions = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  connectTimeoutMS: 30000,
-  socketTimeoutMS: 60000,
-  serverSelectionTimeoutMS: 30000,
-  retryWrites: true,
-  retryReads: true,
-};
 
 const connectToMongoDB = async () => {
   try {
     if (!mongoDBURL) {
       throw new Error("MONGODBURL is not defined in environment variables");
     }
-    await mongoose.connect(mongoDBURL, mongoDBOptions);
+
+    await mongoose.connect(mongoDBURL);
 
     mongoose.connection.on("error", (err) => {
-      console.error("MongoDB connection error:", err);
+      console.error("❌ MongoDB connection error:", err);
     });
+
     mongoose.connection.on("disconnected", () => {
-      console.log("MongoDB disconnected");
+      console.warn("⚠️ MongoDB disconnected");
     });
+
     mongoose.connection.on("connected", () => {
-      console.log("MongoDB connected successfully");
+      console.log("✅ MongoDB connected successfully");
     });
 
     return "MongoDB connection established";
   } catch (error) {
-    console.error("MongoDB connection error:", error);
-    throw error; // Re-throw the error to be handled by the caller
+    console.error("❌ MongoDB connection failed:", error);
+    throw error;
   }
 };
 
