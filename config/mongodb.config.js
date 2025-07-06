@@ -1,12 +1,14 @@
 import mongoose from "mongoose";
+import logger from "./logger.js";
 
 const mongoDBURL = process.env.MONGODBURL;
+
 const mongoDBOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  connectTimeoutMS: 30000,
-  socketTimeoutMS: 60000,
-  serverSelectionTimeoutMS: 30000,
+  connectTimeoutMS: 3000,
+  socketTimeoutMS: 6000,
+  serverSelectionTimeoutMS: 3000,
   retryWrites: true,
   retryReads: true,
 };
@@ -19,19 +21,19 @@ const connectToMongoDB = async () => {
     await mongoose.connect(mongoDBURL, mongoDBOptions);
 
     mongoose.connection.on("error", (err) => {
-      console.error("MongoDB connection error:", err);
+      console.log("Error is here");
+      logger.error("MongoDB connection error:", err);
     });
     mongoose.connection.on("disconnected", () => {
-      console.log("MongoDB disconnected");
+      logger.info("MongoDB disconnected");
     });
     mongoose.connection.on("connected", () => {
-      console.log("MongoDB connected successfully");
+      logger.info("MongoDB connected successfully");
     });
 
     return "MongoDB connection established";
   } catch (error) {
-    console.error("MongoDB connection error:", error);
-    throw error; // Re-throw the error to be handled by the caller
+    logger.error("MongoDB connection error:", error);
   }
 };
 

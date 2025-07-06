@@ -31,7 +31,7 @@ export const login = async (req, res, next) => {
     const token = jwt.sign(
       { _id: user._id, role: user.role },
       process.env.JWT_SECRET_KEY,
-      { expiresIn: "3d" }
+      { expiresIn: "5d" }
     );
 
     const isProduction = process.env.NODE_ENV === "production";
@@ -41,7 +41,7 @@ export const login = async (req, res, next) => {
       httpOnly: true,
       secure: true, // Set secure to true in production
       sameSite: 'none', // Set sameSite to none in production
-      maxAge: 86400 * 1000, // 1 day in milliseconds
+      maxAge: 86400 * 5000, // 5 day in milliseconds
     });
 
     return res.status(201).json({ message: "Login Successful", token });

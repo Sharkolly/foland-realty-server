@@ -4,22 +4,23 @@ const userDetails = new Schema(
   {
     firstName: {
       type: String,
-      required: [true, "Please provide a username"],
+      required: [true, "Please provide a First name"],
       unique: false,
     },
-
+    isOnline: Boolean,
+    lastSeen: Date,
     uuid: {
       type: String,
     },
     lastName: {
       type: String,
-      required: [true, "Please provide a username"],
+      required: [true, "Please provide a Last name"],
       unique: false,
     },
     email: {
       type: String,
-      required: [true, "Please provide a username"],
-      unique: [true, "Username already exists"],
+      required: [true, "Please provide an email"],
+      unique: [true, "Email already exists"],
     },
     password: {
       type: String,

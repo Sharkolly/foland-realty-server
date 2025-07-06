@@ -1,7 +1,7 @@
 "use strict";
 import dotenv from "dotenv";
 dotenv.config();
-import morgan from 'morgan'
+import morgan from "morgan";
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -19,6 +19,7 @@ import propertyRoute from "./Routes/propertyRoute.js";
 import adminRoute from "./Routes/admin.routes.js";
 import AdminRoute from "./Routes/Admin/admin.route.js";
 import newsLetter from "./Routes/newsLetter.route.js";
+import notification from "./Routes/notification.route.js";
 import chat from "./Routes/chat.route.js";
 import contact from "./Routes/contact.route.js";
 import tokenVerification from "./middleware/tokenVerification.js";
@@ -26,6 +27,7 @@ import db from "./helpers/db.js";
 import errorHandler from "./middleware/errorHandler.js";
 import connectToMongoDB from "./config/mongodb.config.js";
 import limiter from "./config/rate_limit.config.js";
+import logger from "./config/logger.js";
 
 const password = process.env.AIVEN_SERVICE_PASSWORD;
 const databaseUrl = `mysql://avnadmin:${password}@foland-realty-2025-foland-realty-2025.j.aivencloud.com:24163/defaultdb`;
@@ -37,15 +39,12 @@ const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
 app.use(morgan("dev"));
 
-  app.use(
-    cors({
-      origin: [
-        "http://localhost:3000",
-        "https://foland-realty.vercel.app",
-      ],
-      credentials: true,
-    })
-  );
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://foland-realty.vercel.app"],
+    credentials: true,
+  })
+);
 
 app.use(bodyParser());
 app.use(cookieParser());
@@ -57,6 +56,9 @@ app.use("/api/foland-realty/chat", tokenVerification, chat);
 app.use("/api/foland-realty/subscribe", newsLetter);
 app.use("/api/foland-realty/contact", contact);
 app.use("/api/foland-realty/admin", adminRoute);
+app.use("/api/foland-realty/settings", adminRoute);
+// app.use("/api/foland-realty/notification", notification );
+app.use("/api/foland-realty/notification", tokenVerification, notification);
 app.use("/api/foland-realty/auth/admin", AdminRoute);
 
 app.use("/uploads", express.static("uploads"));
@@ -84,14 +86,15 @@ app.get("/", (req, res) => {
 
 const startServer = async () => {
   try {
-    await connectToMongoDB();
+    const message = await connectToMongoDB();
     server.listen(PORT, () => {
       initSocket(server);
-      console.log("Server Started !!", PORT);
+      logger.info(message);
+      logger.info("Server Started !!", PORT);
     });
   } catch (err) {
-    console.error("Error starting server:", err);
-    process.exit(1); // Exit the process with a failure code
+    logger.error("Error starting server:", err);
+    process.exit(1);
   }
 };
 

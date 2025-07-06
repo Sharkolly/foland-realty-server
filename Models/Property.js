@@ -13,7 +13,7 @@ const propertySchema = new Schema(
   {
     uuid: {
       type: String,
-      required: true
+      required: true,
     },
     title: {
       type: String,
@@ -27,7 +27,7 @@ const propertySchema = new Schema(
       type: String,
       enum: ["For Sale", "For Rent", "Shortlet"],
       default: "For Rent",
-      required: true
+      required: true,
     },
     property: {
       type: String,

@@ -1,5 +1,7 @@
+import logger from "../config/logger.js";
+
 const errorHandler = (err, req, res, next) => {
-  console.log("🔥 Error:", err.message);
+  logger.error("🔥Error:", err.message);
 
   if (!res.headersSent) {
     res.status(err.statusCode || 500).json({

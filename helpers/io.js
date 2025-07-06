@@ -3,18 +3,21 @@ import cookie from "cookie";
 import jwt from "jsonwebtoken";
 import Chat from "../Models/Chat.js";
 import User from "../Models/User.js";
+import Notification from "../Models/Notification.js";
+import notificationControllerSocket from "../Controller/io/notifications.io.controller.js";
+import {
+  addChatToDB,
+  getAllMessages,
+  updateChat,
+} from "../Controller/io/updateChat.io.controller.js";
+import logger from "../config/logger.js";
 
 let io;
 
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: [
-        "http://localhost:5173",
-        "http://localhost:3000",
-        "https://foland-realty.vercel.app",
-        "https://foland-realty-nextjs.vercel.app",
-      ],
+      origin: ["http://localhost:3000", "https://foland-realty.vercel.app"],
       credentials: true,
     },
   });
@@ -31,7 +34,7 @@ export const initSocket = (server) => {
     const token = parsed.token;
 
     if (!token) {
-      console.log("No token provided, disconnecting socket");
+      logger.warn("No token provided, disconnecting socket");
       return socket.disconnect(true);
     }
     try {
@@ -47,14 +50,22 @@ export const initSocket = (server) => {
     }
   });
 
-  // On the socket
-  io.on("connection", (socket) => {
-    console.log("Me" + " " + socket.id);
+  
 
+  const connectedUsers = new Map();
+  // On the socket
+  io.on("connection", async (socket) => {
     //join the room emit
+    if (socket.user._id) {
+      connectedUsers.set(socket.user._id, socket.id);
+      await User.findByIdAndUpdate(socket.user._id, { isOnline: true });
+      socket.broadcast.emit("user-online", socket.user._id, socket.id);      
+    }
+    
     socket.on("join-room", async (data, cb) => {
       let chatDetails;
       const { room, propertyId, receiver } = data;
+
 
       if (socket.user.role === "Tenant") {
         chatDetails = {
@@ -68,25 +79,23 @@ export const initSocket = (server) => {
       try {
         // join room
         socket.join(room);
-        console.log(`User joined room: ${room}`);
-        // callback function usefull for notification
-        cb(`You opened a chat with ${room}`);
+
         //get all the message in the room
         const getAllMsg = await Chat.findOne({ roomId: room });
 
-        // send all the messages in the db to the room in the frontend
+        // send all the messages in the db to the room on the frontend
         io.to(room).emit("get-all-message", getAllMsg, { id: socket.id });
 
         // send a notification for new message
         io.to(room).emit("notification", socket.id);
       } catch (err) {
-        console.log(err);
+        logger.error(err);
       }
     });
 
     socket.on("send-message", async (message, data) => {
       let chatDetails;
-      const { room, propertyId, receiver } = data;
+      const { room, propertyId, receiver, userID, userName, sender } = data;
       if (socket.user.role === "Tenant") {
         chatDetails = {
           roomId: room,
@@ -99,26 +108,40 @@ export const initSocket = (server) => {
       const checkIfRoomExists = await Chat.findOne({ roomId: room });
       if (!checkIfRoomExists) {
         // add the chatDetails  to db
-        const addChatToDb = await new Chat(chatDetails);
-        const saveDb = await addChatToDb.save();
+        await addChatToDB(chatDetails);
       }
       if (room) {
         // if room exists update the particular room with the new message
-        const updateMessage = await Chat.findOneAndUpdate(
-          { roomId: room },
-          {
-            $push: {
-              messages: {
-                senderId: socket.user._id,
-                message,
-              },
-            },
-          },
-          { new: true, upsert: true }
+        await updateChat(room, socket, message);
+
+        let owner;
+        if (socket.user.role === "Tenant") {
+          owner = receiver;
+        } else {
+          owner = sender;
+        }
+
+        const messageNotificationDetails = {
+          senderName: userName,
+          senderID: userID,
+          roomID: room,
+          message,
+          senderAvatar: "",
+        };
+        const notif = await Notification.findOne({ owner });
+
+        // add the message to the Notification or update the message if it exists
+        await notificationControllerSocket(
+          notif,
+          messageNotificationDetails,
+          owner,
+          userID,
+          message
         );
 
         // find a particular room to display the message
-        const getAllMessage = await Chat.findOne({ roomId: room });
+        const getAllMessage = await getAllMessages(room);
+
         //send all the message with the message again to the frontend
         io.to(room).emit("get-all-message", getAllMessage, {
           id: socket.id,
@@ -130,11 +153,15 @@ export const initSocket = (server) => {
       }
     });
 
-
     // disconnect the socket
-    socket.on("disconnect", () => {
-      console.log("Socket disconnected:", socket.id);
+    socket.on("disconnect", async () => {
+      logger.info("Socket disconnected:", socket.id);
+      await User.findByIdAndUpdate(socket.user._id, {
+        isOnline: false,
+        lastSeen: new Date(),
+      });
     });
+    socket.broadcast.emit("user-offline", socket.user._id); 
   });
 
   return io;

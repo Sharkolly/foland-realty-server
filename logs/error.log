@@ -1,0 +1,720 @@
+2025-07-02 04:37:41 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:20:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:38:53 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:20:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:40:13 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:20:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:51:18 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:20:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:54:56 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:56:02 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:57:07 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:58:45 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 04:59:16 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:00:00 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:01:07 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:03:24 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:03:57 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:04:09 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:06:38 [31merror[39m: MongoParseError: URI malformed
+    at new ConnectionString (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb-connection-string-url\lib\index.js:102:23)
+    at parseOptions (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\connection_string.js:203:17)
+    at new MongoClient (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\mongo_client.js:51:61)
+    at NativeConnection.createClient (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:328:14)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1060:34)
+    at Mongoose.connect (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\mongoose.js:446:15)
+    at connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:20)
+    at startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:27)
+    at file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:103:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:271:25)
+2025-07-02 05:07:02 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:07:55 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:11:56 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:13:18 [31merror[39m: MongooseServerSelectionError: connect ETIMEDOUT 65.62.2.200:27017
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1154:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1085:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:22:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:91:21)
+2025-07-02 05:37:18 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:38:51 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:40:55 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:44:14 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:45:04 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:48:29 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:50:02 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:50:41 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 05:51:31 [31merror[39m: BSONError: Cannot convert circular structure to BSON
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3600:15)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+    at serializeObject (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:3607:22)
+    at serializeInto (C:\Users\USER\Documents\real_estate_app\backend\node_modules\bson\lib\bson.cjs:4028:29)
+2025-07-02 06:04:49 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3009ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:92:21)
+2025-07-02 18:28:36 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-07-03 04:02:40 [31merror[39m: MongoServerSelectionError: Socket 'secureConnect' timed out after 3244ms (connectTimeoutMS: 3000)
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-03 04:03:05 [31merror[39m: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 3187ms (connectTimeoutMS: 3000)
+    at TLSSocket.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cmap\connect.js:288:20)
+    at Object.onceWrapper (node:events:638:28)
+    at TLSSocket.emit (node:events:524:28)
+    at Socket._onTimeout (node:net:609:8)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-03 04:04:41 [31merror[39m: 🔥Error:
+2025-07-03 04:04:45 [31merror[39m: MongoServerSelectionError: Socket 'secureConnect' timed out after 3251ms (connectTimeoutMS: 3000)
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-03 04:05:11 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:92:21)
+2025-07-03 04:52:12 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-03 04:55:42 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-03 05:57:59 [31merror[39m: 🔥Error:
+2025-07-03 05:58:19 [31merror[39m: 🔥Error:
+2025-07-03 06:09:55 [31merror[39m: 🔥Error:
+2025-07-03 06:13:30 [31merror[39m: 🔥Error:
+2025-07-03 06:15:13 [31merror[39m: 🔥Error:
+2025-07-03 06:15:33 [31merror[39m: 🔥Error:
+2025-07-03 06:16:09 [31merror[39m: 🔥Error:
+2025-07-03 06:17:29 [31merror[39m: 🔥Error:
+2025-07-03 06:17:37 [31merror[39m: 🔥Error:
+2025-07-03 06:18:02 [31merror[39m: 🔥Error:
+2025-07-03 06:20:07 [31merror[39m: 🔥Error:
+2025-07-03 06:20:55 [31merror[39m: 🔥Error:
+2025-07-03 06:24:28 [31merror[39m: 🔥Error:
+2025-07-03 06:24:57 [31merror[39m: 🔥Error:
+2025-07-03 06:25:46 [31merror[39m: 🔥Error:
+2025-07-03 06:30:56 [31merror[39m: 🔥Error:
+2025-07-03 06:31:07 [31merror[39m: 🔥Error:
+2025-07-03 06:31:19 [31merror[39m: 🔥Error:
+2025-07-03 06:31:42 [31merror[39m: 🔥Error:
+2025-07-03 06:31:57 [31merror[39m: 🔥Error:
+2025-07-03 06:32:06 [31merror[39m: 🔥Error:
+2025-07-03 06:32:13 [31merror[39m: 🔥Error:
+2025-07-03 06:32:23 [31merror[39m: 🔥Error:
+2025-07-03 06:32:26 [31merror[39m: 🔥Error:
+2025-07-03 06:32:29 [31merror[39m: 🔥Error:
+2025-07-03 06:32:29 [31merror[39m: 🔥Error:
+2025-07-03 06:32:39 [31merror[39m: 🔥Error:
+2025-07-03 06:32:41 [31merror[39m: 🔥Error:
+2025-07-03 06:37:53 [31merror[39m: 🔥Error:
+2025-07-03 17:11:08 [31merror[39m: 🔥Error:
+2025-07-03 17:11:12 [31merror[39m: 🔥Error:
+2025-07-03 17:17:19 [31merror[39m: 🔥Error:
+2025-07-03 17:17:32 [31merror[39m: 🔥Error:
+2025-07-03 17:17:59 [31merror[39m: 🔥Error:
+2025-07-03 17:19:07 [31merror[39m: 🔥Error:
+2025-07-03 17:20:20 [31merror[39m: 🔥Error:
+2025-07-03 17:20:29 [31merror[39m: 🔥Error:
+2025-07-03 17:20:49 [31merror[39m: 🔥Error:
+2025-07-03 17:25:07 [31merror[39m: 🔥Error:
+2025-07-03 17:25:32 [31merror[39m: 🔥Error:
+2025-07-03 17:25:35 [31merror[39m: 🔥Error:
+2025-07-03 17:50:40 [31merror[39m: 🔥Error:
+2025-07-03 17:50:51 [31merror[39m: 🔥Error:
+2025-07-03 17:51:26 [31merror[39m: 🔥Error:
+2025-07-03 17:51:30 [31merror[39m: 🔥Error:
+2025-07-03 17:52:26 [31merror[39m: 🔥Error:
+2025-07-03 18:37:01 [31merror[39m: 🔥Error:
+2025-07-03 18:37:14 [31merror[39m: 🔥Error:
+2025-07-03 18:38:28 [31merror[39m: 🔥Error:
+2025-07-03 18:39:09 [31merror[39m: 🔥Error:
+2025-07-03 18:40:55 [31merror[39m: 🔥Error:
+2025-07-03 18:41:05 [31merror[39m: 🔥Error:
+2025-07-03 18:44:07 [31merror[39m: 🔥Error:
+2025-07-03 18:44:09 [31merror[39m: 🔥Error:
+2025-07-03 18:44:35 [31merror[39m: 🔥Error:
+2025-07-03 18:44:44 [31merror[39m: 🔥Error:
+2025-07-03 18:46:22 [31merror[39m: 🔥Error:
+2025-07-03 18:46:27 [31merror[39m: 🔥Error:
+2025-07-03 18:47:23 [31merror[39m: 🔥Error:
+2025-07-03 18:47:55 [31merror[39m: 🔥Error:
+2025-07-03 18:51:23 [31merror[39m: 🔥Error:
+2025-07-03 18:51:40 [31merror[39m: 🔥Error:
+2025-07-03 18:51:49 [31merror[39m: 🔥Error:
+2025-07-03 18:54:17 [31merror[39m: 🔥Error:
+2025-07-03 18:55:05 [31merror[39m: 🔥Error:
+2025-07-03 18:57:09 [31merror[39m: 🔥Error:
+2025-07-03 18:59:44 [31merror[39m: 🔥Error:
+2025-07-03 19:17:38 [31merror[39m: 🔥Error:
+2025-07-03 19:18:53 [31merror[39m: 🔥Error:
+2025-07-03 19:22:11 [31merror[39m: 🔥Error:
+2025-07-03 20:53:09 [31merror[39m: 🔥Error:
+2025-07-03 20:53:13 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-02.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:526:9)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+2025-07-03 20:53:13 [31merror[39m: 🔥Error:
+2025-07-03 20:53:14 [31merror[39m: 🔥Error:
+2025-07-03 20:53:35 [31merror[39m: 🔥Error:
+2025-07-03 20:53:53 [31merror[39m: 🔥Error:
+2025-07-03 20:57:52 [31merror[39m: 🔥Error:
+2025-07-03 21:02:03 [31merror[39m: 🔥Error:
+2025-07-03 21:03:54 [31merror[39m: 🔥Error:
+2025-07-04 04:53:26 [31merror[39m: 🔥Error:
+2025-07-04 04:53:37 [31merror[39m: 🔥Error:
+2025-07-04 05:01:34 [31merror[39m: 🔥Error:
+2025-07-04 05:02:45 [31merror[39m: 🔥Error:
+2025-07-04 05:32:28 [31merror[39m: 🔥Error:
+2025-07-04 05:34:42 [31merror[39m: 🔥Error:
+2025-07-04 05:35:49 [31merror[39m: ReferenceError: notification is not defined
+    at deleteMessageNotification (file:///C:/Users/USER/Documents/real_estate_app/backend/mongodb/controller/notification.model.js:57:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DeleteMessageNotificationController (file:///C:/Users/USER/Documents/real_estate_app/backend/Controller/deleteMessageNotification.controller.js:12:20)
+2025-07-04 05:37:22 [31merror[39m: ReferenceError: notification is not defined
+    at deleteMessageNotification (file:///C:/Users/USER/Documents/real_estate_app/backend/mongodb/controller/notification.model.js:57:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DeleteMessageNotificationController (file:///C:/Users/USER/Documents/real_estate_app/backend/Controller/deleteMessageNotification.controller.js:14:20)
+2025-07-04 05:50:04 [31merror[39m: 🔥Error:
+2025-07-04 05:50:54 [31merror[39m: 🔥Error:
+2025-07-05 11:55:19 [31merror[39m: 🔥Error:
+2025-07-05 11:56:21 [31merror[39m: 🔥Error:
+2025-07-05 11:58:09 [31merror[39m: 🔥Error:
+2025-07-05 12:00:04 [31merror[39m: 🔥Error:
+2025-07-05 12:00:08 [31merror[39m: 🔥Error:
+2025-07-05 12:01:17 [31merror[39m: 🔥Error:
+2025-07-05 12:01:38 [31merror[39m: 🔥Error:
+2025-07-05 12:01:58 [31merror[39m: 🔥Error:
+2025-07-05 12:02:26 [31merror[39m: 🔥Error:
+2025-07-05 12:02:56 [31merror[39m: 🔥Error:
+2025-07-05 12:03:20 [31merror[39m: 🔥Error:
+2025-07-05 12:15:08 [31merror[39m: 🔥Error:
+2025-07-05 12:15:45 [31merror[39m: 🔥Error:
+2025-07-05 12:15:45 [31merror[39m: 🔥Error:
+2025-07-05 12:15:46 [31merror[39m: 🔥Error:
+2025-07-05 12:16:20 [31merror[39m: 🔥Error:
+2025-07-05 12:16:41 [31merror[39m: 🔥Error:
+2025-07-05 12:17:18 [31merror[39m: 🔥Error:
+2025-07-05 12:17:28 [31merror[39m: 🔥Error:
+2025-07-05 12:17:42 [31merror[39m: 🔥Error:
+2025-07-05 12:20:34 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3112ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-05 12:20:34 [31merror[39m: 🔥Error:
+2025-07-05 12:20:38 [31merror[39m: 🔥Error:
+2025-07-05 12:20:44 [31merror[39m: 🔥Error:
+2025-07-05 12:20:47 [31merror[39m: 🔥Error:
+2025-07-05 12:20:48 [31merror[39m: 🔥Error:
+2025-07-05 12:20:52 [31merror[39m: 🔥Error:
+2025-07-05 12:20:54 [31merror[39m: 🔥Error:
+2025-07-05 12:20:57 [31merror[39m: 🔥Error:
+2025-07-05 12:21:01 [31merror[39m: 🔥Error:
+2025-07-05 12:21:04 [31merror[39m: 🔥Error:
+2025-07-05 12:21:06 [31merror[39m: 🔥Error:
+2025-07-05 12:21:07 [31merror[39m: 🔥Error:
+2025-07-05 12:21:17 [31merror[39m: 🔥Error:
+2025-07-05 12:21:38 [31merror[39m: 🔥Error:
+2025-07-05 12:21:46 [31merror[39m: 🔥Error:
+2025-07-05 12:21:55 [31merror[39m: 🔥Error:
+2025-07-05 12:21:56 [31merror[39m: 🔥Error:
+2025-07-05 12:24:12 [31merror[39m: 🔥Error:
+2025-07-05 12:24:20 [31merror[39m: 🔥Error:
+2025-07-05 12:24:41 [31merror[39m: 🔥Error:
+2025-07-05 12:24:57 [31merror[39m: 🔥Error:
+2025-07-05 12:25:06 [31merror[39m: 🔥Error:
+2025-07-05 12:25:21 [31merror[39m: 🔥Error:
+2025-07-05 12:25:22 [31merror[39m: 🔥Error:
+2025-07-05 12:26:07 [31merror[39m: 🔥Error:
+2025-07-05 12:36:09 [31merror[39m: 🔥Error:
+2025-07-05 12:36:46 [31merror[39m: 🔥Error:
+2025-07-05 12:51:38 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-05 12:53:04 [31merror[39m: 🔥Error:
+2025-07-05 12:53:09 [31merror[39m: 🔥Error:
+2025-07-05 12:53:14 [31merror[39m: 🔥Error:
+2025-07-05 12:55:25 [31merror[39m: 🔥Error:
+2025-07-05 12:55:27 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-05 12:55:37 [31merror[39m: 🔥Error:
+2025-07-05 12:55:38 [31merror[39m: 🔥Error:
+2025-07-05 13:05:54 [31merror[39m: 🔥Error:
+2025-07-05 13:06:08 [31merror[39m: 🔥Error:
+2025-07-05 13:06:11 [31merror[39m: 🔥Error:
+2025-07-05 13:06:20 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-05 13:06:39 [31merror[39m: 🔥Error:
+2025-07-05 13:06:55 [31merror[39m: 🔥Error:
+2025-07-05 13:06:56 [31merror[39m: 🔥Error:
+2025-07-05 13:07:31 [31merror[39m: 🔥Error:
+2025-07-05 13:07:55 [31merror[39m: 🔥Error:
+2025-07-05 13:07:56 [31merror[39m: 🔥Error:
+2025-07-05 13:09:42 [31merror[39m: 🔥Error:
+2025-07-05 13:10:21 [31merror[39m: 🔥Error:
+2025-07-05 13:14:49 [31merror[39m: 🔥Error:
+2025-07-05 13:15:27 [31merror[39m: 🔥Error:
+2025-07-05 13:15:51 [31merror[39m: 🔥Error:
+2025-07-05 13:16:06 [31merror[39m: 🔥Error:
+2025-07-05 13:19:45 [31merror[39m: 🔥Error:
+2025-07-05 13:19:50 [31merror[39m: 🔥Error:
+2025-07-05 13:19:52 [31merror[39m: 🔥Error:
+2025-07-05 13:19:52 [31merror[39m: 🔥Error:
+2025-07-05 13:20:01 [31merror[39m: 🔥Error:
+2025-07-05 13:20:06 [31merror[39m: 🔥Error:
+2025-07-05 13:20:34 [31merror[39m: 🔥Error:
+2025-07-05 13:36:39 [31merror[39m: 🔥Error:
+2025-07-05 13:53:54 [31merror[39m: 🔥Error:
+2025-07-05 14:14:34 [31merror[39m: 🔥Error:
+2025-07-05 14:14:45 [31merror[39m: 🔥Error:
+2025-07-05 14:14:48 [31merror[39m: 🔥Error:
+2025-07-05 14:15:21 [31merror[39m: 🔥Error:
+2025-07-05 14:15:22 [31merror[39m: 🔥Error:
+2025-07-05 14:15:36 [31merror[39m: 🔥Error:
+2025-07-05 14:18:08 [31merror[39m: 🔥Error:
+2025-07-05 14:19:40 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-05 14:19:43 [31merror[39m: 🔥Error:
+2025-07-05 14:19:43 [31merror[39m: 🔥Error:
+2025-07-05 14:19:44 [31merror[39m: 🔥Error:
+2025-07-05 14:19:53 [31merror[39m: 🔥Error:
+2025-07-05 14:19:53 [31merror[39m: 🔥Error:
+2025-07-05 14:19:54 [31merror[39m: 🔥Error:
+2025-07-05 14:21:23 [31merror[39m: 🔥Error:
+2025-07-05 14:21:23 [31merror[39m: 🔥Error:
+2025-07-05 14:21:24 [31merror[39m: 🔥Error:
+2025-07-05 14:21:33 [31merror[39m: 🔥Error:
+2025-07-05 14:21:34 [31merror[39m: 🔥Error:
+2025-07-05 14:21:34 [31merror[39m: 🔥Error:
+2025-07-05 14:21:46 [31merror[39m: 🔥Error:
+2025-07-05 14:21:46 [31merror[39m: 🔥Error:
+2025-07-05 14:21:46 [31merror[39m: 🔥Error:
+2025-07-05 14:21:56 [31merror[39m: 🔥Error:
+2025-07-05 14:21:56 [31merror[39m: 🔥Error:
+2025-07-05 14:21:56 [31merror[39m: 🔥Error:
+2025-07-05 14:22:22 [31merror[39m: 🔥Error:
+2025-07-05 14:22:23 [31merror[39m: MongoServerSelectionError: connection <monitor> to 65.62.2.179:27017 timed out
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:192:22)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-05 14:22:23 [31merror[39m: MongoServerSelectionError: connection <monitor> to 65.62.2.179:27017 timed out
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:192:22)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-05 14:22:24 [31merror[39m: MongoServerSelectionError: connection <monitor> to 65.62.2.179:27017 timed out
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:192:22)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-05 14:22:24 [31merror[39m: 🔥Error:
+2025-07-05 14:22:24 [31merror[39m: MongoServerSelectionError: connection <monitor> to 65.62.2.179:27017 timed out
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:526:9)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:192:22)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+2025-07-05 14:22:25 [31merror[39m: 🔥Error:
+2025-07-05 14:23:26 [31merror[39m: 🔥Error:
+2025-07-05 14:24:17 [31merror[39m: 🔥Error:
+2025-07-05 14:24:17 [31merror[39m: 🔥Error:
+2025-07-05 14:26:10 [31merror[39m: 🔥Error:
+2025-07-05 14:26:15 [31merror[39m: 🔥Error:
+2025-07-05 14:27:38 [31merror[39m: 🔥Error:
+2025-07-05 14:27:43 [31merror[39m: 🔥Error:
+2025-07-05 14:27:49 [31merror[39m: 🔥Error:
+2025-07-05 18:55:07 [31merror[39m: 🔥Error:
+2025-07-05 18:55:07 [31merror[39m: 🔥Error:
+2025-07-05 18:55:10 [31merror[39m: 🔥Error:
+2025-07-05 18:55:11 [31merror[39m: 🔥Error:
+2025-07-05 18:55:20 [31merror[39m: 🔥Error:
+2025-07-05 18:55:39 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-05 18:56:05 [31merror[39m: 🔥Error:
+2025-07-05 18:56:05 [31merror[39m: 🔥Error:
+2025-07-05 18:56:05 [31merror[39m: 🔥Error:
+2025-07-05 18:56:20 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-07-05 18:56:28 [31merror[39m: 🔥Error:
+2025-07-05 18:56:28 [31merror[39m: 🔥Error:
+2025-07-05 18:56:28 [31merror[39m: 🔥Error:
+2025-07-05 18:56:38 [31merror[39m: 🔥Error:
+2025-07-05 18:56:38 [31merror[39m: 🔥Error:
+2025-07-05 18:56:38 [31merror[39m: 🔥Error:
+2025-07-05 18:56:48 [31merror[39m: 🔥Error:
+2025-07-05 18:56:48 [31merror[39m: 🔥Error:
+2025-07-05 18:56:48 [31merror[39m: 🔥Error:
+2025-07-05 18:57:02 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-05 19:16:14 [31merror[39m: 🔥Error:
+2025-07-05 19:16:14 [31merror[39m: 🔥Error:
+2025-07-05 19:16:15 [31merror[39m: 🔥Error:
+2025-07-06 14:06:09 [31merror[39m: 🔥Error:
+2025-07-06 14:06:09 [31merror[39m: 🔥Error:
+2025-07-06 14:06:12 [31merror[39m: 🔥Error:
+2025-07-06 14:06:12 [31merror[39m: 🔥Error:
+2025-07-06 14:06:12 [31merror[39m: 🔥Error:
+2025-07-06 14:06:13 [31merror[39m: 🔥Error:
+2025-07-06 14:06:17 [31merror[39m: 🔥Error:
+2025-07-06 14:06:20 [31merror[39m: 🔥Error:
+2025-07-06 14:06:37 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-06 14:07:22 [31merror[39m: 🔥Error:
+2025-07-06 14:07:44 [31merror[39m: 🔥Error:
+2025-07-06 14:12:13 [31merror[39m: 🔥Error:
+2025-07-06 14:12:54 [31merror[39m: 🔥Error:
+2025-07-06 14:13:22 [31merror[39m: 🔥Error:
+2025-07-06 14:13:31 [31merror[39m: 🔥Error:
+2025-07-06 14:13:47 [31merror[39m: 🔥Error:
+2025-07-06 14:14:10 [31merror[39m: 🔥Error:
+2025-07-06 14:14:54 [31merror[39m: 🔥Error:
+2025-07-06 14:15:37 [31merror[39m: 🔥Error:
+2025-07-06 14:16:17 [31merror[39m: 🔥Error:
+2025-07-06 14:16:53 [31merror[39m: 🔥Error:
+2025-07-06 14:19:49 [31merror[39m: 🔥Error:
+2025-07-06 14:20:09 [31merror[39m: 🔥Error:
+2025-07-06 14:20:26 [31merror[39m: 🔥Error:
+2025-07-06 14:21:38 [31merror[39m: 🔥Error:
+2025-07-06 14:22:36 [31merror[39m: 🔥Error:
+2025-07-06 14:28:18 [31merror[39m: 🔥Error:
+2025-07-06 14:28:24 [31merror[39m: 🔥Error:
+2025-07-06 14:28:42 [31merror[39m: 🔥Error:
+2025-07-06 14:29:29 [31merror[39m: 🔥Error:
+2025-07-06 14:29:31 [31merror[39m: 🔥Error:
+2025-07-06 14:29:32 [31merror[39m: 🔥Error:
+2025-07-06 14:34:31 [31merror[39m: 🔥Error:
+2025-07-06 14:39:28 [31merror[39m: 🔥Error:
+2025-07-06 14:40:35 [31merror[39m: 🔥Error:
+2025-07-06 14:42:13 [31merror[39m: 🔥Error:
+2025-07-06 14:44:59 [31merror[39m: 🔥Error:
+2025-07-06 14:45:37 [31merror[39m: 🔥Error:
+2025-07-06 14:45:44 [31merror[39m: 🔥Error:
+2025-07-06 14:45:58 [31merror[39m: 🔥Error:
+2025-07-06 14:45:59 [31merror[39m: 🔥Error:
+2025-07-06 14:46:04 [31merror[39m: 🔥Error:
+2025-07-06 14:46:11 [31merror[39m: 🔥Error:
+2025-07-06 14:46:26 [31merror[39m: 🔥Error:
+2025-07-06 14:47:06 [31merror[39m: 🔥Error:
+2025-07-06 14:47:34 [31merror[39m: 🔥Error:
+2025-07-06 14:47:47 [31merror[39m: 🔥Error:
+2025-07-06 14:50:45 [31merror[39m: 🔥Error:
+2025-07-06 14:50:46 [31merror[39m: 🔥Error:
+2025-07-06 14:50:46 [31merror[39m: 🔥Error:
+2025-07-06 14:50:48 [31merror[39m: 🔥Error:
+2025-07-06 14:51:09 [31merror[39m: 🔥Error:
+2025-07-06 14:51:10 [31merror[39m: 🔥Error:
+2025-07-06 14:51:12 [31merror[39m: 🔥Error:
+2025-07-06 14:51:53 [31merror[39m: 🔥Error:
+2025-07-06 14:51:58 [31merror[39m: 🔥Error:
+2025-07-06 14:52:34 [31merror[39m: 🔥Error:
+2025-07-06 14:52:38 [31merror[39m: 🔥Error:
+2025-07-06 14:52:43 [31merror[39m: 🔥Error:
+2025-07-06 14:52:44 [31merror[39m: 🔥Error:
+2025-07-06 14:52:48 [31merror[39m: 🔥Error:
+2025-07-06 14:54:28 [31merror[39m: 🔥Error:
+2025-07-06 14:54:41 [31merror[39m: 🔥Error:
+2025-07-06 14:54:45 [31merror[39m: 🔥Error:
+2025-07-06 14:54:49 [31merror[39m: 🔥Error:
+2025-07-06 14:55:19 [31merror[39m: 🔥Error:
+2025-07-06 14:55:30 [31merror[39m: 🔥Error:
+2025-07-06 14:55:30 [31merror[39m: 🔥Error:
+2025-07-06 14:55:55 [31merror[39m: 🔥Error:
+2025-07-06 14:56:39 [31merror[39m: 🔥Error:
+2025-07-06 14:56:47 [31merror[39m: 🔥Error:
+2025-07-06 14:56:54 [31merror[39m: 🔥Error:
+2025-07-06 14:56:57 [31merror[39m: 🔥Error:
+2025-07-06 14:57:21 [31merror[39m: 🔥Error:
+2025-07-06 14:57:42 [31merror[39m: 🔥Error:
+2025-07-06 14:57:48 [31merror[39m: 🔥Error:
+2025-07-06 14:58:09 [31merror[39m: 🔥Error:
+2025-07-06 14:58:12 [31merror[39m: 🔥Error:
+2025-07-06 14:58:18 [31merror[39m: 🔥Error:
+2025-07-06 14:58:19 [31merror[39m: 🔥Error:
+2025-07-06 14:58:19 [31merror[39m: 🔥Error:
+2025-07-06 14:58:19 [31merror[39m: 🔥Error:
+2025-07-06 14:58:48 [31merror[39m: 🔥Error:
+2025-07-06 15:02:01 [31merror[39m: 🔥Error:
+2025-07-06 15:04:24 [31merror[39m: 🔥Error:
+2025-07-06 15:05:09 [31merror[39m: 🔥Error:
+2025-07-06 15:05:18 [31merror[39m: 🔥Error:
+2025-07-06 15:05:20 [31merror[39m: 🔥Error:
+2025-07-06 15:06:12 [31merror[39m: 🔥Error:
+2025-07-06 15:06:13 [31merror[39m: 🔥Error:
+2025-07-06 15:06:19 [31merror[39m: 🔥Error:
+2025-07-06 15:06:19 [31merror[39m: 🔥Error:
+2025-07-06 15:06:20 [31merror[39m: 🔥Error:
+2025-07-06 15:06:21 [31merror[39m: 🔥Error:
+2025-07-06 15:19:19 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-06 15:29:50 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-06 15:30:49 [31merror[39m: 🔥Error:
+2025-07-06 15:31:15 [31merror[39m: 🔥Error:
+2025-07-06 15:31:21 [31merror[39m: 🔥Error:
+2025-07-06 15:32:52 [31merror[39m: 🔥Error:
+2025-07-06 15:34:47 [31merror[39m: 🔥Error:
+2025-07-06 15:36:17 [31merror[39m: 🔥Error:
+2025-07-06 15:36:52 [31merror[39m: 🔥Error:
+2025-07-06 15:38:40 [31merror[39m: 🔥Error:
+2025-07-06 15:38:46 [31merror[39m: 🔥Error:
+2025-07-06 15:39:25 [31merror[39m: 🔥Error:
+2025-07-06 15:39:55 [31merror[39m: 🔥Error:
+2025-07-06 15:40:00 [31merror[39m: 🔥Error:
+2025-07-06 15:40:02 [31merror[39m: 🔥Error:
+2025-07-06 15:50:22 [31merror[39m: 🔥Error:
+2025-07-06 15:52:10 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-06 15:59:46 [31merror[39m: 🔥Error:
+2025-07-06 15:59:47 [31merror[39m: 🔥Error:
+2025-07-06 16:09:47 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-06 16:12:13 [31merror[39m: 🔥Error:
+2025-07-06 16:15:23 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:526:9)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:21:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:89:21)
+2025-07-06 16:34:15 [31merror[39m: MongoNetworkTimeoutError: connection 1 to 65.62.2.186:27017 timed out
+    at Timeout._onTimeout (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cmap\connection.js:125:26)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-06 17:13:22 [31merror[39m: 🔥Error:
