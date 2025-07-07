@@ -25,6 +25,7 @@ export const initSocket = (server) => {
   io.use(async (socket, next) => {
     //get token
     const rawCookie = socket.handshake.headers.cookie;
+    console.log(rawCookie);
 
     if (!rawCookie) {
       return next(new Error("No cookie found"));
@@ -50,22 +51,19 @@ export const initSocket = (server) => {
     }
   });
 
-  
-
   const connectedUsers = new Map();
   // On the socket
   io.on("connection", async (socket) => {
     //join the room emit
-    if (socket.user._id) {
-      connectedUsers.set(socket.user._id, socket.id);
-      await User.findByIdAndUpdate(socket.user._id, { isOnline: true });
-      socket.broadcast.emit("user-online", socket.user._id, socket.id);      
-    }
-    
+    console.log(socket.id);
+
+    connectedUsers.set(socket.user._id, socket.id);
+    await User.findByIdAndUpdate(socket.user._id, { isOnline: true });
+    socket.broadcast.emit("user-online", socket.user._id, connectedUsers);
+
     socket.on("join-room", async (data, cb) => {
       let chatDetails;
       const { room, propertyId, receiver } = data;
-
 
       if (socket.user.role === "Tenant") {
         chatDetails = {
@@ -161,7 +159,7 @@ export const initSocket = (server) => {
         lastSeen: new Date(),
       });
     });
-    socket.broadcast.emit("user-offline", socket.user._id); 
+    socket.broadcast.emit("user-offline", socket.user._id);
   });
 
   return io;
