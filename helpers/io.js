@@ -25,7 +25,6 @@ export const initSocket = (server) => {
   io.use(async (socket, next) => {
     //get token
     const rawCookie = socket.handshake.headers.cookie;
-    console.log(rawCookie);
 
     if (!rawCookie) {
       return next(new Error("No cookie found"));

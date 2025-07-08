@@ -1804,3 +1804,53 @@
 2025-07-07 18:12:12 [32minfo[39m: MongoDB connected successfully
 2025-07-07 18:13:16 [32minfo[39m: MongoDB disconnected
 2025-07-07 18:13:26 [32minfo[39m: MongoDB connected successfully
+2025-07-07 18:18:57 [32minfo[39m: MongoDB connection established
+2025-07-07 18:18:57 [32minfo[39m: Server Started !!
+2025-07-07 18:20:37 [32minfo[39m: MongoDB disconnected
+2025-07-07 18:20:49 [32minfo[39m: MongoDB connected successfully
+2025-07-07 18:23:12 [32minfo[39m: MongoDB disconnected
+2025-07-07 18:23:23 [32minfo[39m: MongoDB connected successfully
+2025-07-07 18:32:17 [32minfo[39m: MongoDB disconnected
+2025-07-07 18:32:27 [32minfo[39m: MongoDB connected successfully
+2025-07-07 18:38:23 [32minfo[39m: MongoDB disconnected
+2025-07-07 18:38:34 [32minfo[39m: MongoDB connected successfully
+2025-07-07 18:51:18 [32minfo[39m: MongoDB disconnected
+2025-07-07 18:51:29 [32minfo[39m: MongoDB connected successfully
+2025-07-08 05:18:04 [31merror[39m: 🔥Error:
+2025-07-08 05:18:40 [32minfo[39m: MongoDB disconnected
+2025-07-08 05:18:40 [32minfo[39m: MongoDB connected successfully
+2025-07-08 05:26:17 [32minfo[39m: MongoDB connection established
+2025-07-08 05:26:17 [32minfo[39m: Server Started !!
+2025-07-08 05:27:01 [32minfo[39m: MongoDB connection established
+2025-07-08 05:27:01 [32minfo[39m: Server Started !!
+2025-07-08 05:27:13 [32minfo[39m: Socket disconnected:
+2025-07-08 05:27:55 [32minfo[39m: MongoDB connection established
+2025-07-08 05:27:55 [32minfo[39m: Server Started !!
+2025-07-08 05:30:48 [32minfo[39m: MongoDB connection established
+2025-07-08 05:30:48 [32minfo[39m: Server Started !!
+2025-07-08 05:31:39 [32minfo[39m: MongoDB connection established
+2025-07-08 05:31:39 [32minfo[39m: Server Started !!
+2025-07-08 05:32:53 [32minfo[39m: MongoDB connection established
+2025-07-08 05:32:53 [32minfo[39m: Server Started !!
+2025-07-08 05:33:31 [32minfo[39m: MongoDB connection established
+2025-07-08 05:33:31 [32minfo[39m: Server Started !!
+2025-07-08 05:34:05 [32minfo[39m: MongoDB connection established
+2025-07-08 05:34:05 [32minfo[39m: Server Started !!
+2025-07-08 05:35:48 [32minfo[39m: MongoDB connection established
+2025-07-08 05:35:48 [32minfo[39m: Server Started !!
+2025-07-08 05:39:56 [32minfo[39m: MongoDB connection established
+2025-07-08 05:39:56 [32minfo[39m: Server Started !!
+2025-07-08 05:40:16 [32minfo[39m: MongoDB connection established
+2025-07-08 05:40:16 [32minfo[39m: Server Started !!
+2025-07-08 05:41:09 [32minfo[39m: MongoDB connection established
+2025-07-08 05:41:09 [32minfo[39m: Server Started !!
+2025-07-08 05:41:43 [32minfo[39m: MongoDB connection established
+2025-07-08 05:41:43 [32minfo[39m: Server Started !!
+2025-07-08 05:44:01 [32minfo[39m: MongoDB connection established
+2025-07-08 05:44:01 [32minfo[39m: Server Started !!
+2025-07-08 05:45:38 [32minfo[39m: MongoDB connection established
+2025-07-08 05:45:38 [32minfo[39m: Server Started !!
+2025-07-08 05:47:09 [32minfo[39m: MongoDB connection established
+2025-07-08 05:47:09 [32minfo[39m: Server Started !!
+2025-07-08 05:48:01 [32minfo[39m: MongoDB connection established
+2025-07-08 05:48:01 [32minfo[39m: Server Started !!
