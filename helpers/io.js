@@ -46,7 +46,7 @@ export const initSocket = (server) => {
       // call the next function
       next();
     } catch (error) {
-      console.log(error);
+      logger.error(error);
     }
   });
 
@@ -54,7 +54,6 @@ export const initSocket = (server) => {
   // On the socket
   io.on("connection", async (socket) => {
     //join the room emit
-    console.log(socket.id);
 
     connectedUsers.set(socket.user._id, socket.id);
     await User.findByIdAndUpdate(socket.user._id, { isOnline: true });
