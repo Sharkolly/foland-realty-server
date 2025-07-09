@@ -1,53 +1,58 @@
 import Document from "../models/Document.js";
 import cloudinary from "../config/cloudinary.config.js";
 
+// 📁 Afficher tous les documents
 export const listDocuments = async (req, res) => {
   try {
-    const docs = await Document.find({}).sort({ createdAt: -1 });
+    const docs = await Document.find().sort({ createdAt: -1 });
     res.json(docs);
   } catch (error) {
-    console.error("Error listing documents:", error);
-    res.status(500).json({ error: "Erreur serveur lors de la récupération des documents" });
+    console.error("Erreur récupération documents :", error);
+    res.status(500).json({ error: "Erreur serveur" });
   }
 };
 
+// 📤 Uploader un document (via fichier ou URL directe)
 export const uploadDocument = async (req, res) => {
-  const { type, name, fileUrl } = req.body;
+  const { type, name, user } = req.body;
   const file = req.file;
 
-  if (!file && !fileUrl) {
-    return res.status(400).json({ error: "Fichier requis (upload ou URL)." });
+  if (!file) {
+    return res.status(400).json({ error: "Fichier requis." });
   }
 
   try {
     const document = await Document.create({
+      user,
       name,
       type,
-      fileUrl: file ? file.path : fileUrl,
+      fileUrl: file.path,            // URL sécurisée depuis Cloudinary
+      cloudinaryId: file.filename,   // public_id de Cloudinary
     });
 
     res.status(201).json(document);
   } catch (error) {
-    console.error("Error uploading document:", error);
+    console.error("Erreur upload document :", error);
     res.status(500).json({ error: "Erreur serveur lors de l'enregistrement du document" });
   }
 };
 
 
+// 🗑️ Supprimer un document
 export const deleteDocument = async (req, res) => {
   try {
     const doc = await Document.findById(req.params.docId);
     if (!doc) return res.status(404).json({ error: "Document introuvable" });
 
-    // extraction publicId pour cloudinary (attention à adapter selon ton dossier et nommage)
-    const publicId = doc.fileUrl.split("/").pop().split(".")[0];
+    if (doc.cloudinaryId) {
+      await cloudinary.uploader.destroy(doc.cloudinaryId);
+    }
 
-    await cloudinary.uploader.destroy(`documents/${publicId}`);
     await doc.deleteOne();
-
     res.json({ message: "Document supprimé avec succès." });
   } catch (error) {
-    console.error("Error deleting document:", error);
-    res.status(500).json({ error: "Erreur serveur lors de la suppression du document" });
+    console.error("Erreur suppression document :", error);
+    res.status(500).json({ error: "Erreur serveur lors de la suppression" });
   }
 };
+

@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import storage from "../config/cloudinary.config.js";
+import storage  from "../config/cloudinary.config.js"; // ✔️ ici on récupère storage multer
 import {
   listDocuments,
   uploadDocument,
@@ -8,15 +8,15 @@ import {
 } from "../Controller/document.controller.js";
 
 const router = express.Router();
-const upload = multer({ storage });
+const upload = multer({ storage }); // upload vers Cloudinary
 
-// GET /api/documents
+// GET tous les documents
 router.get("/", listDocuments);
 
-// POST /api/documents
+// POST upload vers Cloudinary
 router.post("/", upload.single("file"), uploadDocument);
 
-// DELETE /api/documents/:docId
+// DELETE supprime Cloudinary + DB
 router.delete("/:docId", deleteDocument);
 
 export default router;
