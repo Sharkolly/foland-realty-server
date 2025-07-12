@@ -2,10 +2,7 @@
 
 import dotenv from "dotenv";
 dotenv.config();
-<<<<<<< HEAD
-=======
 
->>>>>>> fidele-lukeka
 import morgan from "morgan";
 import express from "express";
 import cookieParser from "cookie-parser";
@@ -22,17 +19,14 @@ import newsLetter from "./Routes/newsLetter.route.js";
 import notification from "./Routes/notification.route.js";
 import chat from "./Routes/chat.route.js";
 import contact from "./Routes/contact.route.js";
+import documentRoute from "./Routes/documents.route.js";
+
 import tokenVerification from "./middleware/tokenVerification.js";
 import db from "./helpers/db.js";
 import errorHandler from "./middleware/errorHandler.js";
 import connectToMongoDB from "./config/mongodb.config.js";
 import limiter from "./config/rate_limit.config.js";
-<<<<<<< HEAD
 import logger from "./config/logger.js";
-=======
-import documentRoute from "./Routes/documents.route.js";
->>>>>>> fidele-lukeka
-
 
 // Configuration de la base de données MySQL (via Aiven)
 const password = process.env.AIVEN_SERVICE_PASSWORD;
@@ -46,23 +40,14 @@ const PORT = process.env.PORT || 5050;
 
 // Middlewares globaux
 app.use(morgan("dev"));
-<<<<<<< HEAD
-
-=======
->>>>>>> fidele-lukeka
 app.use(
   cors({
     origin: ["http://localhost:3000", "https://foland-realty.vercel.app"],
     credentials: true,
   })
 );
-<<<<<<< HEAD
-
-app.use(bodyParser());
-=======
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
->>>>>>> fidele-lukeka
 app.use(cookieParser());
 
 // Routes API
@@ -74,7 +59,6 @@ app.use("/api/foland-realty/subscribe", newsLetter);
 app.use("/api/foland-realty/contact", contact);
 app.use("/api/foland-realty/admin", adminRoute);
 app.use("/api/foland-realty/settings", adminRoute);
-// app.use("/api/foland-realty/notification", notification );
 app.use("/api/foland-realty/notification", tokenVerification, notification);
 app.use("/api/foland-realty/auth/admin", AdminRoute);
 app.use("/api/foland-realty/documents", documentRoute);
@@ -94,35 +78,25 @@ app.get("/", (req, res) => {
 // Démarrage du serveur
 const startServer = async () => {
   try {
-<<<<<<< HEAD
-    const message = await connectToMongoDB();
-    server.listen(PORT, () => {
-      initSocket(server);
-      logger.info(message);
-      logger.info("Server Started !!", PORT);
-    });
-  } catch (err) {
-    logger.error("Error starting server:", err);
-=======
     const useMongo = process.env.USE_MONGO !== "false";
 
     if (useMongo) {
       try {
-        await connectToMongoDB();
+        const msg = await connectToMongoDB();
+        logger.info(msg);
       } catch (mongoErr) {
-        console.warn("⚠️ MongoDB not connected. Continuing without MongoDB.");
+        logger.warn("⚠️ MongoDB not connected. Continuing without MongoDB.");
       }
     } else {
-      console.log("ℹ️ MongoDB disabled via USE_MONGO=false");
+      logger.info("ℹ️ MongoDB disabled via USE_MONGO=false");
     }
 
     server.listen(PORT, () => {
       initSocket(server);
-      console.log(`🚀 Server started on http://localhost:${PORT}`);
+      logger.info(`🚀 Server started on port ${PORT}`);
     });
   } catch (err) {
-    console.error("❌ Error starting server:", err);
->>>>>>> fidele-lukeka
+    logger.error("❌ Error starting server:", err);
     process.exit(1);
   }
 };

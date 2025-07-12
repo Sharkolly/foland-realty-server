@@ -30,13 +30,9 @@
     "image-hash": "^5.3.2",
     "jimp": "^1.6.0",
     "jsonwebtoken": "^9.0.2",
-<<<<<<< HEAD
     "logger": "^0.0.1",
     "mongoose": "^8.16.1",
-=======
     "mongodb": "^6.17.0",
-    "mongoose": "^8.10.0",
->>>>>>> fidele-lukeka
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "multer-storage-cloudinary": "^4.0.0",
