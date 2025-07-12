@@ -22,23 +22,18 @@ export const login = async (req, res, next) => {
       return res.status(401).json({ message: "Invalid Email or Password" });
     }
 
-    // Clé secrète JWT - vérification simple
+    // Clé secrète JWT
     const jwtSecret = process.env.JWT_SECRET_KEY;
     if (!jwtSecret) {
       console.error("JWT_SECRET_KEY is not defined in environment variables");
       return res.status(500).json({ message: "Server configuration error" });
     }
 
-    // Générer le token JWT
+    // Générer le token JWT (exp. 5 jours)
     const token = jwt.sign(
       { _id: user._id, role: user.role },
-<<<<<<< HEAD
-      process.env.JWT_SECRET_KEY,
-      { expiresIn: "5d" }
-=======
       jwtSecret,
-      { expiresIn: "3d" }
->>>>>>> fidele-lukeka
+      { expiresIn: "5d" }
     );
 
     // Détection de l'environnement
@@ -47,19 +42,13 @@ export const login = async (req, res, next) => {
     // Configurer les options du cookie
     res.cookie("token", token, {
       httpOnly: true,
-<<<<<<< HEAD
-      secure: true, // Set secure to true in production
-      sameSite: 'none', // Set sameSite to none in production
-      maxAge: 86400 * 5000, // 5 day in milliseconds
-=======
-      secure: isProduction,         // true en production, false sinon
-      sameSite: isProduction ? 'none' : 'lax',  // 'none' en prod pour cross-site cookies, sinon 'lax'
-      maxAge: 3 * 24 * 60 * 60 * 1000,  // 3 jours en ms
->>>>>>> fidele-lukeka
+      secure: isProduction,                 // true en prod, false en dev
+      sameSite: isProduction ? 'none' : 'lax',
+      maxAge: 5 * 24 * 60 * 60 * 1000,      // 5 jours
     });
 
     return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
     next(err);
   }
-};
+}
