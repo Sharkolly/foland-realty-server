@@ -40,7 +40,7 @@ export const forgot_password = async (req, res, next) => {
 
     //send the message to the email
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: 'Foland Realty',
       to: checkForEmail.email,
       subject: "Foland Realty Password Reset Code",
       text: `Your password reset code is ${code}. It is valid for 10 minutes. Don't share it with anyone.`,
