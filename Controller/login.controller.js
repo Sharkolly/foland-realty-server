@@ -34,8 +34,8 @@ export const login = async (req, res, next) => {
       { expiresIn: "5d" }
     );
 
-    const isProduction = process.env.NODE_ENV === "production";
-    const isLocalhostAccess = req.get("origin")?.includes("localhost");
+    // const isProduction = process.env.NODE_ENV === "production";
+    // const isLocalhostAccess = req.get("origin")?.includes("localhost");
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -44,9 +44,10 @@ export const login = async (req, res, next) => {
       maxAge: 86400 * 5000, // 5 day in milliseconds
     });
 
-    return res.status(201).json({ message: "Login Successful", token });
+    return res.status(201).json({ message: "Login Successful" });
   } catch (err) {
     // return res.status(500).json({ message: "Server error" });
+    console.log(err);
     next(err);
   }
 };
