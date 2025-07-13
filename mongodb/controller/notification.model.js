@@ -35,8 +35,7 @@ export const getSystemAlertsNotifications = async () => {
   }
 };
 
-export const getMessageNotifications = async (userId) => {
-  console.log(userId);
+export const getMessageNotifications = async (userId) => {  
   try {
     const notifications = await Notification.findOne(
       { owner: userId },

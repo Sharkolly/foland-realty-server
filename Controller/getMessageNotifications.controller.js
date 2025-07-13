@@ -3,7 +3,6 @@ import { getMessageNotifications } from "../mongodb/controller/notification.mode
 const getMessageNotification = async (req, res) => {   
  const { user } = req;
   const userId = user._id;
-  console.log("User ID:", userId);
   try {
     const messageNotifications = await getMessageNotifications(userId);    
     return res.status(200).json({

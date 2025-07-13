@@ -5,10 +5,10 @@ import cloudinary from "../config/cloudinary.config.js";
 export const listDocuments = async (req, res) => {
   try {
     const docs = await Document.find().sort({ createdAt: -1 });
-    res.json(docs);
+    return res.json(docs);
   } catch (error) {
     console.error("Erreur récupération documents :", error);
-    res.status(500).json({ error: "Erreur serveur" });
+    return res.status(500).json({ error: "Erreur serveur" });
   }
 };
 
