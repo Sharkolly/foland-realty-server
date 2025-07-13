@@ -38,6 +38,8 @@ const app = express();
 const server = http.createServer(app);
 const PORT = process.env.PORT || 5000;
 app.use(morgan("dev"));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
 app.use(
   cors({
@@ -46,8 +48,6 @@ app.use(
   })
 );
 
-app.use(bodyParser());
-app.use(cookieParser());
 
 app.use("/api/foland-realty/auth", authRoute);
 app.use("/api/foland-realty/user", tokenVerification, user);

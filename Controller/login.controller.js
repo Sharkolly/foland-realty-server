@@ -41,7 +41,7 @@ export const login = async (req, res, next) => {
       httpOnly: true,
       secure: true, // Set secure to true in production
       sameSite: 'none', // Set sameSite to none in production
-      maxAge: 86400 * 5000, // 5 day in milliseconds
+      maxAge: 1000 * 60 * 60 * 24 * 5, // 5 day in milliseconds
       overwrite: true,
     });
 
