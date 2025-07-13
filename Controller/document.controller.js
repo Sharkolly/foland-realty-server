@@ -1,4 +1,4 @@
-import Document from "../models/Document.js";
+import Document from "../Models/Document.js";
 import cloudinary from "../config/cloudinary.config.js";
 
 // 📁 Afficher tous les documents
