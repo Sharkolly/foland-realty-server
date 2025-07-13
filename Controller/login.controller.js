@@ -36,38 +36,21 @@ export const login = async (req, res, next) => {
       { expiresIn: "5d" }
     );
 
-<<<<<<< HEAD
     // Détection de l'environnement
     const isProduction = process.env.NODE_ENV === "production";
-=======
-    // const isProduction = process.env.NODE_ENV === "production";
-    // const isLocalhostAccess = req.get("origin")?.includes("localhost");
->>>>>>> 2ead1c2f2df4798d949e43c09a78057e6fcb10a4
 
     // Configurer les options du cookie
     res.cookie("token", token, {
       httpOnly: true,
-<<<<<<< HEAD
       secure: isProduction,                 // true en prod, false en dev
       sameSite: isProduction ? 'none' : 'lax',
       maxAge: 5 * 24 * 60 * 60 * 1000,      // 5 jours
-=======
-      secure: true, // Set secure to true in production
-      sameSite: 'none', // Set sameSite to none in production
-      maxAge: 1000 * 60 * 60 * 24 * 5, // 5 day in milliseconds
-      overwrite: true,
->>>>>>> 2ead1c2f2df4798d949e43c09a78057e6fcb10a4
     });
 
     console.log(token);
 
     return res.status(201).json({ message: "Login Successful" });
   } catch (err) {
-<<<<<<< HEAD
-=======
-    // return res.status(500).json({ message: "Server error" });
-    console.log(err);
->>>>>>> 2ead1c2f2df4798d949e43c09a78057e6fcb10a4
     next(err);
   }
 }

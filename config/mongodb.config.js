@@ -7,8 +7,6 @@ import logger from "./logger.js";
 const mongoDBURL = process.env.MONGODBURL;
 
 const mongoDBOptions = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
   connectTimeoutMS: 3000,
   socketTimeoutMS: 6000,
   serverSelectionTimeoutMS: 3000,
