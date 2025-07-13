@@ -44,6 +44,8 @@ export const login = async (req, res, next) => {
       maxAge: 86400 * 5000, // 5 day in milliseconds
     });
 
+    console.log(token);
+
     return res.status(201).json({ message: "Login Successful" });
   } catch (err) {
     // return res.status(500).json({ message: "Server error" });
