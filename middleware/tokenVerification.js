@@ -15,7 +15,7 @@ const tokenVerification = (req, res, next) => {
 
   if (!token) {
     return res.status(403).json({ message: "No Token Found" });
-  }
+  };
 
   jwt.verify(token, process.env.JWT_SECRET_KEY, (err, user) => {
     if (err) return res.status(403).json({ message: err.message });

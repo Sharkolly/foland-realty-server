@@ -81,7 +81,6 @@ export const initSocket = (server) => {
 
         // send all the messages in the db to the room on the frontend
         io.to(room).emit("get-all-message", getAllMsg, { id: socket.id });
-console.log(getAllMsg);
         // send a notification for new message
         io.to(room).emit("notification", socket.id);
       } catch (err) {
@@ -137,7 +136,6 @@ console.log(getAllMsg);
 
         // find a particular room to display the message
         const getAllMessage = await getAllMessages(room);
-        console.log(getAllMessage);
 
         //send all the message with the message again to the frontend
         io.to(room).emit("get-all-message", getAllMessage, {

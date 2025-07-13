@@ -42,12 +42,11 @@ export const login = async (req, res, next) => {
     // Configurer les options du cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: isProduction,                 // true en prod, false en dev
-      sameSite: isProduction ? 'none' : 'lax',
+      overwrite: true,
+      secure: true,                 // true en prod, false en dev
+      sameSite:'none',
       maxAge: 5 * 24 * 60 * 60 * 1000,      // 5 jours
     });
-
-    console.log(token);
 
     return res.status(201).json({ message: "Login Successful" });
   } catch (err) {
