@@ -36,7 +36,14 @@ process.env.DATABASE_URL = databaseUrl;
 // Initialisation de l'app Express
 const app = express();
 const server = http.createServer(app);
+<<<<<<< HEAD
 const PORT = process.env.PORT || 5050;
+=======
+const PORT = process.env.PORT || 5000;
+app.use(morgan("dev"));
+app.use(bodyParser.json());
+app.use(cookieParser());
+>>>>>>> 2ead1c2f2df4798d949e43c09a78057e6fcb10a4
 
 // Middlewares globaux
 app.use(morgan("dev"));
@@ -46,9 +53,13 @@ app.use(
     credentials: true,
   })
 );
+<<<<<<< HEAD
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+=======
+
+>>>>>>> 2ead1c2f2df4798d949e43c09a78057e6fcb10a4
 
 // Routes API
 app.use("/api/foland-realty/auth", authRoute);

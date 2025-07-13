@@ -4,7 +4,15 @@ const tokenVerification = (req, res, next) => {
   // 1. Récupérer le token dans l’en-tête Authorization : "Bearer <token>"
   const authHeader = req.headers.authorization;
 
+<<<<<<< HEAD
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
+=======
+
+  const {token} = req.cookies; 
+  console.log(token);  
+  // get token
+  if (!token) {
+>>>>>>> 2ead1c2f2df4798d949e43c09a78057e6fcb10a4
     return res.status(403).json({ message: "No Token Found" });
   }
 
