@@ -42,6 +42,7 @@ export const login = async (req, res, next) => {
       secure: true, // Set secure to true in production
       sameSite: 'none', // Set sameSite to none in production
       maxAge: 86400 * 5000, // 5 day in milliseconds
+      overwrite: true,
     });
 
     console.log(token);
