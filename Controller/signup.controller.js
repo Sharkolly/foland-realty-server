@@ -79,8 +79,6 @@ export const signUp = async (req, res, next) => {
     });
     return res.status(201).json({ token, message: "Login Successful" });
   } catch (err) {
-    console.log(err.message);
-    // return res.status(500).json({ message: "Server error" });
     next(err);
   }
 };

@@ -25,14 +25,12 @@ export const initSocket = (server) => {
   io.use(async (socket, next) => {
     //get token
     const rawCookie = socket.handshake.headers.cookie;
-
     if (!rawCookie) {
       return next(new Error("No cookie found"));
     }
 
     const parsed = cookie.parse(rawCookie);
     const token = parsed.token;
-
     if (!token) {
       logger.warn("No token provided, disconnecting socket");
       return socket.disconnect(true);
@@ -76,11 +74,14 @@ export const initSocket = (server) => {
         // join room
         socket.join(room);
 
+
+
         //get all the message in the room
         const getAllMsg = await Chat.findOne({ roomId: room });
 
         // send all the messages in the db to the room on the frontend
-        io.to(room).emit("get-all-message", getAllMsg, { id: socket.id });
+        io.to(room).emit("get-all-message", getAllMsg, { id: socket.id });        
+
         // send a notification for new message
         io.to(room).emit("notification", socket.id);
       } catch (err) {

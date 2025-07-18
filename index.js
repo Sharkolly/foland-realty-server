@@ -47,7 +47,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://foland-realty.vercel.app"],
+    origin: ["http://localhost:3000", "http://localhost:5173", "https://foland-realty.vercel.app"],
     credentials: true,
   })
 );

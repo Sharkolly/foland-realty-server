@@ -12,3 +12,206 @@
 2025-07-13 16:40:14 [32minfo[39m: 🚀 Server started on port 3001
 2025-07-13 16:41:35 [32minfo[39m: ✅ MongoDB connection established
 2025-07-13 16:41:35 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-13 18:30:26 [32minfo[39m: ✅ MongoDB connection established
+2025-07-13 18:30:28 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-13 18:33:17 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-13 18:33:17 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-13 18:33:17 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-13 18:33:42 [32minfo[39m: ✅ MongoDB connection established
+2025-07-13 18:33:42 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-13 18:56:05 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-13 18:56:19 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-13 19:36:51 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-14 18:11:03 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-14 18:17:07 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-14 18:21:07 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-14 19:30:36 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 19:30:36 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 20:24:20 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-14 20:24:32 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-14 20:25:05 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-14 21:05:28 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-14 21:42:24 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-14 21:42:59 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-14 22:26:46 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:26:46 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:27:32 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:28:18 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:29:04 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:29:52 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:29:52 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:29:52 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:29:52 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:30:41 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:30:41 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 22:30:45 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:31:31 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:32:09 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:32:11 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:34:06 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:34:07 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 22:34:09 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:34:55 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:35:42 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:36:28 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:38:31 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:38:31 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:38:31 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:38:32 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:39:18 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:40:05 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:40:51 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:41:41 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:41:41 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 22:41:41 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:42:08 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:42:08 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 22:42:12 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:42:53 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:42:53 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 22:42:53 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:43:21 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:43:22 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 22:43:25 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-14 22:44:21 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:44:21 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-14 22:45:22 [32minfo[39m: ✅ MongoDB connection established
+2025-07-14 22:45:22 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-15 07:06:10 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 07:06:10 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 07:06:15 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 07:06:26 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 09:46:29 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 12:10:54 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 12:10:56 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 12:11:07 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 12:12:00 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 12:12:25 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 12:12:59 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 12:13:54 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 12:17:19 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 12:18:27 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 12:19:11 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 12:19:55 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 12:20:40 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 12:51:51 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 14:25:43 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 17:33:45 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 18:06:49 [32minfo[39m: ✅ MongoDB connection established
+2025-07-15 18:06:49 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-15 19:05:05 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-15 19:36:18 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-15 20:11:48 [32minfo[39m: ✅ MongoDB connection established
+2025-07-15 20:11:48 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-15 20:12:17 [32minfo[39m: ✅ MongoDB connection established
+2025-07-15 20:12:17 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-15 20:44:02 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 00:31:31 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 00:41:14 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 00:41:14 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 00:43:59 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 00:43:59 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 18:15:55 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 18:15:55 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 18:26:20 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 18:26:20 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 18:52:14 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 19:01:48 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 19:10:22 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 19:10:33 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 19:16:55 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-18 19:17:42 [33mwarn[39m: No token provided, disconnecting socket
+2025-07-18 19:19:53 [32minfo[39m: Socket disconnected:
+2025-07-18 19:20:22 [32minfo[39m: Socket disconnected:
+2025-07-18 19:21:29 [32minfo[39m: Socket disconnected:
+2025-07-18 19:21:30 [32minfo[39m: Socket disconnected:
+2025-07-18 19:25:25 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 19:25:25 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 19:25:27 [32minfo[39m: __next_hmr_refresh_hash__=279; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RmMWUwMGM4NGM4Y2JlMzM0MjhlZTkiLCJyb2xlIjoiTGFuZGxvcmQiLCJpYXQiOjE3NTI4NjI3MDgsImV4cCI6MTc1MzI5NDcwOH0.OfC3EyhvLhpldg6YAMUWFy8Y0rbCpHeunR1p9CrB6qk
+2025-07-18 19:25:28 [32minfo[39m: yZA1-eN7svqS08RdAAAB
+2025-07-18 19:25:45 [32minfo[39m: Socket disconnected:
+2025-07-18 19:26:05 [32minfo[39m: __next_hmr_refresh_hash__=279; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RmMWUwMGM4NGM4Y2JlMzM0MjhlZTkiLCJyb2xlIjoiTGFuZGxvcmQiLCJpYXQiOjE3NTI4NjI3MDgsImV4cCI6MTc1MzI5NDcwOH0.OfC3EyhvLhpldg6YAMUWFy8Y0rbCpHeunR1p9CrB6qk
+2025-07-18 19:26:05 [32minfo[39m: __next_hmr_refresh_hash__=279; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RmMWUwMGM4NGM4Y2JlMzM0MjhlZTkiLCJyb2xlIjoiTGFuZGxvcmQiLCJpYXQiOjE3NTI4NjI3MDgsImV4cCI6MTc1MzI5NDcwOH0.OfC3EyhvLhpldg6YAMUWFy8Y0rbCpHeunR1p9CrB6qk
+2025-07-18 19:26:05 [32minfo[39m: __next_hmr_refresh_hash__=279; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RmMWUwMGM4NGM4Y2JlMzM0MjhlZTkiLCJyb2xlIjoiTGFuZGxvcmQiLCJpYXQiOjE3NTI4NjI3MDgsImV4cCI6MTc1MzI5NDcwOH0.OfC3EyhvLhpldg6YAMUWFy8Y0rbCpHeunR1p9CrB6qk
+2025-07-18 19:26:08 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 19:26:12 [31merror[39m: 🔥Error:
+2025-07-18 19:26:12 [31merror[39m: MongoServerSelectionError: connection <monitor> to 65.62.2.179:27017 timed out
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:192:22)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-18 19:26:12 [31merror[39m: 🔥Error:
+2025-07-18 19:26:12 [31merror[39m: 🔥Error:
+2025-07-18 19:26:12 [31merror[39m: MongoServerSelectionError: Socket 'secureConnect' timed out after 4119ms (connectTimeoutMS: 3000)
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:192:22)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-18 19:26:12 [31merror[39m: MongoServerSelectionError: Socket 'secureConnect' timed out after 4119ms (connectTimeoutMS: 3000)
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:192:22)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-18 19:26:13 [32minfo[39m: __next_hmr_refresh_hash__=279; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RmMWUwMGM4NGM4Y2JlMzM0MjhlZTkiLCJyb2xlIjoiTGFuZGxvcmQiLCJpYXQiOjE3NTI4NjI3MDgsImV4cCI6MTc1MzI5NDcwOH0.OfC3EyhvLhpldg6YAMUWFy8Y0rbCpHeunR1p9CrB6qk
+2025-07-18 19:26:16 [31merror[39m: MongoServerSelectionError: Socket 'secureConnect' timed out after 4119ms (connectTimeoutMS: 3000)
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 19:26:21 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 19:26:23 [32minfo[39m: __next_hmr_refresh_hash__=279; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RmMWUwMGM4NGM4Y2JlMzM0MjhlZTkiLCJyb2xlIjoiTGFuZGxvcmQiLCJpYXQiOjE3NTI4NjI3MDgsImV4cCI6MTc1MzI5NDcwOH0.OfC3EyhvLhpldg6YAMUWFy8Y0rbCpHeunR1p9CrB6qk
+2025-07-18 19:26:24 [32minfo[39m: A9figbcE8K1rVajiAAAK
+2025-07-18 19:27:01 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 19:27:01 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 19:27:06 [32minfo[39m: WxL8p_KzrpP7pSYQAAAB
+2025-07-18 19:27:10 [32minfo[39m: Socket disconnected:
+2025-07-18 19:27:11 [32minfo[39m: OicPPYxqebLoRJADAAAE
+2025-07-18 19:27:11 [32minfo[39m: EKXn7kpOKiQFIH04AAAI
+2025-07-18 19:28:12 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-18 19:28:12 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-18 19:28:12 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 19:28:25 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-18 19:28:52 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 19:28:52 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 19:28:59 [32minfo[39m: Socket disconnected:
+2025-07-18 19:33:03 [32minfo[39m: Socket disconnected:
+2025-07-18 19:33:47 [32minfo[39m: Socket disconnected:
+2025-07-18 19:36:32 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 19:37:32 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 19:39:58 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 19:39:58 [32minfo[39m: 🚀 Server started on port 3001

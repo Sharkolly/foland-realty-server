@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { checkUserExists } from "../mongodb/controller/auth.model.js";
+import logger from "../config/logger.js";
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
@@ -13,7 +14,9 @@ export const login = async (req, res, next) => {
     // Vérifier si l'utilisateur existe
     const user = await checkUserExists(email);
     if (!user) {
-      return res.status(403).json({ message: "Email is not registered. Please Sign Up." });
+      return res
+        .status(403)
+        .json({ message: "Email is not registered. Please Sign Up." });
     }
 
     // Comparer le mot de passe
@@ -25,16 +28,14 @@ export const login = async (req, res, next) => {
     // Clé secrète JWT
     const jwtSecret = process.env.JWT_SECRET_KEY;
     if (!jwtSecret) {
-      console.error("JWT_SECRET_KEY is not defined in environment variables");
+      logger.error("JWT_SECRET_KEY is not defined in environment variables");
       return res.status(500).json({ message: "Server configuration error" });
     }
 
     // Générer le token JWT (exp. 5 jours)
-    const token = jwt.sign(
-      { _id: user._id, role: user.role },
-      jwtSecret,
-      { expiresIn: "5d" }
-    );
+    const token = jwt.sign({ _id: user._id, role: user.role }, jwtSecret, {
+      expiresIn: "5d",
+    });
 
     // Détection de l'environnement
     const isProduction = process.env.NODE_ENV === "production";
@@ -42,14 +43,13 @@ export const login = async (req, res, next) => {
     // Configurer les options du cookie
     res.cookie("token", token, {
       httpOnly: true,
-      overwrite: true,
-      secure: true,                 // true en prod, false en dev
-      sameSite:'none',
-      maxAge: 5 * 24 * 60 * 60 * 1000,      // 5 jours
+      secure: true, // true en prod, false en dev
+      sameSite: "none",
+      maxAge: 5 * 24 * 60 * 60 * 1000, // 5 jours
     });
 
     return res.status(201).json({ message: "Login Successful" });
   } catch (err) {
     next(err);
   }
-}
+};
