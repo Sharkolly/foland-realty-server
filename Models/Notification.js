@@ -12,7 +12,7 @@ const NotificationSchema = new Schema(
     messages: [
       {
         roomID: { type: String, required: true },
-        sender: { type: Schema.Types.ObjectId, ref: "User", required: true },
+        sender: { type: Schema.Types.ObjectId, ref: "User", required: true }, 
         senderName: { type: String, required: true },
         senderAvatar: { type: String, required: false },
         message: { type: String, required: true },

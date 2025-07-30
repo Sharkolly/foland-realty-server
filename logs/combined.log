@@ -750,3 +750,20 @@
 2025-07-30 13:57:47 [32minfo[39m: Socket disconnected:
 2025-07-30 14:01:30 [32minfo[39m: Socket disconnected:
 2025-07-30 14:01:33 [32minfo[39m: Socket disconnected:
+2025-07-30 14:38:18 [32minfo[39m: Socket disconnected:
+2025-07-30 14:38:31 [32minfo[39m: Socket disconnected:
+2025-07-30 14:39:01 [32minfo[39m: Socket disconnected:
+2025-07-30 14:39:08 [32minfo[39m: Socket disconnected:
+2025-07-30 14:49:56 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 14:49:56 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 15:04:00 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3008ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 15:04:00 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 15:04:00 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 15:04:15 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
