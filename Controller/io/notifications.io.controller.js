@@ -16,13 +16,13 @@ const notificationControllerSocket = async (
   } else {
     // Check if any message in messages[] has same senderID
     const existingMessage = notif.messages.find(
-      (msg) => msg.senderID.toString() === userID.toString()
+      (msg) => msg.sender.toString() === userID.toString()
     );
 
     if (existingMessage) {
       // Update that message instead of pushing a new one
       await Notification.updateOne(
-        { owner, "messages.senderID": userID },
+        { owner, "messages.sender": userID },
         {
           $set: {
             "messages.$.message": message,

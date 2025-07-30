@@ -2,10 +2,11 @@ import logger from "../config/logger.js";
 import { getAllNotifications } from "../mongodb/controller/notification.model.js";
 
 const getAllNotification = async (req, res, next) => {
-  // const { user } = req;
-  // const userId = user._id;
+  const { user } = req;
+
   try {
-    const allNotifications = await getAllNotifications();
+    const allNotifications = await getAllNotifications(user._id);  
+    console.log(allNotifications);  
     return res.status(200).json({
       success: true,
       message: "Notifications fetched successfully",

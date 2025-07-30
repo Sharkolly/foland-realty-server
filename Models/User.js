@@ -38,6 +38,10 @@ const userDetails = new Schema(
     resetCode: {
       type: String,
     },
+    changedRole: {
+      type: String,
+      default: false
+    },
     resetCodeExpiration: { type: Date },
   },
   { timestamps: true }

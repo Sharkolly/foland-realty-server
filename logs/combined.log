@@ -215,3 +215,538 @@
 2025-07-18 19:37:32 [32minfo[39m: ✅ MongoDB connected successfully
 2025-07-18 19:39:58 [32minfo[39m: ✅ MongoDB connection established
 2025-07-18 19:39:58 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 19:41:15 [32minfo[39m: ✅ MongoDB connection established
+2025-07-18 19:41:15 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-18 19:41:22 [32minfo[39m: Socket disconnected:
+2025-07-18 19:41:49 [32minfo[39m: Socket disconnected:
+2025-07-18 19:42:38 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 19:42:49 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 19:48:23 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 19:49:05 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 19:55:20 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 19:55:46 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 20:01:20 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-18 20:01:46 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-18 20:02:22 [32minfo[39m: Socket disconnected:
+2025-07-18 21:41:42 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:42:49 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:43:36 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:526:9)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+2025-07-18 21:44:25 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:45:15 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:46:01 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:46:48 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:47:36 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:526:9)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+2025-07-18 21:48:26 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:49:13 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:49:59 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:50:46 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:51:32 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:52:19 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:53:06 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:53:53 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:54:44 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:57:14 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-18 21:58:01 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-19 07:16:51 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-19 07:22:26 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-19 07:22:38 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-19 07:36:41 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-19 07:36:42 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-19 07:46:22 [32minfo[39m: Socket disconnected:
+2025-07-19 07:46:54 [32minfo[39m: Socket disconnected:
+2025-07-19 07:53:26 [32minfo[39m: Socket disconnected:
+2025-07-19 07:53:50 [32minfo[39m: Socket disconnected:
+2025-07-19 08:16:46 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-19 08:16:58 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-19 08:21:27 [32minfo[39m: ✅ MongoDB connection established
+2025-07-19 08:21:27 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-19 11:17:35 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-19 11:17:36 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-19 11:17:37 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-19 11:17:47 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-19 12:08:04 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-22 05:57:39 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-22 06:41:46 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-22 06:42:00 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-22 07:02:55 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-23 06:02:14 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-23 06:02:17 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-23 06:02:27 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-23 06:08:11 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-23 06:08:22 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-25 22:12:31 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-25 22:12:31 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-26 08:02:49 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-26 08:02:55 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-26 08:02:57 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-26 08:03:08 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-26 08:05:34 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-26 15:20:39 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-26 15:20:40 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-26 15:20:51 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-26 15:40:05 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-27 17:34:01 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-27 17:39:08 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-28 14:23:54 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-28 14:24:00 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-28 14:24:10 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-28 14:37:01 [32minfo[39m: ✅ MongoDB connection established
+2025-07-28 14:37:01 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-28 14:51:03 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-28 14:54:42 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-29 14:27:28 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-29 14:27:39 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-29 14:51:43 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 14:51:44 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 14:52:24 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 14:52:24 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 14:56:53 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 14:56:53 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 15:35:14 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 15:35:14 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 15:37:31 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 15:37:31 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 15:39:42 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 15:39:42 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 15:45:13 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 15:45:13 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 15:48:38 [32minfo[39m: 
+2025-07-29 15:49:29 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 15:49:29 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 15:49:52 [32minfo[39m: 
+2025-07-29 15:51:29 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 15:51:29 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 15:52:08 [32minfo[39m: {
+  _id: new ObjectId('686aa67e7ce6a03991174d65'),
+  owner: new ObjectId('67df1e00c84c8cbe33428ee9'),
+  messages: [
+    {
+      roomID: '67df1e00c84c8cbe33428ee9/67f1802f79d0f503ac872c0e',
+      senderID: new ObjectId('67f1802f79d0f503ac872c0e'),
+      senderName: 'Paul Paul  ',
+      senderAvatar: '',
+      message: 'The top bar or bottom bar should go',
+      _id: new ObjectId('686d83b82f4577cc31b762dc'),
+      createdAt: 2025-07-19T11:53:47.035Z
+    },
+    {
+      roomID: '67df1e00c84c8cbe33428ee9/6870f0fae1eb8b736d2cd166',
+      senderID: new ObjectId('6870f0fae1eb8b736d2cd166'),
+      senderName: 'Ayomide oni ',
+      senderAvatar: '',
+      message: 'Hello ',
+      _id: new ObjectId('6870f129e1eb8b736d2cd18b'),
+      createdAt: 2025-07-11T11:10:33.938Z
+    }
+  ],
+  inspections: [],
+  alerts: [],
+  createdAt: 2025-07-06T16:38:22.179Z,
+  updatedAt: 2025-07-19T11:53:47.036Z,
+  __v: 0
+}
+2025-07-29 15:56:11 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-29 15:56:22 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-29 15:59:55 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 15:59:55 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-29 16:38:39 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-29 16:38:53 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-29 16:52:37 [32minfo[39m: ✅ MongoDB connection established
+2025-07-29 16:52:37 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 10:51:25 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 10:51:25 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:01:55 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:01:55 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:05:49 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:05:49 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:09:01 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:09:01 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:09:37 [31merror[39m: StrictPopulateError: Cannot populate path `messages.senderID` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:50:12)
+    at _populatePath (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\model.js:4468:21)
+    at Function.populate (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\model.js:4435:21)
+    at C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2631:11
+    at _init (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:3307:5)
+    at Document.init (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\document.js:654:5)
+    at Document.$init (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\document.js:667:42)
+    at Object.createModelAndInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\queryHelpers.js:119:12)
+    at completeOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:3285:11)
+    at Query._completeOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2627:3)
+2025-07-30 11:10:08 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:10:08 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:11:32 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 11:11:32 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 11:11:32 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:13:26 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:13:26 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:23:56 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:23:56 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:24:18 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:24:18 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:26:06 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:26:06 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:31:03 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:31:03 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:33:02 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:33:02 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:34:02 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:34:02 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:42:17 [32minfo[39m: Socket disconnected:
+2025-07-30 11:43:01 [32minfo[39m: Socket disconnected:
+2025-07-30 11:43:05 [32minfo[39m: Socket disconnected:
+2025-07-30 11:43:59 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 11:43:59 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 11:43:59 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:44:09 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 11:44:23 [31merror[39m: 🔥Error:
+2025-07-30 11:44:26 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 11:44:26 [31merror[39m: 🔥Error:
+2025-07-30 11:44:26 [31merror[39m: 🔥Error:
+2025-07-30 11:44:26 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 11:44:26 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 11:44:46 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:44:46 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:45:19 [32minfo[39m: Socket disconnected:
+2025-07-30 11:46:58 [32minfo[39m: Socket disconnected:
+2025-07-30 11:46:59 [32minfo[39m: Socket disconnected:
+2025-07-30 11:47:39 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:47:39 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:47:50 [32minfo[39m: Socket disconnected:
+2025-07-30 11:48:40 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 3000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 11:48:40 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 11:48:41 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:48:59 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 11:48:59 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 11:49:10 [32minfo[39m: Socket disconnected:
+2025-07-30 13:30:28 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-30 13:31:17 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-07-30 13:31:17 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 13:31:17 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 13:31:28 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:32:14 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:33:00 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:33:15 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:33:15 [31merror[39m: 🔥Error:
+2025-07-30 13:33:15 [31merror[39m: 🔥Error:
+2025-07-30 13:33:25 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:33:31 [31merror[39m: 🔥Error:
+2025-07-30 13:33:31 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:33:31 [31merror[39m: 🔥Error:
+2025-07-30 13:34:10 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3000ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 13:34:10 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 13:34:10 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 13:34:21 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:35:08 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:35:54 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:36:12 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3009ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 13:36:12 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 13:36:12 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 13:36:24 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:37:03 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3001ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 13:37:03 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 13:37:03 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 13:37:13 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:37:29 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:37:53 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3001ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 13:37:53 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 13:37:53 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 13:38:05 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 13:38:49 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 13:38:49 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 13:55:50 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 13:55:50 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 13:57:13 [32minfo[39m: Socket disconnected:
+2025-07-30 13:57:22 [32minfo[39m: Socket disconnected:
+2025-07-30 13:57:47 [32minfo[39m: Socket disconnected:
+2025-07-30 14:01:30 [32minfo[39m: Socket disconnected:
+2025-07-30 14:01:33 [32minfo[39m: Socket disconnected:

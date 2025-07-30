@@ -3,9 +3,13 @@ import Notification from "../../Models/Notification.js";
 
 export const getAllNotifications = async (userId) => {
   try {
-    const notifications = await Notification.find({ userId }).sort({
-      createdAt: -1,
-    });
+    const notifications = await Notification.findOne({ owner: userId })
+      .sort({
+        createdAt: -1,
+      })
+      .populate("messages.sender", "firstName lastName role")
+      .populate("inspections.sender", "firstName lastName role");
+    console.log(notifications);
     return notifications;
   } catch (error) {
     logger.error("Error fetching notifications:", error);
@@ -35,7 +39,7 @@ export const getSystemAlertsNotifications = async () => {
   }
 };
 
-export const getMessageNotifications = async (userId) => {  
+export const getMessageNotifications = async (userId) => {
   try {
     const notifications = await Notification.findOne(
       { owner: userId },
