@@ -53,8 +53,6 @@ export const initSocket = (server) => {
   io.on("connection", async (socket) => {
     //join the room emit
 
-    console.log("Socket connected:", socket.id);
-
     connectedUsers.set(socket.user._id, socket.id);
     await User.findByIdAndUpdate(socket.user._id, { isOnline: true });
     socket.broadcast.emit("user-online", socket.user._id, connectedUsers);
@@ -62,7 +60,6 @@ export const initSocket = (server) => {
     socket.on("join-room", async (data, cb) => {
       let chatDetails;
       const { room, propertyId, receiver } = data;
-      console.log(room, propertyId, receiver);
 
       if (socket.user.role === "Tenant") {
         chatDetails = {
@@ -79,7 +76,7 @@ export const initSocket = (server) => {
 
         //get all the message in the room
         const getAllMsg = await Chat.findOne({ roomId: room });
-        console.log(getAllMsg);
+        // console.log(getAllMsg);
 
         // send all the messages in the db to the room on the frontend
         io.to(room).emit("get-all-message", getAllMsg, { id: socket.id });

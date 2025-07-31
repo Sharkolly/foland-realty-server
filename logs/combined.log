@@ -767,3 +767,268 @@
     at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
     at listOnTimeout (node:internal/timers:594:17)
     at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:05:02 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:05:49 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:06:36 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:07:21 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:08:08 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:08:55 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:09:41 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:10:28 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:11:14 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:12:00 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:12:39 [31merror[39m: 🔥Error:
+2025-07-30 15:12:39 [31merror[39m: 🔥Error:
+2025-07-30 15:12:48 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:12:52 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:13:04 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:13:39 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:14:26 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:14:32 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:14:57 [31merror[39m: 🔥Error:
+2025-07-30 15:14:58 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:15:20 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:16:02 [31merror[39m: 🔥Error:
+2025-07-30 15:16:02 [31merror[39m: 🔥Error:
+2025-07-30 15:16:02 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:16:06 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 15:17:32 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 15:17:32 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 16:11:54 [32minfo[39m: Socket disconnected:
+2025-07-30 16:24:19 [32minfo[39m: Socket disconnected:
+2025-07-30 16:24:19 [32minfo[39m: Socket disconnected:
+2025-07-30 16:24:20 [32minfo[39m: Socket disconnected:
+2025-07-30 16:24:27 [32minfo[39m: Socket disconnected:
+2025-07-30 17:19:38 [32minfo[39m: Socket disconnected:
+2025-07-30 17:55:59 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-30 17:56:46 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-30 18:01:39 [32minfo[39m: Socket disconnected:
+2025-07-30 18:52:36 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:526:9)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+2025-07-30 18:53:23 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-30 18:54:10 [31merror[39m: MongoServerSelectionError: getaddrinfo ENOTFOUND foland-realty-database-shard-00-00.2fev2.mongodb.net
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+    at async Collection.findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\collection.js:277:21)
+    at async model.Query._findOne (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:2687:15)
+    at async model.Query.exec (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\query.js:4604:63)
+2025-07-30 18:54:22 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-30 18:54:23 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-30 19:17:50 [32minfo[39m: Socket disconnected:
+2025-07-30 21:06:14 [31merror[39m: MongoServerSelectionError: Socket 'secureConnect' timed out after 3000ms (connectTimeoutMS: 3000)
+    at Topology.selectServer (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\sdam\topology.js:326:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async tryOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:145:18)
+    at async executeOperation (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async FindCursor._initialize (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\find_cursor.js:61:26)
+    at async FindCursor.cursorInit (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)
+    at async FindCursor.fetchBatch (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:667:13)
+    at async FindCursor.next (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:347:17)
+2025-07-30 21:08:20 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3081ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 21:08:21 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 21:08:21 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:08:31 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 21:12:36 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 21:12:36 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:27:28 [32minfo[39m: Socket disconnected:
+2025-07-30 21:27:30 [32minfo[39m: Socket disconnected:
+2025-07-30 21:31:09 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3004ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 21:31:09 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 21:31:09 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:31:22 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 21:31:32 [31merror[39m: MongooseError: Operation `notifications.updateOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 21:31:39 [31merror[39m: 🔥Error:
+2025-07-30 21:31:40 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 21:31:40 [31merror[39m: 🔥Error:
+2025-07-30 21:31:40 [31merror[39m: 🔥Error:
+2025-07-30 21:31:50 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 21:31:54 [31merror[39m: 🔥Error:
+2025-07-30 21:31:55 [31merror[39m: MongooseError: Operation `notifications.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 21:32:09 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 21:32:48 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 21:32:48 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:33:36 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 21:33:36 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:42:17 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 21:42:17 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 21:42:17 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:42:29 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 21:42:29 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:43:27 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 21:43:27 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:50:51 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 21:50:51 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 21:50:51 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:51:05 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 21:51:05 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:53:16 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3010ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 21:53:16 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 21:53:16 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 21:53:30 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-07-30 22:03:56 [31merror[39m: MongooseServerSelectionError: Socket 'secureConnect' timed out after 3003ms (connectTimeoutMS: 3000)
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:526:9)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-07-30 22:03:56 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-07-30 22:03:56 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 22:04:06 [32minfo[39m: ✅ MongoDB connection established
+2025-07-30 22:04:07 [32minfo[39m: 🚀 Server started on port 3001
+2025-07-30 22:05:03 [32minfo[39m: Socket disconnected:
+2025-07-30 22:55:20 [32minfo[39m: Socket disconnected:
+2025-07-31 08:01:31 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-31 08:01:32 [32minfo[39m: ✅ MongoDB connected successfully
+2025-07-31 08:01:43 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-07-31 08:02:06 [32minfo[39m: ✅ MongoDB connected successfully

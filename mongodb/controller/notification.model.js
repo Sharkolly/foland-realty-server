@@ -9,7 +9,6 @@ export const getAllNotifications = async (userId) => {
       })
       .populate("messages.sender", "firstName lastName role")
       .populate("inspections.sender", "firstName lastName role");
-    console.log(notifications);
     return notifications;
   } catch (error) {
     logger.error("Error fetching notifications:", error);
@@ -56,6 +55,28 @@ export const deleteMessageNotification = async (userId, id) => {
     const notification = await Notification.updateOne(
       { owner: userId },
       { $pull: { messages: { _id: id } } }
+    );
+    return notification;
+  } catch (error) {
+    logger.error("Error deleting message notification:", error);
+  }
+};
+export const deleteInspectionNotification = async (userId, id) => {
+  try {
+    const notification = await Notification.updateOne(
+      { owner: userId },
+      { $pull: { inspections: { _id: id } } }
+    );
+    return notification;
+  } catch (error) {
+    logger.error("Error deleting message notification:", error);
+  }
+};
+export const deleteAlertNotification = async (userId, id) => {
+  try {
+    const notification = await Notification.updateOne(
+      { owner: userId },
+      { $pull: { alerts: { _id: id } } }
     );
     return notification;
   } catch (error) {

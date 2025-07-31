@@ -5,8 +5,7 @@ const getAllNotification = async (req, res, next) => {
   const { user } = req;
 
   try {
-    const allNotifications = await getAllNotifications(user._id);  
-    console.log(allNotifications);  
+    const allNotifications = await getAllNotifications(user._id);      
     return res.status(200).json({
       success: true,
       message: "Notifications fetched successfully",
