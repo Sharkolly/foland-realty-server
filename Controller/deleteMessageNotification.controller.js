@@ -17,7 +17,7 @@ const DeleteMessageNotificationController = async (req, res) => {
     if (result) {
       return res.status(200).json({
         success: true,
-        message: "Message Notification deleted successfully",
+        message: "Notification deleted successfully",
       });
     } else {
       return res.status(404).json({

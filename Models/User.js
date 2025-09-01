@@ -1,5 +1,21 @@
 import { Schema, model } from "mongoose";
 
+const deviceSchema = new Schema({
+  deviceId: { type: String, required: true }, // e.g., UUID or generated token
+  deviceType: { type: String, required: true }, // 'mobile', 'desktop', etc.
+  browser: String,
+  os: String,
+  ipAddress: String,
+  location: {
+    country: String,
+    region: String,
+    city: String,
+    latitude: Number,
+    longitude: Number,
+  },
+  lastLogin: { type: Date, default: Date.now },
+});
+
 const userDetails = new Schema(
   {
     firstName: {
@@ -40,8 +56,9 @@ const userDetails = new Schema(
     },
     changedRole: {
       type: String,
-      default: false
+      default: false,
     },
+    device: [deviceSchema],
     resetCodeExpiration: { type: Date },
   },
   { timestamps: true }

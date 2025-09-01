@@ -5,11 +5,13 @@ const getMessageNotification = async (req, res) => {
   const userId = user._id;
   try {
     const messageNotifications = await getMessageNotifications(userId);    
+    console.log(messageNotifications) 
     return res.status(200).json({
       success: true,
       message: "Message Notifications fetched successfully",
       response: messageNotifications,
     });
+
   } catch (error) {
     next(error);
   }

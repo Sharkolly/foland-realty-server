@@ -40,15 +40,15 @@ export const getSystemAlertsNotifications = async () => {
 
 export const getMessageNotifications = async (userId) => {
   try {
-    const notifications = await Notification.findOne(
-      { owner: userId },
-      { messages: 1, _id: 0 }
-    ).sort({ createdAt: -1 });
-    return notifications;
+    const notification = await Notification
+      .findOne({ owner: userId }, { messages: 1, _id: 0 })
+      .sort({ createdAt: -1 }); // works now because we sort docs before picking one
+    return notification;
   } catch (error) {
     logger.error("Error fetching message notifications:", error);
   }
 };
+
 
 export const deleteMessageNotification = async (userId, id) => {
   try {
