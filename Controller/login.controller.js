@@ -43,8 +43,10 @@ export const login = async (req, res, next) => {
     // Configurer les options du cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true, // true en prod, false en dev
+      secure: true,
       sameSite: "none",
+      domain: "foland-realty.vercel.app",
+      path: "/",
       maxAge: 5 * 24 * 60 * 60 * 1000, // 5 jours
     });
 
