@@ -820,3 +820,25 @@
 2025-09-12 17:47:10 [31merror[39m: 🔥Error:
 2025-09-12 17:47:58 [31merror[39m: 🔥Error:
 2025-09-12 17:47:58 [31merror[39m: 🔥Error:
+2025-09-12 17:51:10 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-09-12 18:10:59 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-09-12 18:26:10 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-09-12 18:27:42 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-09-12 18:30:35 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-09-12 18:30:50 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-09-12 18:31:01 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-09-12 18:31:11 [31merror[39m: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2025-09-12 18:31:33 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)

@@ -3,7 +3,6 @@ import jwt from "jsonwebtoken";
 const tokenVerification = (req, res, next) => {
   // 1. Récupérer le token dans l’en-tête Authorization : "Bearer <token>" ou dans les cookies
   const authHeader = req.headers.authorization;
-  console.log("token:", authHeader);
   const cookieToken = req.cookies?.token;
 
   let token = null;

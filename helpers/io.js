@@ -24,17 +24,26 @@ export const initSocket = (server) => {
 
   io.use(async (socket, next) => {
     //get token
+
+    let token = null;
+    if(socket.handshake.auth && socket.handshake.auth.token){
+      token = socket.handshake.auth.token;
+    }
+    else if(socket.handshake.headers && socket.handshake.headers.cookie){
     const rawCookie = socket.handshake.headers.cookie;
     if (!rawCookie) {
       return next(new Error("No cookie found"));
     }
 
     const parsed = cookie.parse(rawCookie);
-    const token = parsed.token;
+    token = parsed.token;
     if (!token) {
       logger.warn("No token provided, disconnecting socket");
       return socket.disconnect(true);
     }
+  }
+
+oo 
     try {
       // verify token
       const verifyUser = jwt.verify(token, process.env.JWT_SECRET_KEY);
