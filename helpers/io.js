@@ -43,7 +43,7 @@ export const initSocket = (server) => {
     }
   }
 
-oo 
+
     try {
       // verify token
       const verifyUser = jwt.verify(token, process.env.JWT_SECRET_KEY);
