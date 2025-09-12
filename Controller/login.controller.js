@@ -11,7 +11,6 @@ export const login = async (req, res, next) => {
   }
 
   try {
-    // Vérifier si l'utilisateur existe
     const user = await checkUserExists(email);
     if (!user) {
       return res
@@ -19,39 +18,38 @@ export const login = async (req, res, next) => {
         .json({ message: "Email is not registered. Please Sign Up." });
     }
 
-    // Comparer le mot de passe
     const isValidPassword = await bcrypt.compare(password, user.password);
     if (!isValidPassword) {
       return res.status(401).json({ message: "Invalid Email or Password" });
     }
 
-    // Clé secrète JWT
     const jwtSecret = process.env.JWT_SECRET_KEY;
     if (!jwtSecret) {
       logger.error("JWT_SECRET_KEY is not defined in environment variables");
       return res.status(500).json({ message: "Server configuration error" });
     }
 
-    // Générer le token JWT (exp. 5 jours)
     const token = jwt.sign({ _id: user._id, role: user.role }, jwtSecret, {
       expiresIn: "5d",
     });
-
-    // Détection de l'environnement
+    // const token = jwt.sign({email}, jwtSecret, {
+    //   expiresIn: "5d",
+    // });
+    
     const isProduction = process.env.NODE_ENV === "production";
 
-    // Configurer les options du cookie
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,
       sameSite: "none",
-      domain: "foland-realty.vercel.app",
+      // domain: "foland-realty.vercel.app",
       path: "/",
       maxAge: 5 * 24 * 60 * 60 * 1000, // 5 jours
     });
 
-    return res.status(201).json({ message: "Login Successful" });
+    return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
+    console.log(err)
     next(err);
   }
 };
