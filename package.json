@@ -45,6 +45,7 @@
     "ssim.js": "^3.5.0",
     "tailwind-scrollbar-hide": "^4.0.0",
     "twilio": "^5.5.1",
+    "ua-parser-js": "^2.0.5",
     "uuid": "^11.1.0",
     "winston": "^3.17.0"
   },

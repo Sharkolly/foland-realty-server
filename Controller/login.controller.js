@@ -5,6 +5,8 @@ import logger from "../config/logger.js";
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
+  const { lastLogin, ip, browser, os, deviceId, deviceType, location } = req.deviceInfo;
+  // console.log(lastLogin, ip, browser, os, deviceId, deviceType, location)
 
   if (!email || !password) {
     return res.status(400).json({ message: "Email and password are required" });
@@ -21,7 +23,7 @@ export const login = async (req, res, next) => {
     const isValidPassword = await bcrypt.compare(password, user.password);
     if (!isValidPassword) {
       return res.status(401).json({ message: "Invalid Email or Password" });
-    };
+    }
 
     const jwtSecret = process.env.JWT_SECRET_KEY;
     if (!jwtSecret) {
@@ -35,7 +37,7 @@ export const login = async (req, res, next) => {
     // const token = jwt.sign({email}, jwtSecret, {
     //   expiresIn: "5d",
     // });
-    
+
     const isProduction = process.env.NODE_ENV === "production";
 
     res.cookie("token", token, {
@@ -49,7 +51,7 @@ export const login = async (req, res, next) => {
 
     return res.status(201).json({ message: "Login Successful", token });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     next(err);
   }
 };

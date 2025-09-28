@@ -16,6 +16,15 @@ const deviceSchema = new Schema({
   lastLogin: { type: Date, default: Date.now },
 });
 
+// const idDocumentSchema = new Schema(
+//   {
+//     name: { type: String },
+//     path: { type: String },
+//     uploadedAt: { type: Date, default: Date.now },
+//   },
+//   { _id: false }
+// );
+
 const userDetails = new Schema(
   {
     firstName: {
@@ -58,6 +67,18 @@ const userDetails = new Schema(
       type: String,
       default: false,
     },
+    phone: {
+      required: true,
+      type: String,
+    },
+    // idDocument: [idDocumentSchema],
+    idDocument: [
+      {
+        name: { type: String },
+        path: { type: String },
+      },
+      {timestamps: true},
+    ],
     device: [deviceSchema],
     resetCodeExpiration: { type: Date },
   },

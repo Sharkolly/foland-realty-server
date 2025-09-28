@@ -1,6 +1,12 @@
 import multer from "multer";
 import path from "path";
-import storage from "../config/cloudinaryStorage.config.js";
+import {
+  propertyPictureStorage,
+  chatStorage,
+  propertyVideoStorage,
+  profileStorage,
+  idDocumentStorage,
+} from "../config/cloudinaryStorage.config.js";
 
 // File Filter (Optional)
 const fileFilter = (req, file, cb) => {
@@ -17,9 +23,28 @@ const fileFilter = (req, file, cb) => {
 };
 
 // Base multer instance
-const upload = multer({
-  storage,
+export const uploadPropertyPicture = multer({
+  storage: propertyPictureStorage,
   fileFilter,
   limits: { fileSize: 6 * 1024 * 1024 },
 });
-export default upload;
+export const uploadPropertyVideo = multer({
+  storage: propertyVideoStorage,
+  fileFilter,
+  limits: { fileSize: 6 * 1024 * 1024 },
+});
+export const uploadIdDocument = multer({
+  storage: idDocumentStorage,
+  fileFilter,
+  limits: { fileSize: 6 * 1024 * 1024 },
+});
+export const uploadProfile = multer({
+  storage: profileStorage,
+  fileFilter,
+  limits: { fileSize: 6 * 1024 * 1024 },
+});
+export const uploadChat = multer({
+  storage: chatStorage,
+  fileFilter,
+  limits: { fileSize: 6 * 1024 * 1024 },
+});

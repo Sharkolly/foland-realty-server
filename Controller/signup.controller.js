@@ -8,16 +8,32 @@ import {
 } from "../mongodb/controller/auth.model.js";
 
 export const signUp = async (req, res, next) => {
-  const { email, password, firstName, lastName, role } = req.body;
-  console.log(email, password, firstName, lastName, role);
-  // const profilePic = req.file ? req.file.path : "";
+  const {
+    email,
+    password,
+    firstName,
+    lastName,
+    role,
+    idVerificationSkipped,
+    phone,
+  } = req.body;
   const regexForValidEmail = /^[a-zA-Z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+  console.log(
+    email,
+    password,
+    firstName,
+    lastName,
+    role,
+    idVerificationSkipped,
+    phone
+  );
 
   const regexForValidPassword =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 
   // check for user credentials
-  if (!firstName || !lastName || !password || !email || !role) {
+  if (!firstName || !lastName || !password || !email || !role || !phone) {
     return res.status(403).json({ message: "Complete the form" });
   }
   // validate email
@@ -37,6 +53,13 @@ export const signUp = async (req, res, next) => {
   // hash password
   const hashedPassword = await bcrypt.hash(password, 10);
   try {
+    const documentImage = req.file
+      ? {
+          path: req.file.path,
+          name: req.file.originalname,
+        }
+      : null;
+
     //check user in mongoDb
     const user = await checkUserExists(email);
     //check user in MySql
@@ -56,12 +79,14 @@ export const signUp = async (req, res, next) => {
 
     const { userIdToString } = await userSignUpMongoDB(
       email,
-      password,
+      hashedPassword,
       role,
       firstName,
       lastName,
       uuid,
-      hashedPassword
+      idVerificationSkipped,
+      phone,
+      documentImage
     );
 
     // sign a token and send to browser
@@ -77,8 +102,11 @@ export const signUp = async (req, res, next) => {
       sameSite: "none",
       maxAge: 86400 * 1000 * 5, // 5 days in milliseconds
     });
-    return res.status(201).json({ token, message: "Login Successful" });
+    return res
+      .status(201)
+      .json({ success: true, token, message: "Login Successful" });
   } catch (err) {
+    console.log(err);
     next(err);
   }
 };
