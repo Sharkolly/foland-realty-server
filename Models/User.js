@@ -67,19 +67,18 @@ const userDetails = new Schema(
       enum: ["Tenant", "Landlord", "Agent"],
       default: "Tenant",
     },
-    resetCode: {
+    reset_code: {
       type: String,
     },
-    changedRole: {
+    changed_role: {
       type: String,
       default: false,
     },
     phone: {
-      required: true,
       type: String,
     },
     // idDocument: [idDocumentSchema],
-    idDocument: [
+    id_document: [
       {
         name: { type: String },
         path: { type: String },
@@ -87,7 +86,7 @@ const userDetails = new Schema(
       { timestamps: true },
     ],
     device: [deviceSchema],
-    resetCodeExpiration: { type: Date },
+    reset_code_expiration: { type: Date },
   },
   { timestamps: true }
 );

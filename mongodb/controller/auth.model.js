@@ -44,15 +44,36 @@ export const addUserDevice = async (
   location,
   user
 ) => {
-  user.deviceInfo.push({
-    lastLogin,
-    ip,
-    browser,
-    os,
-    deviceId,
-    deviceType,
-    location,
-  });
-  await findUser.save();
+  const existingDevice = user.device.find(
+    (d) =>
+      d.deviceType === deviceType &&
+      d.browser === browser &&
+      d.ip === location.ip
+  );
+
+  if (existingDevice) {
+    // Just update last login
+    existingDevice.lastLogin = new Date();
+    existingDevice.location.region = location.city; // optional update
+    existingDevice.location.city = location.city; // optional update
+    existingDevice.os = os;
+  } else {
+    // Add new device
+    user.phone = "07035439642";
+    user.device.push({
+      lastLogin,
+      ip,
+      browser,
+      os,
+      deviceId,
+      deviceType,
+      location,
+    });
+  }
+
+  // Update user's lastLogin field
+  user.device.lastLogin = new Date();
+
+  await user.save();
   return;
 };

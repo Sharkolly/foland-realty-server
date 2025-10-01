@@ -49,10 +49,10 @@
 //   }
 // };
 
-
 import fetch from "node-fetch";
 import { v4 as uuidv4 } from "uuid";
-import {UAParser} from "ua-parser-js";
+import { UAParser } from "ua-parser-js";
+import geoip from "geoip-lite";
 
 export const captureDevice = async (req, res, next) => {
   try {
@@ -62,13 +62,16 @@ export const captureDevice = async (req, res, next) => {
     const parser = new UAParser(req.headers["user-agent"]);
     const ua = parser.getResult();
 
+    const geop = geoip.lookup(ip);
+    console.log(ip);
+    console.log(geop);
     // Fetch location data from free API
     let geo = null;
     try {
       // const resp = await fetch(`https://ipwho.is/${ip}`);
-      const resp = await fetch(`http://ip-api.com/json/${ip}`);
-      console.log(await resp.json())
-      const respo = await fetch(`https://ipapi.co/json/`);      
+      // const resp = await fetch(`http://ip-api.com/json/${ip}`);
+      // console.log(await resp.json())
+      const respo = await fetch(`https://ipapi.co/json/`);
       geo = await respo.json();
     } catch (err) {
       console.warn("IP lookup failed:", err.message);
@@ -88,10 +91,10 @@ export const captureDevice = async (req, res, next) => {
             city: geo.city || "Unknown",
             timezone: geo.timezone || "Unknown",
             mobile_network: geo.org || "Unknown",
-            utc: geo.utc_offset || "Unknown",
+            latitude: geo.lat || null,
+            longitude: geo.lon || null,
             calling_code: geo.country_calling_code || "Unknown",
-            latitude: geo.latitude || null,
-            longitude: geo.longitude || null,
+            utc: geo.utc_offset || "Unknown",
             ip: geo.ip || "Unknown",
             network: geo.network || "Unknown",
           }
