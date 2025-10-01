@@ -11,7 +11,6 @@ export const userSignUpMongoDB = async (
   phone,
   documentImage
 ) => {
-  
   const saveToDatabase = await new User({
     email: email.toLowerCase(),
     password: hashedPassword,
@@ -20,8 +19,8 @@ export const userSignUpMongoDB = async (
     lastName,
     uuid,
     phone,
-    idDocument: documentImage ? [documentImage] : null
-    
+    idDocument: documentImage ? [documentImage] : null,
+
     // profilePic,
   });
 
@@ -33,4 +32,27 @@ export const userSignUpMongoDB = async (
 export const checkUserExists = async (email) => {
   const checkIfUserExist = await User.findOne({ email: email.toLowerCase() });
   return checkIfUserExist;
+};
+
+export const addUserDevice = async (
+  lastLogin,
+  ip,
+  browser,
+  os,
+  deviceId,
+  deviceType,
+  location,
+  user
+) => {
+  user.deviceInfo.push({
+    lastLogin,
+    ip,
+    browser,
+    os,
+    deviceId,
+    deviceType,
+    location,
+  });
+  await findUser.save();
+  return;
 };

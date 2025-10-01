@@ -1,12 +1,16 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { checkUserExists } from "../mongodb/controller/auth.model.js";
+import {
+  addUserDevice,
+  checkUserExists,
+} from "../mongodb/controller/auth.model.js";
 import logger from "../config/logger.js";
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
-  const { lastLogin, ip, browser, os, deviceId, deviceType, location } = req.deviceInfo;
-  // console.log(lastLogin, ip, browser, os, deviceId, deviceType, location)
+  const { lastLogin, ip, browser, os, deviceId, deviceType, location } =
+    req.deviceInfo;
+  console.log(lastLogin, ip, browser, os, deviceId, deviceType, location);
 
   if (!email || !password) {
     return res.status(400).json({ message: "Email and password are required" });
@@ -34,11 +38,18 @@ export const login = async (req, res, next) => {
     const token = jwt.sign({ _id: user._id, role: user.role }, jwtSecret, {
       expiresIn: "5d",
     });
-    // const token = jwt.sign({email}, jwtSecret, {
-    //   expiresIn: "5d",
-    // });
 
-    const isProduction = process.env.NODE_ENV === "production";
+    const addUserDeviceToDB = await addUserDevice(
+      lastLogin,
+      ip,
+      browser,
+      os,
+      deviceId,
+      deviceType,
+      location,
+      user
+    );
+
 
     res.cookie("token", token, {
       httpOnly: true,

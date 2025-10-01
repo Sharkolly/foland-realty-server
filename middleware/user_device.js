@@ -65,11 +65,11 @@ export const captureDevice = async (req, res, next) => {
     // Fetch location data from free API
     let geo = null;
     try {
-    //   const resp = await fetch(`https://ipwho.is/${ip}`);
-      const respo = await fetch(`https://ipapi.co/json/`);
-      const data = await respo.json()
-      console.log(data)
-    //   geo = await resp.json();
+      // const resp = await fetch(`https://ipwho.is/${ip}`);
+      const resp = await fetch(`http://ip-api.com/json/${ip}`);
+      console.log(await resp.json())
+      const respo = await fetch(`https://ipapi.co/json/`);      
+      geo = await respo.json();
     } catch (err) {
       console.warn("IP lookup failed:", err.message);
     }
@@ -80,13 +80,20 @@ export const captureDevice = async (req, res, next) => {
       browser: ua.browser.name || "Unknown",
       os: ua.os.name || "Unknown",
       ip,
-      location: geo && geo.success
+      location: geo
         ? {
-            country: geo.country || "Unknown",
+            country: geo.country_name || "Unknown",
+            country_code: geo.country_code || "Unknown",
             region: geo.region || "Unknown",
             city: geo.city || "Unknown",
+            timezone: geo.timezone || "Unknown",
+            mobile_network: geo.org || "Unknown",
+            utc: geo.utc_offset || "Unknown",
+            calling_code: geo.country_calling_code || "Unknown",
             latitude: geo.latitude || null,
             longitude: geo.longitude || null,
+            ip: geo.ip || "Unknown",
+            network: geo.network || "Unknown",
           }
         : {
             country: "Unknown",

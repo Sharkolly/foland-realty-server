@@ -1843,3 +1843,124 @@
     at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
 2025-09-28 16:32:14 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
 2025-09-28 16:32:14 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 06:09:37 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 06:09:37 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 06:23:40 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:23:51 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:25:45 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:26:35 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:28:13 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:28:42 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:28:55 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:29:38 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:30:39 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:36:46 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:37:52 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:39:52 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:40:06 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:40:22 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:40:36 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:40:51 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:41:04 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 06:41:15 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 06:59:51 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 07:00:01 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 07:01:57 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 07:02:47 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 07:12:22 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 07:12:33 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 07:25:05 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:25:05 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:25:27 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-10-01 07:25:27 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 07:25:27 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:25:57 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-01 07:25:57 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 07:25:57 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:26:28 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:26:28 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:28:04 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:28:04 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:28:48 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:28:48 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:29:41 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:29:42 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:31:16 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:31:16 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:35:28 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 07:35:39 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 07:35:53 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 07:36:04 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 07:37:46 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:37:47 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:39:02 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-01 07:39:02 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 07:39:02 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:39:27 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:39:27 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:40:32 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:40:32 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:40:58 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:40:59 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:41:25 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:41:25 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:42:44 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:42:44 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:43:19 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:43:19 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:44:07 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:44:07 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:44:44 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:44:44 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:46:16 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:46:16 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:48:09 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-01 07:48:20 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-01 07:52:31 [32minfo[39m: ✅ MongoDB connection established
+2025-10-01 07:52:31 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 07:58:45 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-01 07:58:45 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 07:58:45 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 08:00:05 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-01 08:00:05 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 08:00:05 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 08:00:29 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-01 08:00:30 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 08:00:30 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 08:01:08 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-01 08:01:08 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 08:01:08 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 08:01:53 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:555:9)
+    at process.processTimers (node:internal/timers:529:7)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-10-01 08:01:53 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 08:01:53 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 08:02:47 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-10-01 08:02:47 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 08:02:47 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-01 08:03:13 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:87:21)
+2025-10-01 08:03:13 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-01 08:03:13 [32minfo[39m: 🚀 Server started on port 3001

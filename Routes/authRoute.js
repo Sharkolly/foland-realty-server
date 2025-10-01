@@ -14,22 +14,6 @@ import { captureDevice } from "../middleware/user_device.js";
 
 const router = express.Router();
 
-// router.post("/signup", upload.single("profilePic"), signUp);
-
-// router.post(
-//   "/signup",
-//   (req, res, next) => {
-//     upload.single("idDocument")(req, res, (err) => {
-//       if (err instanceof multer.MulterError) {
-//         return res.status(400).json({ message: err.message });
-//       } else if (err) {
-//         return res.status(400).json({ message: err.message });
-//       }
-//       next();
-//     });
-//   },
-//   signUp
-// );
 router.post(
   "/signup",
     uploadIdDocument.single("idDocument"),
