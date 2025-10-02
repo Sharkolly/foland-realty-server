@@ -8,7 +8,8 @@ import logger from "../config/logger.js";
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
-  const { lastLogin, ip, browser, os, deviceId, deviceType, location } =
+  const { lastLogin, ip, browser, os, deviceId, deviceType, location, model,
+  vendor } =
     req.deviceInfo;
   console.log(lastLogin, ip, browser, os, deviceId, deviceType, location);
 
@@ -47,7 +48,8 @@ export const login = async (req, res, next) => {
       deviceId,
       deviceType,
       location,
-      user
+      user,model,
+  vendor
     );
 
 

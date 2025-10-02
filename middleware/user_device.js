@@ -53,6 +53,7 @@ import fetch from "node-fetch";
 import { v4 as uuidv4 } from "uuid";
 import { UAParser } from "ua-parser-js";
 import geoip from "geoip-lite";
+import axios from "axios";
 
 export const captureDevice = async (req, res, next) => {
   try {
@@ -63,16 +64,17 @@ export const captureDevice = async (req, res, next) => {
     const ua = parser.getResult();
 
     const geop = geoip.lookup(ip);
-    console.log(ip);
-    console.log(geop);
     // Fetch location data from free API
     let geo = null;
     try {
       // const resp = await fetch(`https://ipwho.is/${ip}`);
       // const resp = await fetch(`http://ip-api.com/json/${ip}`);
       // console.log(await resp.json())
-      const respo = await fetch(`https://ipapi.co/json/`);
-      geo = await respo.json();
+      // const respo = await fetch(`https://ipapi.co/json/`);
+      // const respo = await fetch(`https://api.ipwho.org/me`);
+      const respo = await axios.get(`https://api.ipwho.org/me`);
+      geo = await respo.data.data;
+      console.log(geo);
     } catch (err) {
       console.warn("IP lookup failed:", err.message);
     }
@@ -81,20 +83,23 @@ export const captureDevice = async (req, res, next) => {
       deviceId: uuidv4(),
       deviceType: ua.device.type || "desktop",
       browser: ua.browser.name || "Unknown",
-      os: ua.os.name || "Unknown",
+      vendor: ua.device.vendor || "Unknown Vendor",
+      model: ua.device.model || "Unknown Model",
+      os: `${ua.os.name || "Unknown OS"} ${ua.os.version || ""}`,
       ip,
       location: geo
         ? {
-            country: geo.country_name || "Unknown",
-            country_code: geo.country_code || "Unknown",
+            continent: geo.continent || "Unknown",
+            country: geo.country || "Unknown",
+            country_code: geo.countryCode || "Unknown",
             region: geo.region || "Unknown",
             city: geo.city || "Unknown",
-            timezone: geo.timezone || "Unknown",
-            mobile_network: geo.org || "Unknown",
-            latitude: geo.lat || null,
-            longitude: geo.lon || null,
-            calling_code: geo.country_calling_code || "Unknown",
-            utc: geo.utc_offset || "Unknown",
+            timezone: geo.timezone.time_zone || "Unknown",
+            mobile_network: geo.connection.org || "Unknown",
+            latitude: geo.latitude || null,
+            longitude: geo.longitude || null,
+            calling_code: geo.dial_code || "Unknown",
+            utc: geo.timezone.utc || "Unknown",
             ip: geo.ip || "Unknown",
             network: geo.network || "Unknown",
           }

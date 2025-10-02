@@ -42,7 +42,9 @@ export const addUserDevice = async (
   deviceId,
   deviceType,
   location,
-  user
+  user,
+  model,
+  vendor
 ) => {
   const existingDevice = user.device.find(
     (d) =>
@@ -62,6 +64,8 @@ export const addUserDevice = async (
     user.phone = "07035439642";
     user.device.push({
       lastLogin,
+      model,
+      vendor,
       ip,
       browser,
       os,

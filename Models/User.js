@@ -4,10 +4,13 @@ const deviceSchema = new Schema({
   deviceId: { type: String, required: true }, // e.g., UUID or generated token
   deviceType: { type: String, required: true }, // 'mobile', 'desktop', etc.
   browser: String,
+  model: String,
+  vendor: String,
   os: String,
   ipAddress: String,
   location: {
     country: String,
+    continent: String,
     country_code: String,
     timezone: String,
     mobile_network: String,
