@@ -49,14 +49,13 @@ export const addUserDevice = async (
   const existingDevice = user.device.find(
     (d) =>
       d.deviceType === deviceType &&
-      d.browser === browser &&
-      d.ip === location.ip
+      d.browser === browser 
   );
 
   if (existingDevice) {
     // Just update last login
     existingDevice.lastLogin = new Date();
-    existingDevice.location.region = location.city; // optional update
+    existingDevice.location.region = location.region; // optional update
     existingDevice.location.city = location.city; // optional update
     existingDevice.os = os;
   } else {
@@ -74,6 +73,7 @@ export const addUserDevice = async (
       location,
     });
   }
+
 
   // Update user's lastLogin field
   user.device.lastLogin = new Date();

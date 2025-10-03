@@ -2096,3 +2096,67 @@
 2025-10-02 06:40:30 [32minfo[39m: 🚀 Server started on port 3001
 2025-10-02 06:41:18 [32minfo[39m: ✅ MongoDB connection established
 2025-10-02 06:41:18 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-02 06:41:45 [32minfo[39m: ✅ MongoDB connection established
+2025-10-02 06:41:45 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-02 07:02:18 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-02 07:02:30 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-02 07:04:04 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-02 07:04:14 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-02 07:14:19 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-02 07:14:30 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-03 04:05:36 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-03 04:05:36 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-03 04:15:31 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-03 04:15:34 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-03 04:15:58 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-03 04:16:23 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-03 04:17:24 [31merror[39m: Error: querySrv EREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-03 04:17:24 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-03 04:17:24 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:28:52 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:28:52 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:30:32 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:30:32 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:31:57 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:31:57 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:32:25 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:32:25 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:33:30 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:33:30 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:34:25 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:34:25 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:35:24 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:35:24 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:36:30 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:36:30 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:37:04 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:37:04 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:37:21 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:37:21 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:38:35 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:38:35 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:47:33 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:47:33 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:51:08 [31merror[39m: 🔥Error:
+2025-10-03 04:52:08 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:52:08 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:52:23 [31merror[39m: 🔥Error:
+2025-10-03 04:53:24 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:53:24 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:54:57 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:54:57 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:55:27 [31merror[39m: 🔥Error:
+2025-10-03 04:56:06 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:56:06 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:56:31 [31merror[39m: 🔥Error:
+2025-10-03 04:57:11 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:57:11 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 04:59:31 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 04:59:31 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 05:01:12 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 05:01:12 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 05:59:02 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 05:59:02 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 05:59:51 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 05:59:51 [32minfo[39m: 🚀 Server started on port 3001

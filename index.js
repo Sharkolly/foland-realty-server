@@ -63,7 +63,7 @@ app.use("/api/foland-realty/admin", adminRoute);
 app.use("/api/foland-realty/settings", adminRoute);
 app.use("/api/foland-realty/notification", tokenVerification, notification);
 app.use("/api/foland-realty/auth/admin", AdminRoute);
-app.use("/api/foland-realty/documents", documentRoute);
+app.use("/api/foland-realty/document",tokenVerification, documentRoute);
 
 // Fichiers statiques
 app.use("/uploads", express.static("uploads"));

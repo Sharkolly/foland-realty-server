@@ -101,7 +101,6 @@ export const captureDevice = async (req, res, next) => {
             calling_code: geo.dial_code || "Unknown",
             utc: geo.timezone.utc || "Unknown",
             ip: geo.ip || "Unknown",
-            network: geo.network || "Unknown",
           }
         : {
             country: "Unknown",

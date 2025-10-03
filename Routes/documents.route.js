@@ -6,6 +6,7 @@ import {
   uploadDocument,
   deleteDocument,
 } from "../Controller/document.controller.js";
+import { get_document_security } from "../Controller/get_document_security.controller.js";
 
 const router = express.Router();
 const upload = multer({ storage }); // upload vers Cloudinary
@@ -18,5 +19,8 @@ router.post("/", upload.single("file"), uploadDocument);
 
 // DELETE supprime Cloudinary + DB
 router.delete("/:docId", deleteDocument);
+
+router.get("/security", get_document_security);
+
 
 export default router;

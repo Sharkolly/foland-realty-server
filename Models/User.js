@@ -17,7 +17,6 @@ const deviceSchema = new Schema({
     utc: String,
     calling_code: String,
     ip: String,
-    network: String,
     region: String,
     city: String,
     latitude: Number,
