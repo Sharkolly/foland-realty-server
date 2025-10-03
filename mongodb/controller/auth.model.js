@@ -7,7 +7,6 @@ export const userSignUpMongoDB = async (
   firstName,
   lastName,
   uuid,
-  idVerificationSkipped,
   phone,
   documentImage
 ) => {

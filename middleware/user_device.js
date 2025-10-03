@@ -72,8 +72,10 @@ export const captureDevice = async (req, res, next) => {
       // console.log(await resp.json())
       // const respo = await fetch(`https://ipapi.co/json/`);
       // const respo = await fetch(`https://api.ipwho.org/me`);
-      const respo = await axios.get(`https://api.ipwho.org/me`);
-      geo = await respo.data.data;
+      // const respo = await axios.get(`https://api.ipwho.org/me`);
+      const respo = await axios.get(`https://ipwhois.app/json/`);
+      // geo = await respo.data.data;
+      geo = await respo.data;
       console.log(geo);
     } catch (err) {
       console.warn("IP lookup failed:", err.message);
@@ -87,28 +89,43 @@ export const captureDevice = async (req, res, next) => {
       model: ua.device.model || "Unknown Model",
       os: `${ua.os.name || "Unknown OS"} ${ua.os.version || ""}`,
       ip,
-      location: geo
-        ? {
-            continent: geo.continent || "Unknown",
-            country: geo.country || "Unknown",
-            country_code: geo.countryCode || "Unknown",
-            region: geo.region || "Unknown",
-            city: geo.city || "Unknown",
-            timezone: geo.timezone.time_zone || "Unknown",
-            mobile_network: geo.connection.org || "Unknown",
-            latitude: geo.latitude || null,
-            longitude: geo.longitude || null,
-            calling_code: geo.dial_code || "Unknown",
-            utc: geo.timezone.utc || "Unknown",
-            ip: geo.ip || "Unknown",
-          }
-        : {
-            country: "Unknown",
-            region: "Unknown",
-            city: "Unknown",
-            latitude: null,
-            longitude: null,
-          },
+      // location: geo
+      //   ? 
+      //   {
+      //       continent: geo.continent || "Unknown",
+      //       country: geo.country || "Unknown",
+      //       country_code: geo.countryCode || "Unknown",
+      //       region: geo.region || "Unknown",
+      //       city: geo.city || "Unknown",
+      //       timezone: geo.timezone.time_zone || "Unknown",
+      //       mobile_network: geo.connection.org || "Unknown",
+      //       latitude: geo.latitude || null,
+      //       longitude: geo.longitude || null,
+      //       calling_code: geo.dial_code || "Unknown",
+      //       utc: geo.timezone.utc || "Unknown",
+      //       ip: geo.ip || "Unknown",
+      //     }
+        // {
+        //     continent: geo.continent || "Unknown",
+        //     country: geo.country || "Unknown",
+        //     country_code: geo.country_code || "Unknown",
+        //     region: geo.region || "Unknown",
+        //     city: geo.city || "Unknown",
+        //     timezone: geo.timezone || "Unknown",
+        //     mobile_network: geo.org || "Unknown",
+        //     latitude: geo.latitude || null,
+        //     longitude: geo.longitude || null,
+        //     calling_code: geo.country_phone || "Unknown",
+        //     utc: geo.gmt || "Unknown",
+        //     ip: geo.ip || "Unknown",
+        //   }
+        // : {
+        //     country: "Unknown",
+        //     region: "Unknown",
+        //     city: "Unknown",
+        //     latitude: null,
+        //     longitude: null,
+        //   },
       lastLogin: new Date(),
     };
 

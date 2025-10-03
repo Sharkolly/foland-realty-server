@@ -7,11 +7,37 @@ import {
 import logger from "../config/logger.js";
 
 export const login = async (req, res, next) => {
-  const { email, password } = req.body;
-  const { lastLogin, ip, browser, os, deviceId, deviceType, location, model,
-  vendor } =
+  const { email, password, userLocation } = req.body;
+  const { lastLogin, ip, browser, os, deviceId, deviceType, model, vendor } =
     req.deviceInfo;
-  console.log(lastLogin, ip, browser, os, deviceId, deviceType, location);
+
+  const {
+    country,
+    region,
+    city,
+    timezone,
+    mobile_network,
+    gmt,
+    continent,
+    country_phone,
+    org,
+    latitude,
+    longitude,
+  } = userLocation || {};
+  const location = {
+    country,
+    utc: gmt,
+    continent,
+    calling_code: country_phone,
+    org,
+    region,
+    city,
+    timezone,
+    mobile_network,
+    ip: userLocation.ip,
+    latitude,
+    longitude,
+  };
 
   if (!email || !password) {
     return res.status(400).json({ message: "Email and password are required" });
@@ -48,10 +74,10 @@ export const login = async (req, res, next) => {
       deviceId,
       deviceType,
       location,
-      user,model,
-  vendor
+      user,
+      model,
+      vendor
     );
-
 
     res.cookie("token", token, {
       httpOnly: true,
