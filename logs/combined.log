@@ -2245,3 +2245,13 @@
     at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
 2025-10-03 19:50:37 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
 2025-10-03 19:50:37 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 19:57:00 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-03 19:57:00 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-03 19:57:00 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 20:06:22 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-03 20:06:22 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-03 20:06:22 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-03 20:06:42 [32minfo[39m: ✅ MongoDB connection established
+2025-10-03 20:06:42 [32minfo[39m: 🚀 Server started on port 3001

@@ -1078,3 +1078,7 @@
     at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
 2025-10-03 19:50:36 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
     at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-03 19:57:00 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2025-10-03 20:06:22 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
