@@ -25,15 +25,6 @@ const deviceSchema = new Schema({
   lastLogin: { type: Date, default: Date.now },
 });
 
-// const idDocumentSchema = new Schema(
-//   {
-//     name: { type: String },
-//     path: { type: String },
-//     uploadedAt: { type: Date, default: Date.now },
-//   },
-//   { _id: false }
-// );
-
 const userDetails = new Schema(
   {
     firstName: {
@@ -47,6 +38,7 @@ const userDetails = new Schema(
     isOnline: Boolean,
     lastSeen: Date,
     uuid: String,
+    verified: Boolean,
     lastName: {
       type: String,
       required: [true, "Please provide a Last name"],
@@ -76,7 +68,6 @@ const userDetails = new Schema(
       default: false,
     },
     phone: String,
-    // idDocument: [idDocumentSchema],
     id_document: [
       {
         name: { type: String },
