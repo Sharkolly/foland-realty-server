@@ -41,11 +41,12 @@ const userDetails = new Schema(
       required: [true, "Please provide a First name"],
       unique: false,
     },
+    gender: String,
+    date_of_birth: String,
+    address: String,
     isOnline: Boolean,
     lastSeen: Date,
-    uuid: {
-      type: String,
-    },
+    uuid: String,
     lastName: {
       type: String,
       required: [true, "Please provide a Last name"],
@@ -60,7 +61,7 @@ const userDetails = new Schema(
       type: String,
       required: [true, "Please provide a password"],
     },
-    image: {
+    profile_picture: {
       type: String,
       unique: false,
     },
@@ -69,16 +70,12 @@ const userDetails = new Schema(
       enum: ["Tenant", "Landlord", "Agent"],
       default: "Tenant",
     },
-    reset_code: {
-      type: String,
-    },
+    reset_code: String,
     changed_role: {
-      type: String,
+      type: Boolean,
       default: false,
     },
-    phone: {
-      type: String,
-    },
+    phone: String,
     // idDocument: [idDocumentSchema],
     id_document: [
       {

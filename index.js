@@ -21,6 +21,7 @@ import notification from "./Routes/notification.route.js";
 import chat from "./Routes/chat.route.js";
 import contact from "./Routes/contact.route.js";
 import documentRoute from "./Routes/documents.route.js";
+import setting from "./Routes/setting.route.js";
 
 import tokenVerification from "./middleware/tokenVerification.js";
 import db from "./helpers/db.js";
@@ -47,7 +48,11 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173", "https://foland-realty.vercel.app"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "https://foland-realty.vercel.app",
+    ],
     credentials: true,
   })
 );
@@ -60,10 +65,10 @@ app.use("/api/foland-realty/chat", tokenVerification, chat);
 app.use("/api/foland-realty/subscribe", newsLetter);
 app.use("/api/foland-realty/contact", contact);
 app.use("/api/foland-realty/admin", adminRoute);
-app.use("/api/foland-realty/settings", adminRoute);
 app.use("/api/foland-realty/notification", tokenVerification, notification);
 app.use("/api/foland-realty/auth/admin", AdminRoute);
-app.use("/api/foland-realty/document",tokenVerification, documentRoute);
+app.use("/api/foland-realty/document", tokenVerification, documentRoute);
+app.use("/api/foland-realty/setting", tokenVerification, setting);
 
 // Fichiers statiques
 app.use("/uploads", express.static("uploads"));
@@ -74,7 +79,9 @@ app.use(errorHandler);
 
 // Route d'accueil
 app.get("/", (req, res) => {
-  return res.status(200).json({ success: true, message: "Welcome to Foland Realty API" });
+  return res
+    .status(200)
+    .json({ success: true, message: "Welcome to Foland Realty API" });
 });
 
 // Démarrage du serveur

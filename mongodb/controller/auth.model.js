@@ -1,3 +1,4 @@
+import Setting from "../../Models/Setting.js";
 import User from "../../Models/User.js";
 
 export const userSignUpMongoDB = async (
@@ -19,12 +20,14 @@ export const userSignUpMongoDB = async (
     uuid,
     phone,
     idDocument: documentImage ? [documentImage] : null,
-
-    // profilePic,
   });
 
   const user = await saveToDatabase.save();
   const userIdToString = await user._id.toString();
+  const newSetting = await new Setting({
+    owner: user._id, // your User _id
+  });
+  await newSetting.save();
   return { userIdToString, role: user.role };
 };
 
@@ -46,9 +49,7 @@ export const addUserDevice = async (
   vendor
 ) => {
   const existingDevice = user.device.find(
-    (d) =>
-      d.deviceType === deviceType &&
-      d.browser === browser 
+    (d) => d.deviceType === deviceType && d.browser === browser
   );
 
   if (existingDevice) {
@@ -72,7 +73,6 @@ export const addUserDevice = async (
       location,
     });
   }
-
 
   // Update user's lastLogin field
   user.device.lastLogin = new Date();

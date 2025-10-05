@@ -1,4 +1,4 @@
-import { get_document_security_details } from "../mongodb/document.model.js";
+import { get_document_security_details } from "../mongodb/controller/document.model.js";
 
 export const get_document_security = async (req, res, next) => {
   const { user } = req;

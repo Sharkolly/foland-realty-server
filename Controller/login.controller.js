@@ -16,7 +16,7 @@ export const login = async (req, res, next) => {
     region,
     city,
     timezone,
-    gmt,
+    timezone_gmt,
     continent,
     country_phone,
     org,
@@ -25,7 +25,7 @@ export const login = async (req, res, next) => {
   } = userLocation || {};
   const location = {
     country,
-    utc: gmt,
+    utc: timezone_gmt,
     continent,
     calling_code: country_phone,
     org,

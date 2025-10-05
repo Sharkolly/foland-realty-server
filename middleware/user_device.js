@@ -72,9 +72,8 @@ export const captureDevice = async (req, res, next) => {
       // console.log(await resp.json())
       // const respo = await fetch(`https://ipapi.co/json/`);
       // const respo = await fetch(`https://api.ipwho.org/me`);
-      const respo = await axios.get(`https://ipwhois.app/json/`);
+      // const respo = await axios.get(`https://ipwhois.app/json/`);
       // geo = await respo.data.data;
-
 
     req.deviceInfo = {
       deviceId: uuidv4(),
