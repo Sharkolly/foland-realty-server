@@ -50,7 +50,6 @@ export const getUserTotalProperty = async (user) => {
 
 export const update_user_details = async (user, user_details) => {
   const get_user = await User.findOne({ _id: user._id });
-  console.log(user_details.profileImage);
   if (
     !user_details.dateOfBirth ||
     !user_details.address ||

@@ -55,8 +55,7 @@ export const addUserDevice = async (
   if (existingDevice) {
     // Just update last login
     existingDevice.lastLogin = new Date();
-    existingDevice.location.region = location.region; // optional update
-    existingDevice.location.city = location.city; // optional update
+    existingDevice.location = location
     existingDevice.os = os;
   } else {
     // Add new device

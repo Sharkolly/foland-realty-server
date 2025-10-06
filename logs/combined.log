@@ -2532,3 +2532,13 @@
 2025-10-05 11:39:47 [32minfo[39m: ✅ MongoDB connected successfully
 2025-10-05 11:44:24 [32minfo[39m: ✅ MongoDB connection established
 2025-10-05 11:44:24 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-05 18:46:24 [32minfo[39m: ✅ MongoDB connection established
+2025-10-05 18:46:24 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-05 19:36:58 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-05 19:42:44 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-05 19:44:37 [32minfo[39m: ✅ MongoDB connection established
+2025-10-05 19:44:37 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-05 19:45:58 [32minfo[39m: ✅ MongoDB connection established
+2025-10-05 19:45:58 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-06 18:06:20 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-06 18:06:20 [32minfo[39m: ✅ MongoDB connected successfully
