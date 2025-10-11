@@ -2,9 +2,11 @@ import { update_user_details } from "../mongodb/controller/user.model.js";
 
 export const change_user_details = async (req, res, next) => {
   const { user } = req;
-  const { user_details } = req.body;
+  const  userFormData = req.body;
+  
+  const profilePicture = req.file ? req.file : null;
   try {
-    const update_user = await update_user_details(user, user_details);
+    const update_user = await update_user_details(user, userFormData, profilePicture);
     if (update_user.success === false) {
       return res
         .status(400)
@@ -16,6 +18,7 @@ export const change_user_details = async (req, res, next) => {
       // res.status(200).json({ success: true, message: "Saved" });
     }
   } catch (err) {
+    console.log(err);
     next(err);
   }
 };

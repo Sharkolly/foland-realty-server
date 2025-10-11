@@ -2542,3 +2542,105 @@
 2025-10-05 19:45:58 [32minfo[39m: 🚀 Server started on port 3001
 2025-10-06 18:06:20 [33mwarn[39m: ⚠️ MongoDB disconnected
 2025-10-06 18:06:20 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-06 18:17:23 [32minfo[39m: ✅ MongoDB connection established
+2025-10-06 18:17:23 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 17:55:23 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-10 17:55:23 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-10 17:58:15 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 17:58:15 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 18:00:10 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 18:00:10 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 18:01:43 [31merror[39m: 🔥Error:
+2025-10-10 18:05:09 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 18:05:09 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 18:19:50 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 18:19:50 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 18:23:33 [31merror[39m: 🔥Error:
+2025-10-10 18:35:03 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-10 18:35:14 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-10 18:57:11 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 18:57:11 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 18:57:34 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-10 18:58:11 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-10 19:01:39 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:94:21)
+2025-10-10 19:01:39 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-10 19:01:39 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 19:02:30 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:94:21)
+2025-10-10 19:02:30 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-10 19:02:30 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 19:03:25 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:94:21)
+2025-10-10 19:03:25 [33mwarn[39m: ⚠️ MongoDB not connected. Continuing without MongoDB.
+2025-10-10 19:03:25 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 19:04:13 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 19:04:13 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 19:06:32 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 19:06:32 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 19:07:03 [31merror[39m: 🔥Error:
+2025-10-10 19:08:06 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 19:08:06 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 19:09:06 [31merror[39m: 🔥Error:
+2025-10-10 19:09:30 [32minfo[39m: ✅ MongoDB connection established
+2025-10-10 19:09:31 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-10 19:09:35 [31merror[39m: 🔥Error:
+2025-10-10 19:10:03 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-10 19:10:14 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-10 19:12:17 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-10 19:12:28 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-11 07:46:03 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-11 07:46:13 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-11 08:10:38 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-11 08:10:49 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-11 08:11:44 [33mwarn[39m: ⚠️ MongoDB disconnected
+2025-10-11 08:11:55 [32minfo[39m: ✅ MongoDB connected successfully
+2025-10-11 08:15:05 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:15:06 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:18:19 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:18:19 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:28:58 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:28:58 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:29:04 [31merror[39m: 🔥Error:
+2025-10-11 08:29:27 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:29:27 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:36:27 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:36:27 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:37:10 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:37:10 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:39:08 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:39:08 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:43:40 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:43:40 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:50:32 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:50:32 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:50:45 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:50:45 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:51:20 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:51:20 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:51:38 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:51:38 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:52:06 [31merror[39m: 🔥Error:
+2025-10-11 08:53:35 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:53:35 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:53:41 [31merror[39m: 🔥Error:
+2025-10-11 08:54:48 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:54:49 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:54:53 [31merror[39m: 🔥Error:
+2025-10-11 08:55:45 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:55:46 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 08:56:37 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 08:56:37 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 09:37:08 [31merror[39m: 🔥Error:
+2025-10-11 09:39:26 [32minfo[39m: ✅ MongoDB connection established
+2025-10-11 09:39:27 [32minfo[39m: 🚀 Server started on port 3001
+2025-10-11 09:40:03 [31merror[39m: 🔥Error:

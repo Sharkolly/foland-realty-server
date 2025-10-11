@@ -1129,3 +1129,29 @@
 2025-10-04 18:39:19 [31merror[39m: 🔥Error:
 2025-10-05 07:09:47 [31merror[39m: 🔥Error:
 2025-10-05 07:11:23 [31merror[39m: 🔥Error:
+2025-10-10 18:01:43 [31merror[39m: 🔥Error:
+2025-10-10 18:23:33 [31merror[39m: 🔥Error:
+2025-10-10 19:01:39 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:94:21)
+2025-10-10 19:02:30 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:94:21)
+2025-10-10 19:03:25 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:94:21)
+2025-10-10 19:07:03 [31merror[39m: 🔥Error:
+2025-10-10 19:09:06 [31merror[39m: 🔥Error:
+2025-10-10 19:09:35 [31merror[39m: 🔥Error:
+2025-10-11 08:29:04 [31merror[39m: 🔥Error:
+2025-10-11 08:52:06 [31merror[39m: 🔥Error:
+2025-10-11 08:53:41 [31merror[39m: 🔥Error:
+2025-10-11 08:54:53 [31merror[39m: 🔥Error:
+2025-10-11 09:37:08 [31merror[39m: 🔥Error:
+2025-10-11 09:40:03 [31merror[39m: 🔥Error:

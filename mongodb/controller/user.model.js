@@ -48,7 +48,11 @@ export const getUserTotalProperty = async (user) => {
   return userTotalProperty;
 };
 
-export const update_user_details = async (user, user_details) => {
+export const update_user_details = async (
+  user,
+  user_details,
+  profilePicture
+) => {
   const get_user = await User.findOne({ _id: user._id });
   if (
     !user_details.dateOfBirth ||
@@ -68,7 +72,9 @@ export const update_user_details = async (user, user_details) => {
     get_user.phone &&
     get_user.gender
   ) {
-    get_user.profile_picture = user_details.profileImage;
+    if (profilePicture && profilePicture.path)
+      get_user.profile_picture = profilePicture.path;
+    if (!profilePicture) get_user.profile_picture = user_details.profileImage;
     await get_user.save();
 
     return {
@@ -82,7 +88,9 @@ export const update_user_details = async (user, user_details) => {
     get_user.date_of_birth = user_details.dateOfBirth;
     get_user.address = user_details.address;
     get_user.gender = user_details.gender;
-    get_user.profile_picture = user_details.profileImage;
+    if (profilePicture && profilePicture.path)
+      get_user.profile_picture = profilePicture.path;
+    if (!profilePicture) get_user.profile_picture = user_details.profileImage;
     await get_user.save();
     return {
       message: "Saved",

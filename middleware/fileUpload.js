@@ -38,7 +38,7 @@ export const uploadIdDocument = multer({
   fileFilter,
   limits: { fileSize: 6 * 1024 * 1024 },
 });
-export const uploadProfile = multer({
+export const uploadProfilePicture = multer({
   storage: profileStorage,
   fileFilter,
   limits: { fileSize: 6 * 1024 * 1024 },
