@@ -1155,3 +1155,8 @@
 2025-10-11 08:54:53 [31merror[39m: 🔥Error:
 2025-10-11 09:37:08 [31merror[39m: 🔥Error:
 2025-10-11 09:40:03 [31merror[39m: 🔥Error:
+2025-10-14 05:26:31 [31merror[39m: 🔥Error:
+2025-10-14 05:26:38 [31merror[39m: 🔥Error:
+2025-10-14 05:26:45 [31merror[39m: 🔥Error:
+2025-10-16 12:07:21 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
