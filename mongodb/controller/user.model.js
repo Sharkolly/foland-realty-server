@@ -64,6 +64,17 @@ export const update_user_details = async (
       success: false,
     };
   }
+
+  if (profilePicture && profilePicture.path) {
+    get_user.profile_picture = profilePicture.path;
+
+    await get_user.save();
+    return {
+      message: "Profile picture updated successfully",
+      success: true,
+    };
+  }
+
   if (
     get_user.firstName &&
     get_user.lastName &&
@@ -72,8 +83,6 @@ export const update_user_details = async (
     get_user.phone &&
     get_user.gender
   ) {
-    if (profilePicture && profilePicture.path)
-      get_user.profile_picture = profilePicture.path;
     if (!profilePicture) get_user.profile_picture = user_details.profileImage;
     await get_user.save();
 
