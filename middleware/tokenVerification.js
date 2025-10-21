@@ -14,11 +14,16 @@ const tokenVerification = (req, res, next) => {
   }
 
   if (!token) {
+    // console.log("No token found");
     return res.status(403).json({ message: "No Token Found" });
   }
 
   jwt.verify(authHeader, process.env.JWT_SECRET_KEY, (err, user) => {
-    if (err) return res.status(403).json({ message: err.message });
+    if (err) {
+      // console.log(err);
+      // console.log(err.message);
+      return res.status(403).json({ message: err.message });
+    }
 
     req.user = user;
     next();
@@ -26,5 +31,3 @@ const tokenVerification = (req, res, next) => {
 };
 
 export default tokenVerification;
-
-
