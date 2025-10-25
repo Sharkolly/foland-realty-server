@@ -11,7 +11,7 @@ const getChatUser = async (req, res, next) => {
     if (!userInfo) {
       return res.status(404).json({ message: "No chat found" });
     }
-    res.status(201).json(userInfo);
+   return res.status(201).json(userInfo);
   } catch (error) {
     // res.status(502).json({ message: error.message });
     next(error);

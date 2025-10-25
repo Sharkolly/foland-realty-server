@@ -5,12 +5,12 @@ export const getUsersInChat = async (senderId, role) => {
   if (role == "Landlord" || role == "Agent") {
     //if landlord or agent check the chat receiver field
     users = await Chat.find({ receiver: senderId })
-      .populate("sender", "firstName lastName role image")
+      .populate("sender", "firstName lastName role profile_picture")
       .sort({ updatedAt: -1 }).lean();
   } else {
     //  else check sender field
     users = await Chat.find({ sender: senderId })
-      .populate("receiver", "firstName lastName role image")
+      .populate("receiver", "firstName lastName role profile_picture")
       .sort({ updatedAt: -1 }).lean();
   } 
   const lastMessage = users.map((chat) => {
