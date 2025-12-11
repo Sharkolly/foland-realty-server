@@ -5,6 +5,7 @@ import {
   checkUserExists,
 } from "../mongodb/controller/auth.model.js";
 import logger from "../config/logger.js";
+import User from "../Models/User.js";
 
 export const login = async (req, res, next) => {
   const { email, password, userLocation } = req.body;
@@ -77,6 +78,9 @@ export const login = async (req, res, next) => {
       model,
       vendor
     );
+
+    User.verified = true;
+    await User.save();
 
     res.cookie("token", token, {
       httpOnly: true,
