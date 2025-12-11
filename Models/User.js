@@ -77,6 +77,7 @@ const userDetails = new Schema(
     ],
     device: [deviceSchema],
     reset_code_expiration: { type: Date },
+    verified: { type: Boolean, default: false },
   },
   { timestamps: true }
 );
