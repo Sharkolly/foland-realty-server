@@ -75,6 +75,7 @@ export const addUserDevice = async (
 
   // Update user's lastLogin field
   user.device.lastLogin = new Date();
+   user.verified = true;
 
   await user.save();
   return;

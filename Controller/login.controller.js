@@ -79,8 +79,7 @@ export const login = async (req, res, next) => {
       vendor
     );
 
-    User.verified = true;
-    await User.save();
+   
 
     res.cookie("token", token, {
       httpOnly: true,
