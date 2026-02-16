@@ -13,7 +13,7 @@ import bodyParser from "body-parser"; // ✅ Ajout de body-parser
 import { initSocket } from "./helpers/io.js";
 import authRoute from "./Routes/authRoute.js";
 import user from "./Routes/user.js";
-import propertyRoute from "./Routes/propertyRoute.js";
+import propertyRoute from "./Routes/property.route.js";
 import adminRoute from "./Routes/admin.routes.js";
 import AdminRoute from "./Routes/Admin/admin.route.js";
 import newsLetter from "./Routes/newsLetter.route.js";
@@ -22,6 +22,7 @@ import chat from "./Routes/chat.route.js";
 import contact from "./Routes/contact.route.js";
 import documentRoute from "./Routes/documents.route.js";
 import setting from "./Routes/setting.route.js";
+import blog from "./Routes/blog.route.js";
 
 import tokenVerification from "./middleware/tokenVerification.js";
 import db from "./helpers/db.js";
@@ -69,6 +70,8 @@ app.use("/api/foland-realty/notification", tokenVerification, notification);
 app.use("/api/foland-realty/auth/admin", AdminRoute);
 app.use("/api/foland-realty/document", tokenVerification, documentRoute);
 app.use("/api/foland-realty/setting", tokenVerification, setting);
+app.use("/api/foland-realty/blog", blog);
+
 
 // Fichiers statiques
 app.use("/uploads", express.static("uploads"));

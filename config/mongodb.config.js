@@ -20,7 +20,8 @@ const connectToMongoDB = async () => {
       throw new Error("MONGODBURL is not defined in environment variables");
     }
 
-    await mongoose.connect(mongoDBURL, mongoDBOptions);
+    // await mongoose.connect(mongoDBURL, mongoDBOptions);
+    await mongoose.connect(mongoDBURL);
 
     mongoose.connection.on("error", (err) => {
       logger.error("❌ MongoDB connection error:", err);

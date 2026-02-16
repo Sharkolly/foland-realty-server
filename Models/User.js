@@ -32,6 +32,11 @@ const userDetails = new Schema(
       required: [true, "Please provide a First name"],
       unique: false,
     },
+    bankDetails: {
+      accountNumber: String,
+      bankCode: String,
+      accountName: String,
+    },
     gender: String,
     date_of_birth: String,
     address: String,
@@ -79,7 +84,7 @@ const userDetails = new Schema(
     reset_code_expiration: { type: Date },
     verified: { type: Boolean, default: false },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const User = model("User", userDetails);

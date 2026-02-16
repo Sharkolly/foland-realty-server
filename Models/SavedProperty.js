@@ -10,7 +10,7 @@ const SavedPropertySchema = new Schema(
     },
     savedAt: { type: Date, default: Date.now },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const SavedProperty = model("SavedProperty", SavedPropertySchema);

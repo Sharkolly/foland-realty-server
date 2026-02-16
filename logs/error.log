@@ -1253,3 +1253,131 @@
     at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
     at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
     at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:94:21)
+2026-01-08 20:58:48 [31merror[39m: Error: queryTxt ESERVFAIL foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-01-08 20:59:41 [31merror[39m: Error: querySrv ESERVFAIL _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-04 14:24:11 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-04 17:39:36 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:28:23 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:54:29 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:54:56 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:55:42 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:56:03 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:56:30 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:57:16 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:57:35 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:57:47 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:58:02 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:58:20 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:58:42 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:58:51 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:59:12 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:59:37 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 16:59:50 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:00:17 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:00:27 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:00:42 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:00:59 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:01:14 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:01:26 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:01:43 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:01:50 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:02:44 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:03:28 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:04:23 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:05:17 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:05:38 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:06:48 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:07:13 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:07:32 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:08:50 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-05 17:14:23 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-10 19:53:14 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-11 18:27:08 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-11 18:33:03 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-11 18:35:23 [31merror[39m: 🔥Error:
+2026-02-11 18:36:19 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-11 18:40:48 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-11 18:54:23 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-11 18:56:13 [31merror[39m: Error: querySrv ECONNREFUSED _mongodb._tcp.foland-realty-database.2fev2.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)
+2026-02-14 07:29:33 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:97:21)
+2026-02-14 07:30:06 [31merror[39m: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:23:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:97:21)
+2026-02-14 08:38:08 [31merror[39m: 🔥Error:
+2026-02-14 08:39:27 [31merror[39m: 🔥Error:
+2026-02-14 08:39:27 [31merror[39m: 🔥Error:
+2026-02-14 08:39:59 [31merror[39m: 🔥Error:
+2026-02-14 08:40:15 [31merror[39m: 🔥Error:
+2026-02-14 08:40:18 [31merror[39m: 🔥Error:
+2026-02-14 08:40:46 [31merror[39m: 🔥Error:
+2026-02-14 08:41:18 [31merror[39m: 🔥Error:
+2026-02-14 12:58:31 [31merror[39m: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 30233ms (connectTimeoutMS: 30000)
+    at TLSSocket.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cmap\connect.js:288:20)
+    at Object.onceWrapper (node:events:638:28)
+    at TLSSocket.emit (node:events:524:28)
+    at Socket._onTimeout (node:net:609:8)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2026-02-15 19:08:04 [31merror[39m: MongoNetworkTimeoutError: Socket 'secureConnect' timed out after 31434ms (connectTimeoutMS: 30000)
+    at TLSSocket.<anonymous> (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongodb\lib\cmap\connect.js:288:20)
+    at Object.onceWrapper (node:events:638:28)
+    at TLSSocket.emit (node:events:524:28)
+    at Socket._onTimeout (node:net:609:8)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+2026-02-15 19:40:08 [31merror[39m: MongooseServerSelectionError: Server selection timed out after 30000 ms
+    at _handleConnectionErrors (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1165:11)
+    at NativeConnection.openUri (C:\Users\USER\Documents\real_estate_app\backend\node_modules\mongoose\lib\connection.js:1096:11)
+    at async connectToMongoDB (file:///C:/Users/USER/Documents/real_estate_app/backend/config/mongodb.config.js:24:5)
+    at async startServer (file:///C:/Users/USER/Documents/real_estate_app/backend/index.js:97:21)
