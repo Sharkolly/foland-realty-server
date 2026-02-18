@@ -7,14 +7,17 @@ export const getUserTotalProperty = async (user) => {
 };
 
 // get user properties that user added
-export const getUserPropertiesAdded = async (user) => {  
+export const getUserPropertiesAdded = async (user) => {
   const userTotalPropertes = await Property.find({ owner: user._id });
   return userTotalPropertes;
 };
 
 // get all properties
 export const getProperties = async () => {
-  const properties = await Property.find().sort({ createdAt: -1 }).limit(10);
+  const properties = await Property.find().sort({ createdAt: -1 }).limit(10).populate(
+    "owner",
+    "firstName lastName role profile_picture isOnline verified",
+  );  ;  
   return properties;
 };
 
@@ -37,7 +40,7 @@ export const addPropertiesToMongoDb = async (
   bedroom,
   owner,
   isLandlordLivingWithTenant,
-  purpose
+  purpose,
 ) => {
   const propertyDetails = {
     uuid,
@@ -60,15 +63,17 @@ export const addPropertiesToMongoDb = async (
     isLandlordLivingWithTenant,
     purpose,
   };
-// add to db
+  // add to db
   const saveProperty = await new Property(propertyDetails);
   const newProperty = await saveProperty.save();
   return newProperty;
 };
 
-
 // get single property
 export const getSingleProperty = async (propertyId) => {
-  const getProperty = await Property.findOne({ _id: propertyId });
+  const getProperty = await Property.findOne({ _id: propertyId }).populate(
+    "owner",
+    "firstName lastName role profile_picture isOnline verified",
+  );  
   return getProperty;
 };
