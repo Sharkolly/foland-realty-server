@@ -13,12 +13,22 @@ export const getUserPropertiesAdded = async (user) => {
 };
 
 // get all properties
-export const getProperties = async () => {
-  const properties = await Property.find().sort({ createdAt: -1 }).limit(10).populate(
-    "owner",
-    "firstName lastName role profile_picture isOnline verified",
-  );  ;  
-  return properties;
+export const getProperties = async (page, limit=6) => {
+  const skip = (page - 1) * limit;
+  const property = await Property.find()
+    .sort({ createdAt: -1 })
+    .skip(skip)
+    .limit(limit)
+    .populate(
+      "owner",
+      "firstName lastName role profile_picture isOnline verified",
+    );
+
+  const total = await Property.countDocuments();
+
+  const hasMore = skip + property.length < total;
+
+  return { property, total, hasMore };
 };
 
 export const addPropertiesToMongoDb = async (
@@ -74,6 +84,6 @@ export const getSingleProperty = async (propertyId) => {
   const getProperty = await Property.findOne({ _id: propertyId }).populate(
     "owner",
     "firstName lastName role profile_picture isOnline verified",
-  );  
+  );
   return getProperty;
 };
