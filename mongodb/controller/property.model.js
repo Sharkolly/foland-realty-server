@@ -13,18 +13,51 @@ export const getUserPropertiesAdded = async (user) => {
 };
 
 // get all properties
-export const getProperties = async (page, limit=6) => {
+export const getProperties = async (page, limit = 6) => {
   const skip = (page - 1) * limit;
-  const property = await Property.find()
-    .sort({ createdAt: -1 })
-    .skip(skip)
-    .limit(limit)
-    .populate(
-      "owner",
-      "firstName lastName role profile_picture isOnline verified",
-    );
-
   const total = await Property.countDocuments();
+
+  const property = await Property.aggregate([
+    { $sample: { size: total } },
+
+    {
+      $lookup: {
+        from: "users",
+        localField: "owner",
+        foreignField: "_id",
+        as: "owner",
+      },
+    },
+
+    { $unwind: "$owner" },
+
+    {
+      $project: {
+        title: 1,
+        price: 1,
+        description: 1,
+        property: 1,
+        propertyType: 1,
+        state: 1,
+        images: 1,
+        purpose: 1,
+        location: 1,
+        bedroom: 1,
+        bathroom: 1,
+        landSize: 1,
+        createdAt: 1,
+        "owner.firstName": 1,
+        "owner.lastName": 1,
+        "owner.role": 1,
+        "owner.profile_picture": 1,
+        "owner.isOnline": 1,
+        "owner.verified": 1,
+      },
+    },
+
+    { $skip: skip },
+    { $limit: limit },
+  ]);  
 
   const hasMore = skip + property.length < total;
 
